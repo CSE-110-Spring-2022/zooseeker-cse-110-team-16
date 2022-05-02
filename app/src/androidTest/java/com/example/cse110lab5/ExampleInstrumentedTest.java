@@ -1,4 +1,4 @@
-package com.example.zooseeker_cse_110_team_16;
+package com.example.cse110lab5;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.example.zooseeker_cse_110_team_16", appContext.getPackageName());
+        assertEquals("com.example.cse110lab5", appContext.getPackageName());
     }
 }

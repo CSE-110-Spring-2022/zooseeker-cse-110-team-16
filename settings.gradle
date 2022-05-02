@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "zooseeker-cse-110-team-16"
+rootProject.name = "CSE_110_Lab_5"
 include ':app'
