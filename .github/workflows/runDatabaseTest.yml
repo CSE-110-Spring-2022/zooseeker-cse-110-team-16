@@ -26,7 +26,7 @@ jobs:
       - uses: actions/checkout@v3
       
       - name: test 1
-        run: ./gradlew TodoDatabaseTest
+        run: ./gradlew app/src/test/java/com/example/cse110lab5
         
 
       # Runs a single command using the runners shell
