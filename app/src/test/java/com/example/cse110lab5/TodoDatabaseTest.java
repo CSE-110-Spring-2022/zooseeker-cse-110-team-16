@@ -59,7 +59,7 @@ public class TodoDatabaseTest {
         assertEquals(insertedItem.completed, item.completed);
         assertEquals(insertedItem.order, item.order);
     }
-
+/*
     @Test
     public void testUpdate() {
         TodoListItem item = new TodoListItem("Pizza time", false, 0);
@@ -73,8 +73,8 @@ public class TodoDatabaseTest {
         item = dao.get(id);
         assertNotNull(item);
         assertEquals("Photos of Spider-Man", item.text);
-    }
-
+    } */
+/*
     @Test
     public void testDelete() {
         TodoListItem item = new TodoListItem("Pizza time", false, 0);
@@ -90,4 +90,5 @@ public class TodoDatabaseTest {
     public void testZooData() {
 
     }
+    } */
 }
