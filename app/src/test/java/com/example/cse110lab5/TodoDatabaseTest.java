@@ -17,6 +17,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import java.io.IOException;
+import java.util.Map;
 
 @RunWith(AndroidJUnit4.class)
 public class TodoDatabaseTest {
@@ -85,10 +86,12 @@ public class TodoDatabaseTest {
         assertEquals(1, itemsDeleted);
         assertNull(dao.get(id));
     }
-
+*/
     @Test
-    public void testZooData() {
-
+    public void testAnimalInDatabase() {
+        App test = new App();
+        Map<String, ZooData.VertexInfo> data = test.getData();
+        //System.out.print(data.get("gorillas").kind);
+        assertNotNull(data);
     }
-    } */
 }

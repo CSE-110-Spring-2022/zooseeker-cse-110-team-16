@@ -31,6 +31,12 @@ public class TodoListActivity extends AppCompatActivity {
     private TodoListViewModel viewModel;
     private EditText newTodoText;
     private Button addTodoButton;
+    public Map<String, ZooData.VertexInfo> vInfo;
+
+    //testing moved to TodoDatabase
+//    public Map<String, ZooData.VertexInfo> getData(){
+//        return vInfo;
+//    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +46,6 @@ public class TodoListActivity extends AppCompatActivity {
         viewModel = new ViewModelProvider(this)
                 .get(TodoListViewModel.class);
 
-        Map<String, ZooData.VertexInfo> vInfo = ZooData.loadVertexInfoJSON("sample_node_info.json");//added
 
         TodoListAdapter adapter = new TodoListAdapter();
         adapter.setHasStableIds(true);
@@ -58,6 +63,9 @@ public class TodoListActivity extends AppCompatActivity {
         this.addTodoButton = this.findViewById(R.id.add_todo_btn);
 
         addTodoButton.setOnClickListener(this::onAddTodoClicked);
+
+        //testing
+//        vInfo = ZooData.loadVertexInfoJSON("sample_node_info.json");
     }
 
     //create new todos
