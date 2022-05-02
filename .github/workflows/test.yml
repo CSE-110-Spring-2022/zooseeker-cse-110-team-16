@@ -15,7 +15,7 @@ jobs:
 
       # Execute unit tests
       - name: Unit Test
-        run: ./gradlew TodoDatabaseTest
+        run: ./gradlew src/test/java/com/example/cse110lab5/TodoDatabaseTest.java
 
       # Report the results
       - name: Android Test Report
