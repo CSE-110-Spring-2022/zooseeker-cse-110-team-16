@@ -85,4 +85,9 @@ public class TodoDatabaseTest {
         assertEquals(1, itemsDeleted);
         assertNull(dao.get(id));
     }
+
+    @Test
+    public void testZooData() {
+
+    }
 }

@@ -21,6 +21,8 @@ import java.util.List;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 
+import java.util.Map;
+
 
 public class TodoListActivity extends AppCompatActivity {
     //Exposed for testing purposes later....
@@ -37,6 +39,8 @@ public class TodoListActivity extends AppCompatActivity {
 
         viewModel = new ViewModelProvider(this)
                 .get(TodoListViewModel.class);
+
+        Map<String, ZooData.VertexInfo> vInfo = ZooData.loadVertexInfoJSON("sample_node_info.json");//added
 
         TodoListAdapter adapter = new TodoListAdapter();
         adapter.setHasStableIds(true);
