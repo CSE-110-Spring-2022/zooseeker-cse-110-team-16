@@ -21,45 +21,47 @@ import java.util.Map;
 
 @RunWith(AndroidJUnit4.class)
 public class TodoDatabaseTest {
-    private TodoListItemDao dao;
+    //private VertexInfoItemDao dao;
     private TodoDatabase db;
 
-    @Before
-    public void createDb() {
-        Context context = ApplicationProvider.getApplicationContext();
-        db = Room.inMemoryDatabaseBuilder(context, TodoDatabase.class)
-                .allowMainThreadQueries()
-                .build();
-        dao = db.todoListItemDao();
-    }
+    //we might not need a database, only a map and/or list to store vertex info
+//    @Before
+//    public void createDb() {
+//        Context context = ApplicationProvider.getApplicationContext();
+//        db = Room.inMemoryDatabaseBuilder(context, TodoDatabase.class)
+//                .allowMainThreadQueries()
+//                .build();
+//        //dao = db.vertexInfoItemDao();
+//    }
+//
+//    @After
+//    public void closeDb() throws IOException {
+//        db.close();
+//    }
 
-    @After
-    public void closeDb() throws IOException {
-        db.close();
-    }
+//    @Test
+//    public void testInsert() {
+//        TodoListItem item1 = new TodoListItem("Pizza time", false, 0);
+//        TodoListItem item2 = new TodoListItem("Photos of Spider-Man", false, 1);
+//
+//        long id1 = dao.insert(item1);
+//        long id2 = dao.insert(item2);
+//
+//        assertNotEquals(id1, id2);
+//    }
 
-    @Test
-    public void testInsert() {
-        TodoListItem item1 = new TodoListItem("Pizza time", false, 0);
-        TodoListItem item2 = new TodoListItem("Photos of Spider-Man", false, 1);
-
-        long id1 = dao.insert(item1);
-        long id2 = dao.insert(item2);
-
-        assertNotEquals(id1, id2);
-    }
-
-    @Test
-    public void testGet() {
-        TodoListItem insertedItem = new TodoListItem("Pizza time", false, 0);
-        long id = dao.insert(insertedItem);
-
-        TodoListItem item = dao.get(id);
-        assertEquals(id, item.id);
-        assertEquals(insertedItem.text, item.text);
-        assertEquals(insertedItem.completed, item.completed);
-        assertEquals(insertedItem.order, item.order);
-    }
+    //WILL NEED TO IMPLEMENT THIS IN SEARCH
+//    @Test
+//    public void testGet() {
+//        TodoListItem insertedItem = new TodoListItem("Pizza time", false, 0);
+//        long id = dao.insert(insertedItem);
+//
+//        TodoListItem item = dao.get(id);
+//        assertEquals(id, item.id);
+//        assertEquals(insertedItem.text, item.text);
+//        assertEquals(insertedItem.completed, item.completed);
+//        assertEquals(insertedItem.order, item.order);
+//    }
 /*
     @Test
     public void testUpdate() {
@@ -88,10 +90,26 @@ public class TodoDatabaseTest {
     }
 */
     @Test
-    public void testAnimalInDatabase() {
-        App test = new App();
-        Map<String, ZooData.VertexInfo> data = test.getData();
-        //System.out.print(data.get("gorillas").kind);
+    public void testDatabaseNotNull() {
+        Context context = ApplicationProvider.getApplicationContext();
+        ZooData zooData = new ZooData();
+        Map<String, ZooData.VertexInfo> data = zooData.getData(context);
         assertNotNull(data);
+    }
+
+    @Test
+    public void testAnimalInDatabase() {
+        Context context = ApplicationProvider.getApplicationContext();
+        ZooData zooData = new ZooData();
+        Map<String, ZooData.VertexInfo> data = zooData.getData(context);
+        assertEquals(data.get("gorillas").name ,  "Gorillas");
+    }
+
+    @Test
+    public void testAnimalTagInDatabase() {
+        Context context = ApplicationProvider.getApplicationContext();
+        ZooData zooData = new ZooData();
+        Map<String, ZooData.VertexInfo> data = zooData.getData(context);
+        assertEquals(data.get("gorillas").tags ,  "[\"gorilla\",\"monkey\",\"ape\",\"mammal\"]");
     }
 }

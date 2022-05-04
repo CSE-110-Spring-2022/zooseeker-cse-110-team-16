@@ -13,44 +13,50 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.Executors;
 
-@Database(entities = {TodoListItem.class}, version = 1)
+@Database(entities = {ZooData.VertexInfo.class}, version = 1)
 public abstract class TodoDatabase extends RoomDatabase {
     private static TodoDatabase singleton = null;
     public Map<String, ZooData.VertexInfo> vInfo = null;
 
-    public abstract TodoListItemDao todoListItemDao();
+//    public abstract VertexInfoItemDao vertexInfoItemDao();
 
     //testing change
-    public Map<String, ZooData.VertexInfo> getData(){
+    public Map<String, ZooData.VertexInfo> getData(Context context){
         if (vInfo == null) {
-            vInfo = ZooData.loadVertexInfoJSON("sample_node_info.json");
+            System.out.println("TodoDatabase line 26");
+            vInfo = ZooData.loadVertexInfoJSON(context, "sample_node_info.json");
+        }
+        else {
+            System.out.println("vInfo is not null");
+            //System.out.println(vInfo);
         }
         return vInfo;
     }
 
-    public synchronized static TodoDatabase getSingleton(Context context) {
-        if (singleton == null) {
-            singleton = TodoDatabase.makeDatabase(context);
-        }
-        return singleton;
-    }
+//    //testing the reading data without database
+//    public synchronized static TodoDatabase getSingleton(Context context) {
+//        if (singleton == null) {
+//            singleton = TodoDatabase.makeDatabase(context);
+//        }
+//        return singleton;
+//    }
 
-    private static TodoDatabase makeDatabase(Context context) {
-        return Room.databaseBuilder(context, TodoDatabase.class, "todo_app.db")
-                .allowMainThreadQueries()
-                .addCallback(new Callback() {
-                    @Override
-                    public void onCreate(@NonNull SupportSQLiteDatabase db) {
-                        super.onCreate(db);
-                        Executors.newSingleThreadScheduledExecutor().execute(() -> {
-                            Map<String, ZooData.VertexInfo> todos = ZooData
-                                    .loadVertexInfoJSON("sample_node_info.json");
-                            getSingleton(context).todoListItemDao().insertAll(todos);
-                        });
-                    }
-                })
-                .build();
-    }
+//    private static TodoDatabase makeDatabase(Context context) {
+//        return Room.databaseBuilder(context, TodoDatabase.class, "todo_app.db")
+//                .allowMainThreadQueries()
+//                .addCallback(new Callback() {
+//                    @Override
+//                    public void onCreate(@NonNull SupportSQLiteDatabase db) {
+//                        super.onCreate(db);
+//                        Executors.newSingleThreadScheduledExecutor().execute(() -> {
+//                            Map<String, ZooData.VertexInfo> todos = ZooData
+//                                    .loadVertexInfoJSON(context, "sample_node_info.json");
+//                            getSingleton(context).vertexInfoItemDao().insertAll(todos);
+//                        });
+//                    }
+//                })
+//                .build();
+//    }
 
 
     //testing

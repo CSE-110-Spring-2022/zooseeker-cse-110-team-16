@@ -10,8 +10,7 @@ import java.util.Map;
 //import org.jgrapht.alg.shortestpath.DijkstraShortestPath;
 
 public class App {
-    public Map<String, ZooData.VertexInfo> vInfo;
-    public void main(String[] args) {
+    public static void main(String[] args) {
         // "source" and "sink" are graph terms for the start and end
         String start = "entrance_exit_gate";
         String goal = "elephant_odyssey";
@@ -21,14 +20,14 @@ public class App {
         //GraphPath<String, IdentifiedWeightedEdge> path = DijkstraShortestPath.findPathBetween(g, start, goal);
 
         // 2. Load the information about our nodes and edges...         
-        vInfo = ZooData.loadVertexInfoJSON("sample_node_info.json");
+        //Map<String, ZooData.VertexInfo> vInfo = ZooData.loadVertexInfoJSON("sample_node_info.json");
         //Map<String, ZooData.EdgeInfo> eInfo = ZooData.loadEdgeInfoJSON("sample_edge_info.json");
 
 
 
         //System.out.printf("The shortest path from '%s' to '%s' is:\n", start, goal);
 
-        int i = 1;
+//        int i = 1;
 //        for (IdentifiedWeightedEdge e : path.getEdgeList()) {
 //            System.out.printf("  %d. Walk %.0f meters along %s from '%s' to '%s'.\n",
 //                    i,
@@ -38,11 +37,5 @@ public class App {
 //                    vInfo.get(g.getEdgeTarget(e).toString()).name);
 //            i++;
 //        }
-    }
-    public Map<String, ZooData.VertexInfo> getData(){
-        if (vInfo == null) {
-            vInfo = ZooData.loadVertexInfoJSON("sample_node_info.json");
-        }
-        return vInfo;
     }
 }
