@@ -38,6 +38,11 @@ public class ListActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void onListBtnClicked(View view) {
+        Intent intent = new Intent(this, TodoListActivity.class);
+        startActivity(intent);
+    }
+
     // TODO: Display number of items in selectedExhibitNames
     // TODO: Get code from lab5 for adding items to an expanding view on screen
 }
