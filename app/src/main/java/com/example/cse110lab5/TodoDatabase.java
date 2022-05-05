@@ -18,8 +18,6 @@ public abstract class TodoDatabase extends RoomDatabase {
     private static TodoDatabase singleton = null;
     public Map<String, ZooData.VertexInfo> vInfo = null;
 
-//    public abstract VertexInfoItemDao vertexInfoItemDao();
-
     //testing change
     public Map<String, ZooData.VertexInfo> getData(Context context){
         if (vInfo == null) {
@@ -32,50 +30,6 @@ public abstract class TodoDatabase extends RoomDatabase {
         }
         return vInfo;
     }
-
-//    //testing the reading data without database
-//    public synchronized static TodoDatabase getSingleton(Context context) {
-//        if (singleton == null) {
-//            singleton = TodoDatabase.makeDatabase(context);
-//        }
-//        return singleton;
-//    }
-
-//    private static TodoDatabase makeDatabase(Context context) {
-//        return Room.databaseBuilder(context, TodoDatabase.class, "todo_app.db")
-//                .allowMainThreadQueries()
-//                .addCallback(new Callback() {
-//                    @Override
-//                    public void onCreate(@NonNull SupportSQLiteDatabase db) {
-//                        super.onCreate(db);
-//                        Executors.newSingleThreadScheduledExecutor().execute(() -> {
-//                            Map<String, ZooData.VertexInfo> todos = ZooData
-//                                    .loadVertexInfoJSON(context, "sample_node_info.json");
-//                            getSingleton(context).vertexInfoItemDao().insertAll(todos);
-//                        });
-//                    }
-//                })
-//                .build();
-//    }
-
-
-    //testing
-//    private static TodoDatabase makeDatabase(Context context) {
-//        return Room.databaseBuilder(context, TodoDatabase.class, "todo_app.db")
-//                .allowMainThreadQueries()
-//                .addCallback(new Callback() {
-//                    @Override
-//                    public void onCreate(@NonNull SupportSQLiteDatabase db) {
-//                        super.onCreate(db);
-//                        Executors.newSingleThreadScheduledExecutor().execute(() -> {
-//                            List<TodoListItem> todos = TodoListItem
-//                                    .loadJSON(context, "demo_todos.json");
-//                            getSingleton(context).todoListItemDao().insertAll(todos);
-//                        });
-//                    }
-//                })
-//                .build();
-//    }
 
     @VisibleForTesting
     public static void injectTestDatabase(TodoDatabase testDatabase) {
