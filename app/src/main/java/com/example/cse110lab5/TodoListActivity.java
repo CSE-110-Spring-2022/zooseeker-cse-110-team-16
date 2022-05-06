@@ -24,12 +24,16 @@ import java.util.function.Consumer;
 import java.util.Map;
 
 public class TodoListActivity extends AppCompatActivity {
+    // TODO: Add a button to go to the plan activity
+    // TODO: Pass selected exhibits to the plan activity
+
     //Exposed for testing purposes later....
     public RecyclerView recyclerView;
 
     private TodoListViewModel viewModel;
     private EditText newTodoText;
     private Button addTodoButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -19,7 +19,7 @@ public class PlanActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_route);
+        setContentView(R.layout.activity_plan);
 
         // Receive the selected exhibit names from ListActivity
         Bundle extras = getIntent().getExtras();
@@ -30,7 +30,7 @@ public class PlanActivity extends AppCompatActivity {
 
     // ======================== Basic Bottom Navigation UI ========================
     public void onListBtnClicked(View view) {
-        Intent intent = new Intent(this, ListActivity.class);
+        Intent intent = new Intent(this, TodoListActivity.class);
         startActivity(intent);
     }
 

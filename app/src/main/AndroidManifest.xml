@@ -10,12 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CSE110Lab5">
         <activity
-            android:name=".TodoListActivity" />
-        <activity
             android:name=".PlanActivity"
             android:exported="false" />
         <activity
-            android:name=".ListActivity"
+            android:name=".TodoListActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
