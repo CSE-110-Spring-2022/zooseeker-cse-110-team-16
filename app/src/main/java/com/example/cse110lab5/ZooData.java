@@ -23,7 +23,15 @@ import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.reflect.TypeToken;
 
+import org.jgrapht.Graph;
+import org.jgrapht.graph.DefaultUndirectedWeightedGraph;
+import org.jgrapht.nio.json.JSONImporter;
+
 public class ZooData {
+
+    public String vertexInfoFile = "sample_node_info.json";
+    public String edgeInfoFile = "sample_edge_info.json";
+    public String graphInfoFile = "sample_zoo_graph.json";
 
     public static enum Kind {
         // The SerializedName annotation tells GSON how to convert
@@ -70,15 +78,47 @@ public class ZooData {
             this.name = name;
             this.tags = tags;
         }
+
+        //vertex info getter methods
+        public Kind getKind() {
+            return kind;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public String getTags() {
+            return tags;
+        }
     }
 
     public Map<String, ZooData.VertexInfo> vInfo = null;
+    public Map<String, ZooData.EdgeInfo> eInfo = null;
+    public Graph<String, IdentifiedWeightedEdge> gInfo = null;
 
-    public Map<String, ZooData.VertexInfo> getData(Context context){
+    public void populateDatabase(Context context) {
         if (vInfo == null) {
-            vInfo = ZooData.loadVertexInfoJSON(context, "sample_node_info.json");
+            vInfo = ZooData.loadVertexInfoJSON(context, vertexInfoFile);
         }
+        if (eInfo == null) {
+            eInfo = ZooData.loadEdgeInfoJSON(context, edgeInfoFile);
+        }
+        if (gInfo == null) {
+            gInfo = ZooData.loadZooGraphJSON(context, graphInfoFile);
+        }
+    }
+
+    public Map<String, ZooData.VertexInfo> getVertexDatabase(){
         return vInfo;
+    }
+
+    public Map<String, ZooData.EdgeInfo> getEdgeDatabase(){
+        return eInfo;
+    }
+
+    public Graph<String, IdentifiedWeightedEdge> getGraphDatabase() {
+        return gInfo;
     }
 
     //TYPE CONVERTERS FROM VERTEXINFO
@@ -114,6 +154,79 @@ public class ZooData {
         } catch (IOException e) {
             e.printStackTrace();
             return Collections.emptyMap();
+        }
+    }
+
+    //READING EDGE INFO
+    @Entity(tableName = "edge_info")
+    public static class EdgeInfo {
+        @PrimaryKey (autoGenerate = true)
+        public long idx;
+
+        @NonNull
+        public String id;
+        public String street;
+
+        EdgeInfo(@NonNull String id, String street) {
+            this.id = id;
+            this.street = street;
+        }
+
+        //edge info getter methods
+        public String getStreet() {
+            return street;
+        }
+    }
+
+    public static Map<String, ZooData.EdgeInfo> loadEdgeInfoJSON(Context context, String path) {
+        try {
+            InputStream inputStream = context.getAssets().open(path);
+            Reader reader = new InputStreamReader(inputStream);
+
+            Gson gson = new Gson();
+            Type type = new TypeToken<List<ZooData.EdgeInfo>>(){}.getType();
+            List<ZooData.EdgeInfo> zooData = gson.fromJson(reader, type);
+
+            Map<String, ZooData.EdgeInfo> indexedZooData = zooData
+                    .stream()
+                    .collect(Collectors.toMap(v -> v.id, datum -> datum));
+
+            return indexedZooData;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return Collections.emptyMap();
+        }
+    }
+
+    //creating graph database
+    public static Graph<String, IdentifiedWeightedEdge> loadZooGraphJSON(Context context, String path) {
+        try {
+            // Create an empty graph to populate.
+            Graph<String, IdentifiedWeightedEdge> g = new DefaultUndirectedWeightedGraph<>(IdentifiedWeightedEdge.class);
+
+            // Create an importer that can be used to populate our empty graph.
+            JSONImporter<String, IdentifiedWeightedEdge> importer = new JSONImporter<>();
+
+            // We don't need to convert the vertices in the graph, so we return them as is.
+            importer.setVertexFactory(v -> v);
+
+            // We need to make sure we set the IDs on our edges from the 'id' attribute.
+            // While this is automatic for vertices, it isn't for edges. We keep the
+            // definition of this in the IdentifiedWeightedEdge class for convenience.
+            importer.addEdgeAttributeConsumer(IdentifiedWeightedEdge::attributeConsumer);
+
+            // On Android, you would use context.getAssets().open(path) here like in Lab 5.
+            InputStream inputStream = context.getAssets().open(path);
+            Reader reader = new InputStreamReader(inputStream);
+
+            // And now we just import it!
+            importer.importGraph(g, reader);
+
+            return g;
+        } catch (IOException e) {
+            e.printStackTrace();
+            //might give error when ioexception happens
+            return null;
         }
     }
 }
