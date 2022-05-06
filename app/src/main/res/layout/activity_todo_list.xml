@@ -11,24 +11,22 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="1dp"
+        android:layout_marginTop="150dp"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="1dp"
-        android:scrollbars="vertical"
         android:scrollbarSize="5dp"
+        android:scrollbars="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
+    <SearchView
         android:id="@+id/new_todo_text"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="311dp"
+        android:layout_height="50dp"
         android:layout_marginStart="19dp"
-        android:layout_marginBottom="1dp"
-        android:hint="Enter a animal here...."
-        app:layout_constraintBottom_toBottomOf="@+id/todo_items"
+        android:hint="Search an animal here...."
         app:layout_constraintEnd_toStartOf="@+id/add_todo_btn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/add_todo_btn" />
@@ -38,8 +36,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="14dp"
-        android:layout_marginBottom="6dp"
-        android:text="Add"
+        android:layout_marginBottom="652dp"
+        android:text="Search"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/new_todo_text" />
