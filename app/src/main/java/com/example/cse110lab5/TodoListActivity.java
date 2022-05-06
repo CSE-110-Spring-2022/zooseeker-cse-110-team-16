@@ -29,7 +29,6 @@ public class TodoListActivity extends AppCompatActivity {
 
     //Exposed for testing purposes later....
     public RecyclerView recyclerView;
-
     private TodoListViewModel viewModel;
     private EditText newTodoText;
     private Button addTodoButton;
