@@ -36,6 +36,7 @@ public class TodoListActivity extends AppCompatActivity {
 
     //Exposed for testing purposes later....
     public RecyclerView recyclerView;
+
     private TodoListViewModel viewModel;
     private SearchView newTodoText;
     private Button addTodoButton;
@@ -43,7 +44,7 @@ public class TodoListActivity extends AppCompatActivity {
     private ListView listView;
     private ArrayAdapter<String> arrayAdapter;
     private ArrayList<String> searchResults;
-    private ArrayList<String> addedAnimals;
+    private ArrayList<String> addedAnimals = new ArrayList<String>();
 
 
     @Override
@@ -87,13 +88,13 @@ public class TodoListActivity extends AppCompatActivity {
         arrayAdapter = new ArrayAdapter<String>(context, android.R.layout.simple_list_item_1);
         listView.setAdapter(arrayAdapter);
 
-        //-------------Add selected items from ListView to addedResults array----------
+        //-------------Add selected items from ListView to addedAnimals array----------
         ListView lv = (ListView)findViewById(R.id.listView);
 
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-//                addedAnimals.add(searchResults.get(i));
+                addedAnimals.add(searchResults.get(i));
                 Toast.makeText(getApplicationContext(), "Selected: " + searchResults.get(i), Toast.LENGTH_LONG).show();
             }
         });
