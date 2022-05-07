@@ -93,12 +93,10 @@ public class TodoListActivity extends AppCompatActivity {
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                addedAnimals.add(searchResults.get(i));
+//                addedAnimals.add(searchResults.get(i));
                 Toast.makeText(getApplicationContext(), "Selected: " + searchResults.get(i), Toast.LENGTH_LONG).show();
             }
         });
-
-
     }
 
     public ArrayList<String> getAddedAnimals() {
