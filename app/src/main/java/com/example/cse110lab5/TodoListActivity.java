@@ -6,16 +6,21 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.SearchView;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.function.BiConsumer;
@@ -30,8 +35,12 @@ public class TodoListActivity extends AppCompatActivity {
     //Exposed for testing purposes later....
     public RecyclerView recyclerView;
     private TodoListViewModel viewModel;
-    private EditText newTodoText;
+    private SearchView newTodoText;
     private Button addTodoButton;
+    private Map<String, ZooData.VertexInfo> nodeData;
+    private ListView listView;
+    private ArrayAdapter<String> arrayAdapter;
+    private ArrayList<String> searchResults;
 
 
     @Override
@@ -57,13 +66,47 @@ public class TodoListActivity extends AppCompatActivity {
         this.addTodoButton = this.findViewById(R.id.add_todo_btn);
 
         addTodoButton.setOnClickListener(this::onAddTodoClicked);
+
+        Context context = getApplicationContext();
+        ZooData zooData = new ZooData();
+        zooData.populateDatabase(context);
+        nodeData = zooData.getVertexDatabase();
+        //add edge and graph databases if you need them
+
+        searchResults = new ArrayList<String>(){};
+        //filters nodeData based on search query
+        for (ZooData.VertexInfo vertex : nodeData.values()){
+            String nodeName = vertex.getName();
+            searchResults.add(nodeName);
+        }
+
+        listView = findViewById(R.id.listView);
+        arrayAdapter = new ArrayAdapter<String>(context, android.R.layout.simple_list_item_1,searchResults);
+        listView.setAdapter(arrayAdapter);
+
+
     }
 
-    //create new todos
+    //shiv's add click
+//    void onAddTodoClicked(View view) {
+//        String text = newTodoText.getText().toString();
+//        newTodoText.setText("");
+//        viewModel.createTodo(text);
+//    }
+
     void onAddTodoClicked(View view) {
-        String text = newTodoText.getText().toString();
-        newTodoText.setText("");
-        viewModel.createTodo(text);
+        String query = newTodoText.getQuery().toString();
+//        searchResults = new ArrayList<String>(){};
+//        //filters nodeData based on search query
+//        for (ZooData.VertexInfo vertex : nodeData.values()){
+//            String nodeName = vertex.getName();
+//            if (nodeName.contains(query) || vertex.getTags().contains(query)){
+//                searchResults.add(nodeName);
+//            }
+//        }
+
+        arrayAdapter.getFilter().filter(query);
+        //viewModel.createTodo(query);
     }
 
     public class TodoListAdapter extends RecyclerView.Adapter<TodoListAdapter.ViewHolder> {
