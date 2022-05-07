@@ -23,23 +23,29 @@
 
     <SearchView
         android:id="@+id/new_todo_text"
-        android:layout_width="311dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="19dp"
+        android:layout_width="251dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="4dp"
         android:hint="Search an animal here...."
+        app:layout_constraintBottom_toTopOf="@+id/todo_items"
         app:layout_constraintEnd_toStartOf="@+id/add_todo_btn"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/add_todo_btn" />
+        app:layout_constraintTop_toTopOf="@+id/add_todo_btn"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/add_todo_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="14dp"
-        android:layout_marginBottom="652dp"
         android:text="Search"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/new_todo_text" />
+        app:layout_constraintStart_toEndOf="@+id/new_todo_text"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.test.core.app.ApplicationProvider;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -14,8 +16,12 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.SearchView;
 import android.widget.TextView;
 
+import org.jgrapht.Graph;
+
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.function.BiConsumer;
@@ -30,9 +36,9 @@ public class TodoListActivity extends AppCompatActivity {
     //Exposed for testing purposes later....
     public RecyclerView recyclerView;
     private TodoListViewModel viewModel;
-    private EditText newTodoText;
+    private SearchView newTodoText;
     private Button addTodoButton;
-
+    private Map<String, ZooData.VertexInfo> nodeData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,13 +63,29 @@ public class TodoListActivity extends AppCompatActivity {
         this.addTodoButton = this.findViewById(R.id.add_todo_btn);
 
         addTodoButton.setOnClickListener(this::onAddTodoClicked);
+
+        Context context = ApplicationProvider.getApplicationContext();
+        ZooData zooData = new ZooData();
+        zooData.populateDatabase(context);
+        nodeData = zooData.getVertexDatabase();
+        //add edge and graph databases if you need them
     }
 
     //create new todos
     void onAddTodoClicked(View view) {
-        String text = newTodoText.getText().toString();
-        newTodoText.setText("");
-        viewModel.createTodo(text);
+        String query = newTodoText.getQuery().toString();
+        ArrayList<String> searchResults = new ArrayList<String>(){};
+        //filters nodeData based on search query
+        for (ZooData.VertexInfo vertex : nodeData.values()){
+            String nodeName = vertex.getName();
+            if (nodeName.contains(query) || vertex.getTags().contains(query)){
+                searchResults.add(nodeName);
+            }
+        }
+
+        // TODO: display search results
+        //newTodoText.setText("");
+        viewModel.createTodo(query);
     }
 
     public class TodoListAdapter extends RecyclerView.Adapter<TodoListAdapter.ViewHolder> {
