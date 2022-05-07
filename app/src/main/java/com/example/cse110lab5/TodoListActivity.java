@@ -43,7 +43,7 @@ public class TodoListActivity extends AppCompatActivity {
     private ListView listView;
     private ArrayAdapter<String> arrayAdapter;
     private ArrayList<String> searchResults;
-    private ArrayList<String> addedResults;
+    private ArrayList<String> addedAnimals;
 
 
     @Override
@@ -93,12 +93,16 @@ public class TodoListActivity extends AppCompatActivity {
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                addedResults.add(searchResults.get(i));
+                addedAnimals.add(searchResults.get(i));
                 Toast.makeText(getApplicationContext(), "Selected: " + searchResults.get(i), Toast.LENGTH_LONG).show();
             }
         });
 
 
+    }
+
+    public ArrayList<String> getAddedAnimals() {
+        return addedAnimals;
     }
 
     //shiv's add click
