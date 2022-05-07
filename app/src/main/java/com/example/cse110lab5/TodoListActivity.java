@@ -81,7 +81,7 @@ public class TodoListActivity extends AppCompatActivity {
         }
 
         listView = findViewById(R.id.listView);
-        arrayAdapter = new ArrayAdapter<String>(context, android.R.layout.simple_list_item_1,searchResults);
+        arrayAdapter = new ArrayAdapter<String>(context, android.R.layout.simple_list_item_1);
         listView.setAdapter(arrayAdapter);
 
 
@@ -94,19 +94,22 @@ public class TodoListActivity extends AppCompatActivity {
 //        viewModel.createTodo(text);
 //    }
 
+//https://www.youtube.com/watch?v=M3UDh9mwBd8
+// How to Add Search View in Toolbar in Android Studio | SearchView on Toolbar | Actionbar
+// 5/6/2022
+// copied format and changed some things
     void onAddTodoClicked(View view) {
+        arrayAdapter.clear();
         String query = newTodoText.getQuery().toString();
-//        searchResults = new ArrayList<String>(){};
-//        //filters nodeData based on search query
-//        for (ZooData.VertexInfo vertex : nodeData.values()){
-//            String nodeName = vertex.getName();
-//            if (nodeName.contains(query) || vertex.getTags().contains(query)){
-//                searchResults.add(nodeName);
-//            }
-//        }
-
-        arrayAdapter.getFilter().filter(query);
-        //viewModel.createTodo(query);
+        searchResults = new ArrayList<String>(){};
+        //filters nodeData based on search query
+        for (ZooData.VertexInfo vertex : nodeData.values()){
+            String nodeName = vertex.getName();
+            if (nodeName.contains(query) || vertex.getTags().contains(query)){
+                searchResults.add(nodeName);
+            }
+        }
+        arrayAdapter.addAll(searchResults);
     }
 
     public class TodoListAdapter extends RecyclerView.Adapter<TodoListAdapter.ViewHolder> {
