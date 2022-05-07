@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -19,6 +20,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.SearchView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -41,6 +43,7 @@ public class TodoListActivity extends AppCompatActivity {
     private ListView listView;
     private ArrayAdapter<String> arrayAdapter;
     private ArrayList<String> searchResults;
+    private ArrayList<String> addedResults;
 
 
     @Override
@@ -83,6 +86,17 @@ public class TodoListActivity extends AppCompatActivity {
         listView = findViewById(R.id.listView);
         arrayAdapter = new ArrayAdapter<String>(context, android.R.layout.simple_list_item_1);
         listView.setAdapter(arrayAdapter);
+
+        //-------------Add selected items from ListView to addedResults array----------
+        ListView lv = (ListView)findViewById(R.id.listView);
+
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                addedResults.add(searchResults.get(i));
+                Toast.makeText(getApplicationContext(), "Selected: " + searchResults.get(i), Toast.LENGTH_LONG).show();
+            }
+        });
 
 
     }
