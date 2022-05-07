@@ -45,6 +45,7 @@ public class TodoListActivity extends AppCompatActivity {
     private ArrayAdapter<String> arrayAdapter;
     private ArrayList<String> searchResults;
     private ArrayList<String> addedAnimals = new ArrayList<String>();
+    public int numAnimalsSelected = 0;
 
 
     @Override
@@ -89,15 +90,17 @@ public class TodoListActivity extends AppCompatActivity {
         listView.setAdapter(arrayAdapter);
 
         //-------------Add selected items from ListView to addedAnimals array----------
-        ListView lv = (ListView)findViewById(R.id.listView);
+        ListView lv = (ListView) findViewById(R.id.listView);
 
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 addedAnimals.add(searchResults.get(i));
                 Toast.makeText(getApplicationContext(), "Selected: " + searchResults.get(i), Toast.LENGTH_LONG).show();
+                numAnimalsSelected++;
             }
         });
+
     }
 
     public ArrayList<String> getAddedAnimals() {
@@ -127,6 +130,11 @@ public class TodoListActivity extends AppCompatActivity {
             }
         }
         arrayAdapter.addAll(searchResults);
+    }
+
+    public void onCountBtnClick(View view) {
+        TextView tview = (TextView) findViewById(R.id.countView);
+        tview.setText(String.valueOf(numAnimalsSelected));
     }
 
     public class TodoListAdapter extends RecyclerView.Adapter<TodoListAdapter.ViewHolder> {
