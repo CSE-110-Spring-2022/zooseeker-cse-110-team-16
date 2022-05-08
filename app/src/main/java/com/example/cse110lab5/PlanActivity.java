@@ -61,9 +61,18 @@ public class PlanActivity extends AppCompatActivity {
         //pass path information to directions activity
 
         Intent intent = new Intent(this, DirectionsActivity.class);
+        //route = STRATEGY.makeRoute(edgeData, selectedExhibitNames);
+
+        //create mock route
+        GraphPath<String, IdentifiedWeightedEdge> path = DijkstraShortestPath.findPathBetween(edgeData, "entrance_exit_gate", "gorillas");
+        GraphPath<String, IdentifiedWeightedEdge> path1 = DijkstraShortestPath.findPathBetween(edgeData, "gorillas", "lions");
+
+        List<GraphPath<String, IdentifiedWeightedEdge>> mockRoute = new ArrayList<>();
+        mockRoute.add(path);
+        mockRoute.add(path1);
 
         Gson gson = new Gson();
-        String JsonRoute = gson.toJson(route);
+        String JsonRoute = gson.toJson(mockRoute);
         intent.putExtra("JsonRoute", JsonRoute);
 
         startActivity(intent);

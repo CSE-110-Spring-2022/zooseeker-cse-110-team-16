@@ -6,4 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".DirectionsActivity">
 
+    <TextView
+        android:id="@+id/directionsView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="177dp"
+        tools:layout_editor_absoluteY="149dp" />
+
+    <Button
+        android:id="@+id/next_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        tools:layout_editor_absoluteX="159dp"
+        tools:layout_editor_absoluteY="459dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
