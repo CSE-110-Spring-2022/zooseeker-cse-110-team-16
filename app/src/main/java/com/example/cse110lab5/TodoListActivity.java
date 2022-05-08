@@ -7,11 +7,13 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -19,6 +21,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.SearchView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -34,6 +37,7 @@ public class TodoListActivity extends AppCompatActivity {
 
     //Exposed for testing purposes later....
     public RecyclerView recyclerView;
+
     private TodoListViewModel viewModel;
     private SearchView newTodoText;
     private Button addTodoButton;
@@ -41,6 +45,8 @@ public class TodoListActivity extends AppCompatActivity {
     private ListView listView;
     private ArrayAdapter<String> arrayAdapter;
     private ArrayList<String> searchResults;
+    private ArrayList<String> addedAnimals = new ArrayList<String>();
+    public int numAnimalsSelected = 0;
 
 
     @Override
@@ -81,32 +87,50 @@ public class TodoListActivity extends AppCompatActivity {
         }
 
         listView = findViewById(R.id.listView);
-        arrayAdapter = new ArrayAdapter<String>(context, android.R.layout.simple_list_item_1,searchResults);
+        arrayAdapter = new ArrayAdapter<String>(context, android.R.layout.simple_list_item_1);
         listView.setAdapter(arrayAdapter);
 
+        //-------------Add selected items from ListView to addedAnimals array----------
+        ListView lv = (ListView) findViewById(R.id.listView);
+
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                addedAnimals.add(searchResults.get(i));
+                Toast.makeText(getApplicationContext(), "Selected: " + searchResults.get(i), Toast.LENGTH_LONG).show();
+                numAnimalsSelected++;
+            }
+        });
 
     }
 
-    //shiv's add click
-//    void onAddTodoClicked(View view) {
-//        String text = newTodoText.getText().toString();
-//        newTodoText.setText("");
-//        viewModel.createTodo(text);
-//    }
+    public void onPlanBtnClicked(View view) {
+        Intent intent = new Intent(this, PlanActivity.class);
+        intent.putExtra("addedAnimals", addedAnimals.toArray(new String[0]));
+        startActivity(intent);
+    }
 
+//https://www.youtube.com/watch?v=M3UDh9mwBd8
+// How to Add Search View in Toolbar in Android Studio | SearchView on Toolbar | Actionbar
+// 5/6/2022
+// copied format and changed some things
     void onAddTodoClicked(View view) {
+        arrayAdapter.clear();
         String query = newTodoText.getQuery().toString();
-//        searchResults = new ArrayList<String>(){};
-//        //filters nodeData based on search query
-//        for (ZooData.VertexInfo vertex : nodeData.values()){
-//            String nodeName = vertex.getName();
-//            if (nodeName.contains(query) || vertex.getTags().contains(query)){
-//                searchResults.add(nodeName);
-//            }
-//        }
+        searchResults = new ArrayList<String>(){};
+        //filters nodeData based on search query
+        for (ZooData.VertexInfo vertex : nodeData.values()){
+            String nodeName = vertex.getName();
+            if (nodeName.contains(query) || vertex.getTags().contains(query)){
+                searchResults.add(nodeName);
+            }
+        }
+        arrayAdapter.addAll(searchResults);
+    }
 
-        arrayAdapter.getFilter().filter(query);
-        //viewModel.createTodo(query);
+    public void onCountBtnClick(View view) {
+        TextView tview = (TextView) findViewById(R.id.countView);
+        tview.setText(String.valueOf(numAnimalsSelected));
     }
 
     public class TodoListAdapter extends RecyclerView.Adapter<TodoListAdapter.ViewHolder> {
