@@ -46,6 +46,7 @@ public class TodoListActivity extends AppCompatActivity {
     private ArrayAdapter<String> arrayAdapter;
     private ArrayList<String> searchResults;
     private ArrayList<String> addedAnimals = new ArrayList<String>();
+    private ArrayList<String> searchResultsID;
     public int numAnimalsSelected = 0;
 
 
@@ -96,7 +97,7 @@ public class TodoListActivity extends AppCompatActivity {
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                addedAnimals.add(searchResults.get(i));
+                addedAnimals.add(searchResultsID.get(i));
                 Toast.makeText(getApplicationContext(), "Selected: " + searchResults.get(i), Toast.LENGTH_LONG).show();
                 numAnimalsSelected++;
             }
@@ -118,11 +119,13 @@ public class TodoListActivity extends AppCompatActivity {
         arrayAdapter.clear();
         String query = newTodoText.getQuery().toString();
         searchResults = new ArrayList<String>(){};
+        searchResultsID = new ArrayList<String>(){};
         //filters nodeData based on search query
         for (ZooData.VertexInfo vertex : nodeData.values()){
             String nodeName = vertex.getName();
             if (nodeName.contains(query) || vertex.getTags().contains(query)){
                 searchResults.add(nodeName);
+                searchResultsID.add(vertex.getId());
             }
         }
         arrayAdapter.addAll(searchResults);
