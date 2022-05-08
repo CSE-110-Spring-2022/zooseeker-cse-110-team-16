@@ -34,4 +34,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
+
+    <ListView
+        android:id="@+id/selected_exhibits"
+        android:layout_width="409dp"
+        android:layout_height="632dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="2dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

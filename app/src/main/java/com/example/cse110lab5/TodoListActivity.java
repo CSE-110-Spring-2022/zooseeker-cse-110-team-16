@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -103,16 +104,12 @@ public class TodoListActivity extends AppCompatActivity {
 
     }
 
-    public ArrayList<String> getAddedAnimals() {
-        return addedAnimals;
+    public void onPlanBtnClicked(View view) {
+        Intent intent = new Intent(this, PlanActivity.class);
+        String[] foo = {"gorilla", "lion", "panda", "shark"};
+        intent.putExtra("addedAnimals", foo);
+        startActivity(intent);
     }
-
-    //shiv's add click
-//    void onAddTodoClicked(View view) {
-//        String text = newTodoText.getText().toString();
-//        newTodoText.setText("");
-//        viewModel.createTodo(text);
-//    }
 
 //https://www.youtube.com/watch?v=M3UDh9mwBd8
 // How to Add Search View in Toolbar in Android Studio | SearchView on Toolbar | Actionbar
