@@ -27,6 +27,7 @@ public class PlanActivity extends AppCompatActivity {
     private final ZooData zooData = new ZooData();
     private Graph<String, IdentifiedWeightedEdge> edgeData;
     private List<GraphPath<String, IdentifiedWeightedEdge>> route;
+    private List<String> sortedVertexList = new ArrayList<>();
 
     // TODO: selectedExhibitNames cannot be empty yet, remember to select some animals before entering this activity!
 
@@ -44,6 +45,8 @@ public class PlanActivity extends AppCompatActivity {
 
         GraphPath<String, IdentifiedWeightedEdge> path = DijkstraShortestPath.findPathBetween(edgeData, "entrance_exit_gate", "gorillas");
 
+        this.sortedVertexList = path.getVertexList();
+
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, path.getVertexList());
         ListView exhibitList = this.findViewById(R.id.selected_exhibits);
         exhibitList.setAdapter(adapter);
@@ -59,20 +62,14 @@ public class PlanActivity extends AppCompatActivity {
 
     public void onDirectionsBtnClick(View view) {
         //pass path information to directions activity
-
-        Intent intent = new Intent(this, DirectionsActivity.class);
         //route = STRATEGY.makeRoute(edgeData, selectedExhibitNames);
 
-        //create mock route
-        GraphPath<String, IdentifiedWeightedEdge> path = DijkstraShortestPath.findPathBetween(edgeData, "entrance_exit_gate", "gorillas");
-        GraphPath<String, IdentifiedWeightedEdge> path1 = DijkstraShortestPath.findPathBetween(edgeData, "gorillas", "lions");
+        //pass in sortedVertexList from above to directionsActivity
+        List<String> route = this.sortedVertexList;
 
-        List<GraphPath<String, IdentifiedWeightedEdge>> mockRoute = new ArrayList<>();
-        mockRoute.add(path);
-        mockRoute.add(path1);
-
+        Intent intent = new Intent(this, DirectionsActivity.class);
         Gson gson = new Gson();
-        String JsonRoute = gson.toJson(mockRoute);
+        String JsonRoute = gson.toJson(route);
         intent.putExtra("JsonRoute", JsonRoute);
 
         startActivity(intent);
