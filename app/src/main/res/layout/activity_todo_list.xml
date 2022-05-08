@@ -8,19 +8,18 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/todo_items"
-        android:layout_width="100dp"
-        android:layout_height="310dp"
+        android:visibility = "invisible"
+        android:layout_width="24dp"
+        android:layout_height="336dp"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="10dp"
         android:layout_marginEnd="1dp"
-        android:layout_marginBottom="1dp"
+        android:layout_marginBottom="4dp"
         android:scrollbarSize="5dp"
         android:scrollbars="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.048"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.768" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <SearchView
         android:id="@+id/new_todo_text"
@@ -29,7 +28,6 @@
         android:layout_marginStart="24dp"
         android:layout_marginBottom="4dp"
         android:hint="Search an animal here...."
-        app:layout_constraintBottom_toTopOf="@+id/todo_items"
         app:layout_constraintEnd_toStartOf="@+id/add_todo_btn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/add_todo_btn"
@@ -86,14 +84,16 @@
         android:id="@+id/go_to_plan_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="550dp"
+        android:layout_marginEnd="50dp"
         android:onClick="onPlanBtnClicked"
         android:text="Plan"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.835"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.796" />
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

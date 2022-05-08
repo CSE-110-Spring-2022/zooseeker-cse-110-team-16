@@ -25,6 +25,7 @@ public abstract class ListDatabase extends RoomDatabase {
         return singleton;
     }
 
+    //deleted contents of demo_todos.json so list is not populated at start
     private static ListDatabase makeDatabase(Context context) {
         return Room.databaseBuilder(context, ListDatabase.class, "todo_app.db")
                 .allowMainThreadQueries()
