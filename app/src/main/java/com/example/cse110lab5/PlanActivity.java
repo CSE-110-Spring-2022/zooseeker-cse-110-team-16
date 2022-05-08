@@ -26,6 +26,8 @@ public class PlanActivity extends AppCompatActivity {
     private Graph<String, IdentifiedWeightedEdge> edgeData;
     private List<GraphPath<String, IdentifiedWeightedEdge>> route;
 
+    // TODO: selectedExhibitNames cannot be empty yet, remember to select some animals before entering this activity!
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,14 +40,13 @@ public class PlanActivity extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         this.selectedExhibitNames = new ArrayList<>(Arrays.asList(extras.getStringArray("addedAnimals")));
 
-        Set<String> foo = edgeData.vertexSet();
         GraphPath<String, IdentifiedWeightedEdge> path = DijkstraShortestPath.findPathBetween(edgeData, "entrance_exit_gate", "gorillas");
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, path.getVertexList());
         ListView exhibitList = this.findViewById(R.id.selected_exhibits);
         exhibitList.setAdapter(adapter);
 
-        route = STRATEGY.makeRoute(edgeData, selectedExhibitNames);
+//        route = STRATEGY.makeRoute(edgeData, selectedExhibitNames);
     }
 
     // ======================== Basic Bottom Navigation UI ========================
