@@ -8,6 +8,8 @@ import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.gson.Gson;
+
 import org.jgrapht.Graph;
 import org.jgrapht.GraphPath;
 import org.jgrapht.alg.shortestpath.DijkstraShortestPath;
@@ -53,6 +55,19 @@ public class PlanActivity extends AppCompatActivity {
     public void onListBtnClicked(View view) {
         Intent intent = new Intent(this, TodoListActivity.class);
         startActivity(intent);
+    }
+
+    public void onDirectionsBtnClick(View view) {
+        //pass path information to directions activity
+
+        Intent intent = new Intent(this, DirectionsActivity.class);
+
+        Gson gson = new Gson();
+        String JsonRoute = gson.toJson(route);
+        intent.putExtra("JsonRoute", JsonRoute);
+
+        startActivity(intent);
+
     }
 
     // TODO: Display directions from current exhibit to next exhibit
