@@ -31,6 +31,19 @@ public class DirectionsActivity extends AppCompatActivity {
         Gson gson = new Gson();
         this.sortedVertexList = gson.fromJson(getIntent().getStringExtra("JsonRoute"), List.class);
 
+        zooData.populateDatabase(this);
+        edgeData = zooData.getGraphDatabase();
+
+        //@Ilan, you can make your final route here and set this.route to be equal to what you get
+
+    }
+
+    public void onNextBtnClick(View view) {
+        numNextClicks++;
+
+        Map<String, ZooData.VertexInfo> vInfo = zooData.getVertexDatabase();
+        Map<String, ZooData.EdgeInfo> eInfo = zooData.getEdgeDatabase();
+
         /*
         System.out.printf("The shortest path from '%s' to '%s' is:\n", "entrance_exit_gate", "lions");
 
@@ -45,25 +58,16 @@ public class DirectionsActivity extends AppCompatActivity {
             i++;
         } */
 
-    }
-
-    public void onNextBtnClick(View view) {
-        numNextClicks++;
-
-        zooData.populateDatabase(this);
-        edgeData = zooData.getGraphDatabase();
-        Map<String, ZooData.VertexInfo> vInfo = zooData.getVertexDatabase();
-        Map<String, ZooData.EdgeInfo> eInfo = zooData.getEdgeDatabase();
-
-        zooData.populateDatabase(this);
-        edgeData = zooData.getGraphDatabase();
-
+        //populate direction text
         String title = "The shortest path from entrance_exit_gate to lions is: \n";
         String directions = "";
-        GraphPath<String, IdentifiedWeightedEdge> path = route.get(numNextClicks);
+
+
+        GraphPath<String, IdentifiedWeightedEdge> path = this.route.get(numNextClicks);
         int i = 0;
         for (IdentifiedWeightedEdge e : path.getEdgeList()) {
             directions += numNextClicks
+                    + i
                     + " Walk " + edgeData.getEdgeWeight(e)
                     + " meters along " + eInfo.get(e.getId()).street
                     + " from " + vInfo.get(edgeData.getEdgeSource(e).toString()).name
@@ -71,7 +75,6 @@ public class DirectionsActivity extends AppCompatActivity {
                     + "\n";
             i++;
         }
-
 
         TextView directionsTextView = (TextView) findViewById(R.id.directionsView);
         directionsTextView.setText(title + directions);
