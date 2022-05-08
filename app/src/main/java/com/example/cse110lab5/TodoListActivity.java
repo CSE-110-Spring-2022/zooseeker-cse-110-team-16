@@ -106,8 +106,7 @@ public class TodoListActivity extends AppCompatActivity {
 
     public void onPlanBtnClicked(View view) {
         Intent intent = new Intent(this, PlanActivity.class);
-        String[] foo = {"gorilla", "lion", "panda", "shark"};
-        intent.putExtra("addedAnimals", foo);
+        intent.putExtra("addedAnimals", addedAnimals.toArray(new String[0]));
         startActivity(intent);
     }
 
