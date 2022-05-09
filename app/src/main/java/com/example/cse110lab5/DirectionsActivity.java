@@ -63,14 +63,25 @@ public class DirectionsActivity extends AppCompatActivity {
         } */
 
         //populate direction text
-        String title = "The shortest path from entrance_exit_gate to lions is: \n\n";
-        String directions = "";
 
+        /*
+        String title = "";
+        if (sortedVertexList.size() > numNextClicks) {
+            title = "The shortest path from " + sortedVertexList.get(numNextClicks) + " to " + sortedVertexList.get(numNextClicks+1);
+        } */
+        String directions = "";
+        String title = "";
         int numPaths = route.size();
         if (numNextClicks <= numPaths) {
             GraphPath<String, IdentifiedWeightedEdge> path = this.route.get(numNextClicks - 1);
+            String start = "";
+            String end = "";
+            //title = "The shortest path from " + vInfo.get(edgeData.getEdgeTarget(path.getEdgeList().get(i)).toString()).name + " to " + vInfo.get(edgeData.getEdgeTarget(path.getEdgeList().get(i+1)).toString()).name;
             int i = 0;
             for (IdentifiedWeightedEdge e : path.getEdgeList()) {
+                if (i == 0) {
+                    start = vInfo.get(edgeData.getEdgeSource(e).toString()).name;
+                }
                 directions += numNextClicks
                         + i
                         + " Walk " + edgeData.getEdgeWeight(e)
@@ -79,10 +90,12 @@ public class DirectionsActivity extends AppCompatActivity {
                         + " to " + vInfo.get(edgeData.getEdgeTarget(e).toString()).name
                         + "\n\n";
                 i++;
+                end = vInfo.get(edgeData.getEdgeTarget(e)).name;
             }
+            title = "The shortest path from " + start + " to " + end;
 
             TextView directionsTextView = (TextView) findViewById(R.id.directionsView);
-            directionsTextView.setText(title + directions);
+            directionsTextView.setText(title + "\n\n" + directions);
         }
 
         else {
