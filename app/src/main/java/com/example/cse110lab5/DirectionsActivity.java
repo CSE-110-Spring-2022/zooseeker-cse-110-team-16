@@ -12,12 +12,13 @@ import org.jgrapht.Graph;
 import org.jgrapht.GraphPath;
 import org.jgrapht.alg.shortestpath.DijkstraShortestPath;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 public class DirectionsActivity extends AppCompatActivity {
     private int numNextClicks = 0;
-    private List<GraphPath<String, IdentifiedWeightedEdge>> route;
+    private List<GraphPath<String, IdentifiedWeightedEdge>> route = new ArrayList<>();
     private List<String> sortedVertexList;
     private final ZooData zooData = new ZooData();
     private Graph<String, IdentifiedWeightedEdge> edgeData;
@@ -59,11 +60,16 @@ public class DirectionsActivity extends AppCompatActivity {
         } */
 
         //populate direction text
-        String title = "The shortest path from entrance_exit_gate to lions is: \n";
+        String title = "The shortest path from entrance_exit_gate to lions is: \n\n";
         String directions = "";
 
+        //mock route
+        GraphPath<String, IdentifiedWeightedEdge> path1 = DijkstraShortestPath.findPathBetween(edgeData, sortedVertexList.get(0), sortedVertexList.get(2));
+        //GraphPath<String, IdentifiedWeightedEdge> path2 = DijkstraShortestPath.findPathBetween(edgeData, sortedVertexList.get(1), sortedVertexList.get(2));
+        route.add(path1);
+        //route.add(path2);
 
-        GraphPath<String, IdentifiedWeightedEdge> path = this.route.get(numNextClicks);
+        GraphPath<String, IdentifiedWeightedEdge> path = this.route.get(numNextClicks - 1);
         int i = 0;
         for (IdentifiedWeightedEdge e : path.getEdgeList()) {
             directions += numNextClicks
@@ -72,7 +78,7 @@ public class DirectionsActivity extends AppCompatActivity {
                     + " meters along " + eInfo.get(e.getId()).street
                     + " from " + vInfo.get(edgeData.getEdgeSource(e).toString()).name
                     + " to " + vInfo.get(edgeData.getEdgeTarget(e).toString()).name
-                    + "\n";
+                    + "\n\n";
             i++;
         }
 
