@@ -48,20 +48,6 @@ public class DirectionsActivity extends AppCompatActivity {
         Map<String, ZooData.VertexInfo> vInfo = zooData.getVertexDatabase();
         Map<String, ZooData.EdgeInfo> eInfo = zooData.getEdgeDatabase();
 
-        /*
-        System.out.printf("The shortest path from '%s' to '%s' is:\n", "entrance_exit_gate", "lions");
-
-        int i = 1;
-        for (IdentifiedWeightedEdge e : path.get(i).getEdgeList()) {
-            System.out.printf("  %d. Walk %.0f meters along %s from '%s' to '%s'.\n",
-                    i,
-                    g.getEdgeWeight(e),
-                    eInfo.get(e.getId()).street,
-                    vInfo.get(g.getEdgeSource(e).toString()).name,
-                    vInfo.get(g.getEdgeTarget(e).toString()).name);
-            i++;
-        } */
-
         //populate direction text
 
         /*
@@ -72,18 +58,18 @@ public class DirectionsActivity extends AppCompatActivity {
         String directions = "";
         String title = "";
         int numPaths = route.size();
+        int i = 0;
         if (numNextClicks <= numPaths) {
             GraphPath<String, IdentifiedWeightedEdge> path = this.route.get(numNextClicks - 1);
             String start = "";
             String end = "";
             //title = "The shortest path from " + vInfo.get(edgeData.getEdgeTarget(path.getEdgeList().get(i)).toString()).name + " to " + vInfo.get(edgeData.getEdgeTarget(path.getEdgeList().get(i+1)).toString()).name;
-            int i = 0;
             for (IdentifiedWeightedEdge e : path.getEdgeList()) {
                 if (i == 0) {
                     start = vInfo.get(edgeData.getEdgeSource(e).toString()).name;
                 }
-                directions += numNextClicks
-                        + i
+                directions +=
+                        + (i + 1)
                         + " Walk " + edgeData.getEdgeWeight(e)
                         + " meters along " + eInfo.get(e.getId()).street
                         + " from " + vInfo.get(edgeData.getEdgeSource(e).toString()).name
