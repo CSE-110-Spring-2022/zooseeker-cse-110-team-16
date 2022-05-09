@@ -10,29 +10,19 @@ import java.util.List;
 public class NearestNeighborRouteStrategy implements RouteStrategy {
     @Override
     public List<String> makeRoute(Graph<String, IdentifiedWeightedEdge> edgeData, List<String> selectedExhibits) {
-        return null;
+        return makeRouteRecursively(edgeData, selectedExhibits, "entrance_exit_gate");
     }
 
-    public List<String> makeRouteRecursively(Graph<String, IdentifiedWeightedEdge> edgeData, List<String> remainingExhibits, String current) {
+    private List<String> makeRouteRecursively(Graph<String, IdentifiedWeightedEdge> edgeData, List<String> remainingExhibits, String current) {
         List<String> output = new ArrayList<>();
         output.add(current);
 
-        String closest = getClosest(edgeData,remainingExhibits,current);
-
-        remainingExhibits.remove(closest);
-
-        output.addAll(makeRouteRecursively(edgeData, remainingExhibits, closest));
-
         remainingExhibits.remove(current);
 
-        String next = remainingExhibits.get(0);
-        remainingExhibits.remove(0);
-
-        GraphPath<String, IdentifiedWeightedEdge> pathToNext = DijkstraShortestPath.findPathBetween(edgeData, current, next);
-//        output.add(pathToNext);
-
-        if (!remainingExhibits.isEmpty())
-            output.addAll(makeRouteRecursively(edgeData, remainingExhibits, next));
+        if (!remainingExhibits.isEmpty()) {
+            String closest = getClosest(edgeData, remainingExhibits, current);
+            output.addAll(makeRouteRecursively(edgeData, remainingExhibits, closest));
+        }
 
         return output;
     }
@@ -43,7 +33,7 @@ public class NearestNeighborRouteStrategy implements RouteStrategy {
 
         for (String exhibit : remainingExhibits) {
             GraphPath<String, IdentifiedWeightedEdge> path = DijkstraShortestPath.findPathBetween(edgeData, current, exhibit);
-            int pathLength =  path.getLength();
+            int pathLength = path.getLength();
 
             if (pathLength < minDistance) {
                 minDistance = pathLength;

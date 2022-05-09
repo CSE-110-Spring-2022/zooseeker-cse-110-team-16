@@ -20,7 +20,7 @@ import java.util.List;
 import java.util.Set;
 
 public class PlanActivity extends AppCompatActivity {
-    private static final RouteStrategy STRATEGY = new DumbRouteStrategy();
+    private static final RouteStrategy STRATEGY = new NearestNeighborRouteStrategy();
     private final ZooData zooData = new ZooData();
     private Graph<String, IdentifiedWeightedEdge> edgeData;
     private List<String> sortedVertexList = new ArrayList<>();
