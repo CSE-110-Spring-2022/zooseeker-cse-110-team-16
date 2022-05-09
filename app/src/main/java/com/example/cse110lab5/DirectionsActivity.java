@@ -50,11 +50,6 @@ public class DirectionsActivity extends AppCompatActivity {
 
         //populate direction text
 
-        /*
-        String title = "";
-        if (sortedVertexList.size() > numNextClicks) {
-            title = "The shortest path from " + sortedVertexList.get(numNextClicks) + " to " + sortedVertexList.get(numNextClicks+1);
-        } */
         String directions = "";
         String title = "";
         int numPaths = route.size();
