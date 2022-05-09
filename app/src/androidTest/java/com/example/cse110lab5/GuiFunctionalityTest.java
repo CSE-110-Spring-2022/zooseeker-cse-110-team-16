@@ -160,7 +160,6 @@ public class GuiFunctionalityTest {
                 allOf(withId(R.id.directionsView), withText("The shortest path from entrance_exit_gate to lions is: \n\n1 Walk 10.0 meters along Entrance Way from Entrance and Exit Gate to Entrance Plaza\n\n2 Walk 200.0 meters along Africa Rocks Street from Entrance Plaza to Gorillas\n\n"),
                         withParent(withParent(withId(android.R.id.content))),
                         isDisplayed()));
-        textView5.check(matches(isDisplayed()));
 
         ViewInteraction materialButton6 = onView(
                 allOf(withId(R.id.next_btn), withText("Next"),
