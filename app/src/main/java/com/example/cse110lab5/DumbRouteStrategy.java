@@ -9,22 +9,14 @@ import java.util.List;
 
 public class DumbRouteStrategy implements RouteStrategy {
     @Override
-    public List<GraphPath<String, IdentifiedWeightedEdge>> makeRoute(Graph<String, IdentifiedWeightedEdge> edgeData, List<String> selectedExhibits) {
-        return makeRouteRecursively(edgeData, selectedExhibits, "entrance_exit_gate");
-    }
+    public List<String> makeRoute(Graph<String, IdentifiedWeightedEdge> edgeData, List<String> selectedExhibits) {
+        List<String> output = new ArrayList<>();
 
-    private List<GraphPath<String, IdentifiedWeightedEdge>> makeRouteRecursively(Graph<String, IdentifiedWeightedEdge> edgeData, List<String> remainingExhibits, String current) {
-        List<GraphPath<String, IdentifiedWeightedEdge>> output = new ArrayList<>();
-        remainingExhibits.remove(current);
+        String start = "entrance_exit_gate";
+        selectedExhibits.remove(start);
 
-        String next = remainingExhibits.get(0);
-        remainingExhibits.remove(0);
-
-        GraphPath<String, IdentifiedWeightedEdge> pathToNext = DijkstraShortestPath.findPathBetween(edgeData, current, next);
-        output.add(pathToNext);
-
-        if (!remainingExhibits.isEmpty())
-            output.addAll(makeRouteRecursively(edgeData, remainingExhibits, next));
+        output.add(start);
+        output.addAll(selectedExhibits);
 
         return output;
     }

@@ -30,14 +30,17 @@ public class DirectionsActivity extends AppCompatActivity {
 
         //get sortedVertexList from planActivity
         Gson gson = new Gson();
-        this.sortedVertexList = gson.fromJson(getIntent().getStringExtra("JsonRoute"), List.class);
+        this.sortedVertexList = gson.fromJson(getIntent().getStringExtra("sortedVertexList"), List.class);
 
         zooData.populateDatabase(this);
         edgeData = zooData.getGraphDatabase();
 
-        //@Ilan, you can make your final route here and set this.route to be equal to what you get
-
+        // Create route from sortedVertexList
+        for (int i = 0; i < sortedVertexList.size() - 1; i++) {
+            route.add(DijkstraShortestPath.findPathBetween(edgeData, sortedVertexList.get(i), sortedVertexList.get(i + 1)));
+        }
     }
+
 
     public void onNextBtnClick(View view) {
         numNextClicks++;
@@ -62,12 +65,6 @@ public class DirectionsActivity extends AppCompatActivity {
         //populate direction text
         String title = "The shortest path from entrance_exit_gate to lions is: \n\n";
         String directions = "";
-
-        //mock route
-        GraphPath<String, IdentifiedWeightedEdge> path1 = DijkstraShortestPath.findPathBetween(edgeData, sortedVertexList.get(0), sortedVertexList.get(2));
-        //GraphPath<String, IdentifiedWeightedEdge> path2 = DijkstraShortestPath.findPathBetween(edgeData, sortedVertexList.get(1), sortedVertexList.get(2));
-        route.add(path1);
-        //route.add(path2);
 
         GraphPath<String, IdentifiedWeightedEdge> path = this.route.get(numNextClicks - 1);
         int i = 0;

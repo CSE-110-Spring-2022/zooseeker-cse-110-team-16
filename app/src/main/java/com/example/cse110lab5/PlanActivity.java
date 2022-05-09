@@ -21,15 +21,9 @@ import java.util.Set;
 
 public class PlanActivity extends AppCompatActivity {
     private static final RouteStrategy STRATEGY = new DumbRouteStrategy();
-    private List<String> selectedExhibitNames;
-    private String currentExhibit;
-    private String nextExhibit;
     private final ZooData zooData = new ZooData();
     private Graph<String, IdentifiedWeightedEdge> edgeData;
-    private List<GraphPath<String, IdentifiedWeightedEdge>> route;
     private List<String> sortedVertexList = new ArrayList<>();
-
-    // TODO: selectedExhibitNames cannot be empty yet, remember to select some animals before entering this activity!
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,17 +35,13 @@ public class PlanActivity extends AppCompatActivity {
 
         // Receive the selected exhibit names from ListActivity
         Bundle extras = getIntent().getExtras();
-        this.selectedExhibitNames = new ArrayList<>(Arrays.asList(extras.getStringArray("addedAnimals")));
+        List<String> selectedExhibitNames = new ArrayList<>(Arrays.asList(extras.getStringArray("addedAnimals")));
 
-        GraphPath<String, IdentifiedWeightedEdge> path = DijkstraShortestPath.findPathBetween(edgeData, "entrance_exit_gate", "gorillas");
+        this.sortedVertexList = STRATEGY.makeRoute(edgeData, selectedExhibitNames);
 
-        this.sortedVertexList = path.getVertexList();
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, path.getVertexList());
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, sortedVertexList);
         ListView exhibitList = this.findViewById(R.id.selected_exhibits);
         exhibitList.setAdapter(adapter);
-
-//        route = STRATEGY.makeRoute(edgeData, selectedExhibitNames);
     }
 
     // ======================== Basic Bottom Navigation UI ========================
@@ -61,21 +51,12 @@ public class PlanActivity extends AppCompatActivity {
     }
 
     public void onDirectionsBtnClick(View view) {
-        //pass path information to directions activity
-        //route = STRATEGY.makeRoute(edgeData, selectedExhibitNames);
-
-        //pass in sortedVertexList from above to directionsActivity
-        List<String> route = this.sortedVertexList;
-
+        //pass in sortedVertexList to directionsActivity
         Intent intent = new Intent(this, DirectionsActivity.class);
         Gson gson = new Gson();
-        String JsonRoute = gson.toJson(route);
-        intent.putExtra("JsonRoute", JsonRoute);
+        String JsonRoute = gson.toJson(sortedVertexList);
+        intent.putExtra("sortedVertexList", JsonRoute);
 
         startActivity(intent);
-
     }
-
-    // TODO: Display directions from current exhibit to next exhibit
-    // TODO: Next button, i.e reached next exhibit
 }

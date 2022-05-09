@@ -9,7 +9,7 @@ import java.util.List;
 
 public class NearestNeighborRouteStrategy implements RouteStrategy {
     @Override
-    public List<GraphPath<String, IdentifiedWeightedEdge>> makeRoute(Graph<String, IdentifiedWeightedEdge> edgeData, List<String> selectedExhibits) {
+    public List<String> makeRoute(Graph<String, IdentifiedWeightedEdge> edgeData, List<String> selectedExhibits) {
         return null;
     }
 
@@ -22,6 +22,17 @@ public class NearestNeighborRouteStrategy implements RouteStrategy {
         remainingExhibits.remove(closest);
 
         output.addAll(makeRouteRecursively(edgeData, remainingExhibits, closest));
+
+        remainingExhibits.remove(current);
+
+        String next = remainingExhibits.get(0);
+        remainingExhibits.remove(0);
+
+        GraphPath<String, IdentifiedWeightedEdge> pathToNext = DijkstraShortestPath.findPathBetween(edgeData, current, next);
+//        output.add(pathToNext);
+
+        if (!remainingExhibits.isEmpty())
+            output.addAll(makeRouteRecursively(edgeData, remainingExhibits, next));
 
         return output;
     }
