@@ -111,7 +111,7 @@ public class TodoListActivity extends AppCompatActivity {
 
     public void onPlanBtnClicked(View view) {
         Intent intent = new Intent(this, PlanActivity.class);
-        intent.putExtra("addedAnimals", addedAnimals.toArray(new String[0]));
+        intent.putExtra("addedAnimals", addedAnimalsSet.toArray(new String[0]));
         startActivity(intent);
     }
 
