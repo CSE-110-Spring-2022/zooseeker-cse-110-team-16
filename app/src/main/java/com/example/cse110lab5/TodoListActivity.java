@@ -137,7 +137,7 @@ public class TodoListActivity extends AppCompatActivity {
 
     public void onCountBtnClick(View view) {
         TextView tview = (TextView) findViewById(R.id.countView);
-        tview.setText(String.valueOf(numAnimalsSelected));
+        tview.setText(String.valueOf(addedAnimalsSet.size()));
     }
 
     public class TodoListAdapter extends RecyclerView.Adapter<TodoListAdapter.ViewHolder> {
