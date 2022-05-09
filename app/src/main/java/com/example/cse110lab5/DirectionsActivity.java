@@ -66,20 +66,28 @@ public class DirectionsActivity extends AppCompatActivity {
         String title = "The shortest path from entrance_exit_gate to lions is: \n\n";
         String directions = "";
 
-        GraphPath<String, IdentifiedWeightedEdge> path = this.route.get(numNextClicks - 1);
-        int i = 0;
-        for (IdentifiedWeightedEdge e : path.getEdgeList()) {
-            directions += numNextClicks
-                    + i
-                    + " Walk " + edgeData.getEdgeWeight(e)
-                    + " meters along " + eInfo.get(e.getId()).street
-                    + " from " + vInfo.get(edgeData.getEdgeSource(e).toString()).name
-                    + " to " + vInfo.get(edgeData.getEdgeTarget(e).toString()).name
-                    + "\n\n";
-            i++;
+        int numPaths = route.size();
+        if (numNextClicks <= numPaths) {
+            GraphPath<String, IdentifiedWeightedEdge> path = this.route.get(numNextClicks - 1);
+            int i = 0;
+            for (IdentifiedWeightedEdge e : path.getEdgeList()) {
+                directions += numNextClicks
+                        + i
+                        + " Walk " + edgeData.getEdgeWeight(e)
+                        + " meters along " + eInfo.get(e.getId()).street
+                        + " from " + vInfo.get(edgeData.getEdgeSource(e).toString()).name
+                        + " to " + vInfo.get(edgeData.getEdgeTarget(e).toString()).name
+                        + "\n\n";
+                i++;
+            }
+
+            TextView directionsTextView = (TextView) findViewById(R.id.directionsView);
+            directionsTextView.setText(title + directions);
         }
 
-        TextView directionsTextView = (TextView) findViewById(R.id.directionsView);
-        directionsTextView.setText(title + directions);
+        else {
+            TextView directionsTextView = (TextView) findViewById(R.id.directionsView);
+            directionsTextView.setText("At final exhibit!");
+        }
     }
 }
