@@ -37,6 +37,13 @@ public class DirectionsActivity extends AppCompatActivity {
 
         //@Ilan, you can make your final route here and set this.route to be equal to what you get
 
+
+        //mock route
+        GraphPath<String, IdentifiedWeightedEdge> path1 = DijkstraShortestPath.findPathBetween(edgeData, sortedVertexList.get(0), sortedVertexList.get(2));
+        GraphPath<String, IdentifiedWeightedEdge> path2 = DijkstraShortestPath.findPathBetween(edgeData, sortedVertexList.get(1), sortedVertexList.get(2));
+        route.add(path1);
+        route.add(path2);
+
     }
 
     public void onNextBtnClick(View view) {
@@ -63,26 +70,28 @@ public class DirectionsActivity extends AppCompatActivity {
         String title = "The shortest path from entrance_exit_gate to lions is: \n\n";
         String directions = "";
 
-        //mock route
-        GraphPath<String, IdentifiedWeightedEdge> path1 = DijkstraShortestPath.findPathBetween(edgeData, sortedVertexList.get(0), sortedVertexList.get(2));
-        //GraphPath<String, IdentifiedWeightedEdge> path2 = DijkstraShortestPath.findPathBetween(edgeData, sortedVertexList.get(1), sortedVertexList.get(2));
-        route.add(path1);
-        //route.add(path2);
+        int numPaths = route.size();
+        if (numNextClicks <= numPaths) {
+            GraphPath<String, IdentifiedWeightedEdge> path = this.route.get(numNextClicks - 1);
+            int i = 0;
+            for (IdentifiedWeightedEdge e : path.getEdgeList()) {
+                directions += numNextClicks
+                        + i
+                        + " Walk " + edgeData.getEdgeWeight(e)
+                        + " meters along " + eInfo.get(e.getId()).street
+                        + " from " + vInfo.get(edgeData.getEdgeSource(e).toString()).name
+                        + " to " + vInfo.get(edgeData.getEdgeTarget(e).toString()).name
+                        + "\n\n";
+                i++;
+            }
 
-        GraphPath<String, IdentifiedWeightedEdge> path = this.route.get(numNextClicks - 1);
-        int i = 0;
-        for (IdentifiedWeightedEdge e : path.getEdgeList()) {
-            directions += numNextClicks
-                    + i
-                    + " Walk " + edgeData.getEdgeWeight(e)
-                    + " meters along " + eInfo.get(e.getId()).street
-                    + " from " + vInfo.get(edgeData.getEdgeSource(e).toString()).name
-                    + " to " + vInfo.get(edgeData.getEdgeTarget(e).toString()).name
-                    + "\n\n";
-            i++;
+            TextView directionsTextView = (TextView) findViewById(R.id.directionsView);
+            directionsTextView.setText(title + directions);
         }
 
-        TextView directionsTextView = (TextView) findViewById(R.id.directionsView);
-        directionsTextView.setText(title + directions);
+        else {
+            TextView directionsTextView = (TextView) findViewById(R.id.directionsView);
+            directionsTextView.setText("At final exhibit!");
+        }
     }
 }
