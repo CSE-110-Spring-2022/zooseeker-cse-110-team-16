@@ -92,6 +92,8 @@ public class ZooData {
         public String getTags() {
             return tags;
         }
+
+        public String getId() {return id;}
     }
 
     public Map<String, ZooData.VertexInfo> vInfo = null;

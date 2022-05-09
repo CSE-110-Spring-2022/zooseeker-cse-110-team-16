@@ -25,7 +25,9 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 
@@ -46,6 +48,8 @@ public class TodoListActivity extends AppCompatActivity {
     private ArrayAdapter<String> arrayAdapter;
     private ArrayList<String> searchResults;
     private ArrayList<String> addedAnimals = new ArrayList<String>();
+    private Set<String> addedAnimalsSet = new HashSet<String>();
+    private ArrayList<String> searchResultsID;
     public int numAnimalsSelected = 0;
 
 
@@ -96,7 +100,8 @@ public class TodoListActivity extends AppCompatActivity {
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                addedAnimals.add(searchResults.get(i));
+                addedAnimalsSet.add(searchResultsID.get(i));
+                addedAnimals.add(searchResultsID.get(i));
                 Toast.makeText(getApplicationContext(), "Selected: " + searchResults.get(i), Toast.LENGTH_LONG).show();
                 numAnimalsSelected++;
             }
@@ -106,7 +111,7 @@ public class TodoListActivity extends AppCompatActivity {
 
     public void onPlanBtnClicked(View view) {
         Intent intent = new Intent(this, PlanActivity.class);
-        intent.putExtra("addedAnimals", addedAnimals.toArray(new String[0]));
+        intent.putExtra("addedAnimals", addedAnimalsSet.toArray(new String[0]));
         startActivity(intent);
     }
 
@@ -118,11 +123,13 @@ public class TodoListActivity extends AppCompatActivity {
         arrayAdapter.clear();
         String query = newTodoText.getQuery().toString();
         searchResults = new ArrayList<String>(){};
+        searchResultsID = new ArrayList<String>(){};
         //filters nodeData based on search query
         for (ZooData.VertexInfo vertex : nodeData.values()){
             String nodeName = vertex.getName();
             if (nodeName.contains(query) || vertex.getTags().contains(query)){
                 searchResults.add(nodeName);
+                searchResultsID.add(vertex.getId());
             }
         }
         arrayAdapter.addAll(searchResults);

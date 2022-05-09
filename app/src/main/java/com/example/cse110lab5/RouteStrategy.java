@@ -6,5 +6,5 @@ import org.jgrapht.GraphPath;
 import java.util.List;
 
 public interface RouteStrategy {
-    public List<GraphPath<String, IdentifiedWeightedEdge>> makeRoute(Graph<String, IdentifiedWeightedEdge> edgeData, List<String> selectedExhibits);
+    public List<String> makeRoute(Graph<String, IdentifiedWeightedEdge> edgeData, List<String> selectedExhibits);
 }

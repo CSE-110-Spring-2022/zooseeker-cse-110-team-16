@@ -9,19 +9,20 @@ import java.util.List;
 
 public class NearestNeighborRouteStrategy implements RouteStrategy {
     @Override
-    public List<GraphPath<String, IdentifiedWeightedEdge>> makeRoute(Graph<String, IdentifiedWeightedEdge> edgeData, List<String> selectedExhibits) {
-        return null;
+    public List<String> makeRoute(Graph<String, IdentifiedWeightedEdge> edgeData, List<String> selectedExhibits) {
+        return makeRouteRecursively(edgeData, selectedExhibits, "entrance_exit_gate");
     }
 
-    public List<String> makeRouteRecursively(Graph<String, IdentifiedWeightedEdge> edgeData, List<String> remainingExhibits, String current) {
+    private List<String> makeRouteRecursively(Graph<String, IdentifiedWeightedEdge> edgeData, List<String> remainingExhibits, String current) {
         List<String> output = new ArrayList<>();
         output.add(current);
 
-        String closest = getClosest(edgeData,remainingExhibits,current);
+        remainingExhibits.remove(current);
 
-        remainingExhibits.remove(closest);
-
-        output.addAll(makeRouteRecursively(edgeData, remainingExhibits, closest));
+        if (!remainingExhibits.isEmpty()) {
+            String closest = getClosest(edgeData, remainingExhibits, current);
+            output.addAll(makeRouteRecursively(edgeData, remainingExhibits, closest));
+        }
 
         return output;
     }
@@ -32,7 +33,7 @@ public class NearestNeighborRouteStrategy implements RouteStrategy {
 
         for (String exhibit : remainingExhibits) {
             GraphPath<String, IdentifiedWeightedEdge> path = DijkstraShortestPath.findPathBetween(edgeData, current, exhibit);
-            int pathLength =  path.getLength();
+            int pathLength = path.getLength();
 
             if (pathLength < minDistance) {
                 minDistance = pathLength;
