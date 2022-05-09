@@ -22,8 +22,6 @@ import java.util.Map;
 
 @RunWith(AndroidJUnit4.class)
 public class TodoDatabaseTest {
-    //private VertexInfoItemDao dao;
-    private TodoDatabase db;
 
     @Test
     public void testVertexDatabaseNotNull() {

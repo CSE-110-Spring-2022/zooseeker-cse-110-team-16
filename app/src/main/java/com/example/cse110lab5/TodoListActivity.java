@@ -34,8 +34,6 @@ import java.util.function.Consumer;
 import java.util.Map;
 
 public class TodoListActivity extends AppCompatActivity {
-    // TODO: Add a button to go to the plan activity
-    // TODO: Pass selected exhibits to the plan activity
 
     //Exposed for testing purposes later....
     public RecyclerView recyclerView;
@@ -77,19 +75,20 @@ public class TodoListActivity extends AppCompatActivity {
 
         addTodoButton.setOnClickListener(this::onAddTodoClicked);
 
+        //populating the app with new zoo database
         Context context = getApplicationContext();
         ZooData zooData = new ZooData();
-        zooData.populateDatabase(context);
+        zooData.populateDatabase(this); //changed context to this
         nodeData = zooData.getVertexDatabase();
-        //add edge and graph databases if you need them
 
-        searchResults = new ArrayList<String>(){};
         //filters nodeData based on search query
+        searchResults = new ArrayList<String>(){};
         for (ZooData.VertexInfo vertex : nodeData.values()){
             String nodeName = vertex.getName();
             searchResults.add(nodeName);
         }
 
+        //preparing objects for search query
         listView = findViewById(R.id.listView);
         arrayAdapter = new ArrayAdapter<String>(context, android.R.layout.simple_list_item_1);
         listView.setAdapter(arrayAdapter);
@@ -109,16 +108,17 @@ public class TodoListActivity extends AppCompatActivity {
 
     }
 
+    //passes addedAnimals array to plan for a plan summary
     public void onPlanBtnClicked(View view) {
         Intent intent = new Intent(this, PlanActivity.class);
         intent.putExtra("addedAnimals", addedAnimalsSet.toArray(new String[0]));
         startActivity(intent);
     }
 
-//https://www.youtube.com/watch?v=M3UDh9mwBd8
-// How to Add Search View in Toolbar in Android Studio | SearchView on Toolbar | Actionbar
-// 5/6/2022
-// copied format and changed some things
+    //https://www.youtube.com/watch?v=M3UDh9mwBd8
+    // How to Add Search View in Toolbar in Android Studio | SearchView on Toolbar | Actionbar
+    // 5/6/2022
+    // copied format and changed filter requirements to account for tags as well
     void onAddTodoClicked(View view) {
         arrayAdapter.clear();
         String query = newTodoText.getQuery().toString();
@@ -127,6 +127,7 @@ public class TodoListActivity extends AppCompatActivity {
         //filters nodeData based on search query
         for (ZooData.VertexInfo vertex : nodeData.values()){
             String nodeName = vertex.getName();
+            //takes into account tags also
             if (nodeName.contains(query) || vertex.getTags().contains(query)){
                 searchResults.add(nodeName);
                 searchResultsID.add(vertex.getId());
@@ -135,6 +136,7 @@ public class TodoListActivity extends AppCompatActivity {
         arrayAdapter.addAll(searchResults);
     }
 
+    //displays the total amount of exhibits selected
     public void onCountBtnClick(View view) {
         TextView tview = (TextView) findViewById(R.id.countView);
         tview.setText(String.valueOf(addedAnimalsSet.size()));

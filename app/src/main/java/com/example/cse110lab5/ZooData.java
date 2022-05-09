@@ -30,9 +30,10 @@ import org.jgrapht.nio.json.JSONImporter;
 
 public class ZooData {
 
-    public String vertexInfoFile = "sample_node_info.json";
-    public String edgeInfoFile = "sample_edge_info.json";
-    public String graphInfoFile = "sample_zoo_graph.json";
+    // json filenames for updating zoo data
+    private String vertexInfoFile = "sample_node_info.json";
+    private String edgeInfoFile = "sample_edge_info.json";
+    private String graphInfoFile = "sample_zoo_graph.json";
 
     public static enum Kind {
         // The SerializedName annotation tells GSON how to convert
@@ -42,6 +43,7 @@ public class ZooData {
         @SerializedName("intersection") INTERSECTION
     }
 
+    // vertex info object type that is read by gson from json file
     @Entity(tableName = "vertex_info_store")
     public static class VertexInfoStore {
 
@@ -62,8 +64,10 @@ public class ZooData {
         }
     }
 
+    // vertex info object type that is stored in database
     @Entity(tableName = "vertex_info")
     public static class VertexInfo {
+
         @PrimaryKey (autoGenerate = true)
         public long idx;
 
@@ -96,9 +100,32 @@ public class ZooData {
         public String getId() {return id;}
     }
 
-    public Map<String, ZooData.VertexInfo> vInfo = null;
-    public Map<String, ZooData.EdgeInfo> eInfo = null;
-    public Graph<String, IdentifiedWeightedEdge> gInfo = null;
+    // edge info object read from json
+    @Entity(tableName = "edge_info")
+    public static class EdgeInfo {
+
+        @PrimaryKey (autoGenerate = true)
+        public long idx;
+
+        @NonNull
+        public String id;
+        public String street;
+
+        EdgeInfo(@NonNull String id, String street) {
+            this.id = id;
+            this.street = street;
+        }
+
+        //edge info getter methods
+        public String getStreet() {
+            return street;
+        }
+    }
+
+    // load read file data into database
+    private Map<String, ZooData.VertexInfo> vInfo = null;
+    private Map<String, ZooData.EdgeInfo> eInfo = null;
+    private Graph<String, IdentifiedWeightedEdge> gInfo = null;
 
     public void populateDatabase(Context context) {
         if (vInfo == null) {
@@ -112,6 +139,7 @@ public class ZooData {
         }
     }
 
+    // database getter methods
     public Map<String, ZooData.VertexInfo> getVertexDatabase(){
         return vInfo;
     }
@@ -124,13 +152,11 @@ public class ZooData {
         return gInfo;
     }
 
-    //TYPE CONVERTERS FROM VERTEXINFO
-    @TypeConverter
-    public static List<String> fromJsonToList(String jsonStr) {
-        Type listType = new TypeToken<ArrayList<String>>() {}.getType();
-        return new Gson().fromJson(jsonStr, listType);
-    }
-
+    // all code below is sourced from given project files
+    // https://github.com/CSE-110-Spring-2022/ZooSeeker-Assets
+    // https://gist.github.com/DylanLukes/2198a9e4a889e3a86cb6b8b0c8d0e2a5
+    // accessed before 5/8/2022
+    // Copied code and altered statements to work with our app
     @TypeConverter
     public static String fromListToJson(List<String> list) {
         Gson gson = new Gson();
@@ -147,6 +173,7 @@ public class ZooData {
             Type type = new TypeToken<List<ZooData.VertexInfoStore>>(){}.getType();
             List<ZooData.VertexInfoStore> zooData = gson.fromJson(reader, type);
 
+            // loads vertexInfoStore object and stores in database as vertexInfo object
              Map<String, ZooData.VertexInfo> indexedZooData = new HashMap();
              for (ZooData.VertexInfoStore datum : zooData) {
                  indexedZooData.put(datum.id
@@ -157,27 +184,6 @@ public class ZooData {
         } catch (IOException e) {
             e.printStackTrace();
             return Collections.emptyMap();
-        }
-    }
-
-    //READING EDGE INFO
-    @Entity(tableName = "edge_info")
-    public static class EdgeInfo {
-        @PrimaryKey (autoGenerate = true)
-        public long idx;
-
-        @NonNull
-        public String id;
-        public String street;
-
-        EdgeInfo(@NonNull String id, String street) {
-            this.id = id;
-            this.street = street;
-        }
-
-        //edge info getter methods
-        public String getStreet() {
-            return street;
         }
     }
 
