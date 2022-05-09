@@ -65,18 +65,7 @@ public class GuiFunctionalityTest {
                                                 1)),
                                 0),
                         isDisplayed()));
-        searchAutoComplete.perform(replaceText("Gorilla"), closeSoftKeyboard());
-
-        ViewInteraction searchAutoComplete2 = onView(
-                allOf(withClassName(is("android.widget.SearchView$SearchAutoComplete")), withText("Gorilla"),
-                        childAtPosition(
-                                allOf(withClassName(is("android.widget.LinearLayout")),
-                                        childAtPosition(
-                                                withClassName(is("android.widget.LinearLayout")),
-                                                1)),
-                                0),
-                        isDisplayed()));
-        searchAutoComplete2.perform(pressImeActionButton());
+        searchAutoComplete.perform(replaceText("exit"), closeSoftKeyboard());
 
         ViewInteraction materialButton = onView(
                 allOf(withId(R.id.add_todo_btn), withText("Search"),
@@ -106,18 +95,22 @@ public class GuiFunctionalityTest {
                         isDisplayed()));
         materialButton2.perform(click());
 
-        ViewInteraction textView2 = onView(
-                allOf(withId(android.R.id.text1), withText("Gorillas"),
-                        withParent(allOf(withId(R.id.listView),
-                                withParent(IsInstanceOf.<View>instanceOf(android.view.ViewGroup.class)))),
+        ViewInteraction searchAutoComplete2 = onView(
+                allOf(withClassName(is("android.widget.SearchView$SearchAutoComplete")), withText("exit"),
+                        childAtPosition(
+                                allOf(withClassName(is("android.widget.LinearLayout")),
+                                        childAtPosition(
+                                                withClassName(is("android.widget.LinearLayout")),
+                                                1)),
+                                0),
                         isDisplayed()));
-        textView2.check(matches(withText("Gorillas")));
+        searchAutoComplete2.perform(pressImeActionButton());
 
-        ViewInteraction textView3 = onView(
+        ViewInteraction textView2 = onView(
                 allOf(withId(R.id.countView), withText("1"),
                         withParent(withParent(withId(android.R.id.content))),
                         isDisplayed()));
-        textView3.check(matches(withText("1")));
+        textView2.check(matches(withText("1")));
 
         ViewInteraction materialButton3 = onView(
                 allOf(withId(R.id.go_to_plan_btn), withText("Plan"),
@@ -129,12 +122,12 @@ public class GuiFunctionalityTest {
                         isDisplayed()));
         materialButton3.perform(click());
 
-        ViewInteraction textView4 = onView(
+        ViewInteraction textView3 = onView(
                 allOf(withId(android.R.id.text1), withText("entrance_exit_gate"),
                         withParent(allOf(withId(R.id.selected_exhibits),
                                 withParent(IsInstanceOf.<View>instanceOf(android.view.ViewGroup.class)))),
                         isDisplayed()));
-        textView4.check(matches(withText("entrance_exit_gate")));
+        textView3.check(matches(withText("entrance_exit_gate")));
 
         ViewInteraction materialButton4 = onView(
                 allOf(withId(R.id.directions_btn), withText("Directions"),
@@ -156,10 +149,11 @@ public class GuiFunctionalityTest {
                         isDisplayed()));
         materialButton5.perform(click());
 
-        ViewInteraction textView5 = onView(
-                allOf(withId(R.id.directionsView), withText("The shortest path from entrance_exit_gate to lions is: \n\n1 Walk 10.0 meters along Entrance Way from Entrance and Exit Gate to Entrance Plaza\n\n2 Walk 200.0 meters along Africa Rocks Street from Entrance Plaza to Gorillas\n\n"),
+        ViewInteraction textView4 = onView(
+                allOf(withId(R.id.directionsView), withText("At final exhibit!"),
                         withParent(withParent(withId(android.R.id.content))),
                         isDisplayed()));
+        textView4.check(matches(withText("At final exhibit!")));
 
         ViewInteraction materialButton6 = onView(
                 allOf(withId(R.id.next_btn), withText("Next"),
@@ -170,12 +164,6 @@ public class GuiFunctionalityTest {
                                 1),
                         isDisplayed()));
         materialButton6.perform(click());
-
-        ViewInteraction textView6 = onView(
-                allOf(withId(R.id.directionsView), withText("At final exhibit!"),
-                        withParent(withParent(withId(android.R.id.content))),
-                        isDisplayed()));
-        textView6.check(matches(withText("At final exhibit!")));
     }
 
     private static Matcher<View> childAtPosition(
