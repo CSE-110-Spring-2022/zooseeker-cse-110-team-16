@@ -39,6 +39,8 @@ public class DirectionsActivity extends AppCompatActivity {
         for (int i = 0; i < sortedVertexList.size() - 1; i++) {
             route.add(DijkstraShortestPath.findPathBetween(edgeData, sortedVertexList.get(i), sortedVertexList.get(i + 1)));
         }
+
+        //addition
     }
 
 
