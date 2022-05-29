@@ -31,16 +31,18 @@ import org.jgrapht.nio.json.JSONImporter;
 public class ZooData {
 
     // json filenames for updating zoo data
-    private String vertexInfoFile = "sample_node_info.json";
-    private String edgeInfoFile = "sample_edge_info.json";
-    private String graphInfoFile = "sample_zoo_graph.json";
+    private String vertexInfoFile = "zoo_node_info.json";
+    private String edgeInfoFile = "zoo_edge_info.json";
+    private String graphInfoFile = "zoo_graph.json";
 
     public static enum Kind {
         // The SerializedName annotation tells GSON how to convert
         // from the strings in our JSON to this Enum.
+        // *** added new kind "exhibit_group" ms2 ***
         @SerializedName("gate") GATE,
         @SerializedName("exhibit") EXHIBIT,
-        @SerializedName("intersection") INTERSECTION
+        @SerializedName("intersection") INTERSECTION,
+        @SerializedName("exhibit_group") EXHIBIT_GROUP
     }
 
     // vertex info object type that is read by gson from json file
@@ -55,12 +57,18 @@ public class ZooData {
         public Kind kind;
         public String name;
         public List<String> tags;
+        //new info below ms2
+        public double lat;
+        public double lng;
 
-        VertexInfoStore(@NonNull String id, Kind kind, String name, List<String> tags) {
+        VertexInfoStore(@NonNull String id, Kind kind, String name, List<String> tags, double lat, double lng) {
             this.id = id;
             this.kind = kind;
             this.name = name;
             this.tags = tags;
+            //new info below ms2
+            this.lat = lat;
+            this.lng = lng;
         }
     }
 
@@ -76,12 +84,18 @@ public class ZooData {
         public Kind kind;
         public String name;
         public String tags;
+        //new info below ms2
+        public double lat;
+        public double lng;
 
-        VertexInfo(@NonNull String id, Kind kind, String name, String tags) {
+        VertexInfo(@NonNull String id, Kind kind, String name, String tags, double lat, double lng) {
             this.id = id;
             this.kind = kind;
             this.name = name;
             this.tags = tags;
+            //new info below ms2
+            this.lat = lat;
+            this.lng = lng;
         }
 
         //vertex info getter methods
@@ -97,7 +111,18 @@ public class ZooData {
             return tags;
         }
 
-        public String getId() {return id;}
+        public String getId() {
+            return id;
+        }
+
+        //return methods for new data ms2
+        public double getLat() {
+            return lat;
+        }
+
+        public double getLng() {
+            return lng;
+        }
     }
 
     // edge info object read from json
@@ -177,7 +202,7 @@ public class ZooData {
              Map<String, ZooData.VertexInfo> indexedZooData = new HashMap();
              for (ZooData.VertexInfoStore datum : zooData) {
                  indexedZooData.put(datum.id
-                         , new VertexInfo(datum.id, datum.kind, datum.name, fromListToJson(datum.tags)));
+                         , new VertexInfo(datum.id, datum.kind, datum.name, fromListToJson(datum.tags), datum.lat, datum.lng));
              }
 
             return indexedZooData;
