@@ -28,12 +28,12 @@ public class NearestNeighborRouteStrategy implements RouteStrategy {
     }
 
     private String getClosest(Graph<String, IdentifiedWeightedEdge> edgeData, List<String> remainingExhibits, String current) {
-        int minDistance = Integer.MAX_VALUE;
+        double minDistance = Double.MAX_VALUE;
         String closest = "";
 
         for (String exhibit : remainingExhibits) {
             GraphPath<String, IdentifiedWeightedEdge> path = DijkstraShortestPath.findPathBetween(edgeData, current, exhibit);
-            int pathLength = path.getLength();
+            double pathLength = path.getWeight();
 
             if (pathLength < minDistance) {
                 minDistance = pathLength;
