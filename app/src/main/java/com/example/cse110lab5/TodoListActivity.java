@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -54,58 +55,63 @@ public class TodoListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_todo_list);    //TODO rename the xml file
 
-        viewModel = new ViewModelProvider(this)
-                .get(ListViewModel.class);
+//        List<ListItem> todos = ListItem.loadJSON(this, "demo_todos.json");
+//        Log.d("TodoListActivity", todos.toString());
 
+//        viewModel = new ViewModelProvider(this)
+//                .get(ListViewModel.class);
+//
         ListAdapter adapter = new ListAdapter();
         adapter.setHasStableIds(true);
-        adapter.setOnTextEditedHandler(viewModel::updateText);
-        adapter.setOnDeleteBtnClickedHandler(viewModel::deleteItem);    //exercise 4
-        viewModel.getListItems().observe(this, adapter::setListItems);
-
+//        adapter.setOnTextEditedHandler(viewModel::updateText);
+//        adapter.setOnDeleteBtnClickedHandler(viewModel::deleteItem);    //exercise 4
+//        viewModel.getListItems().observe(this, adapter::setListItems);
+//
         recyclerView = findViewById(R.id.list_items);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
 
-        //set item ids
-        this.searchText = this.findViewById(R.id.search_text);
-        this.searchButton = this.findViewById(R.id.search_btn);
-
-        searchButton.setOnClickListener(this::onSearchClicked);
-
-        //populating the app with new zoo database
-        ZooData zooData = new ZooData();
-        zooData.populateDatabase(this); //changed context to this
-        nodeData = zooData.getVertexDatabase();
-
-        //filters nodeData based on search query
-        searchResults = new ArrayList<String>(){};
-        for (ZooData.VertexInfo vertex : nodeData.values()){
-            String nodeName = vertex.getName();
-            searchResults.add(nodeName);
-        }
-
-        //preparing objects for search query
-        listView = findViewById(R.id.search_view);
-        arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1);
-        listView.setAdapter(arrayAdapter);
-
-        //-------------Add selected items from ListView to addedAnimals array----------
-        ListView lv = (ListView) findViewById(R.id.search_view);
-
-        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                addedAnimalsSet.add(searchResultsID.get(i));
-                addedAnimals.add(searchResultsID.get(i));
-                Toast.makeText(getApplicationContext(), "Selected: " + searchResults.get(i), Toast.LENGTH_LONG).show();
-                numAnimalsSelected++;
-
-                //changed / added for listview display
-                String text = searchResultsID.get(i);
-                viewModel.createItem(text);
-            }
-        });
+        adapter.setListItems(ListItem.loadJSON(this, "demo_todos.json"));   //TODO probs dont need this
+//
+//        //set item ids
+//        this.searchText = this.findViewById(R.id.search_text);
+//        this.searchButton = this.findViewById(R.id.search_btn);
+//
+//        searchButton.setOnClickListener(this::onSearchClicked);
+//
+//        //populating the app with new zoo database
+//        ZooData zooData = new ZooData();
+//        zooData.populateDatabase(this); //changed context to this
+//        nodeData = zooData.getVertexDatabase();
+//
+//        //filters nodeData based on search query
+//        searchResults = new ArrayList<String>(){};
+//        for (ZooData.VertexInfo vertex : nodeData.values()){
+//            String nodeName = vertex.getName();
+//            searchResults.add(nodeName);
+//        }
+//
+//        //preparing objects for search query
+//        listView = findViewById(R.id.search_view);
+//        arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1);
+//        listView.setAdapter(arrayAdapter);
+//
+//        //-------------Add selected items from ListView to addedAnimals array----------
+//        ListView lv = (ListView) findViewById(R.id.search_view);
+//
+//        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+//                addedAnimalsSet.add(searchResultsID.get(i));
+//                addedAnimals.add(searchResultsID.get(i));
+//                Toast.makeText(getApplicationContext(), "Selected: " + searchResults.get(i), Toast.LENGTH_LONG).show();
+//                numAnimalsSelected++;
+//
+//                //changed / added for listview display
+//                String text = searchResultsID.get(i);
+//                viewModel.createItem(text);
+//            }
+//        });
 
     }
 
@@ -141,90 +147,5 @@ public class TodoListActivity extends AppCompatActivity {
     public void onCountBtnClick(View view) {
         TextView tview = (TextView) findViewById(R.id.countView);
         tview.setText(String.valueOf(addedAnimalsSet.size()));
-    }
-
-    public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
-
-        private List<ListItem> listItems = Collections.emptyList();
-        private BiConsumer<ListItem, String> onTextEditedHandler;
-        private Consumer<ListItem> onDeleteBtnClicked;
-        public Map<String, ZooData.VertexInfo> vInfo;
-
-        public void setListItems(List<ListItem> newListItems) {
-            this.listItems.clear();
-            this.listItems = newListItems;
-            notifyDataSetChanged();
-        }
-
-        //TODO delete if not in use
-        public void setOnTextEditedHandler(BiConsumer<ListItem, String> onTextEdited) {
-            this.onTextEditedHandler = onTextEdited;
-        }
-
-        //exercise 4
-        //TODO expand on this to delete all items, not only one
-        public void setOnDeleteBtnClickedHandler(Consumer<ListItem> onDeleteBtnClicked) {
-            this.onDeleteBtnClicked = onDeleteBtnClicked;
-        }
-
-        @NonNull
-        @Override
-        public ListAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            View view = LayoutInflater
-                    .from(parent.getContext())
-                    .inflate(R.layout.list_item, parent, false);   //changed from todo_list_item to list_item
-
-            return new ViewHolder(view);
-        }
-
-        @Override
-        public void onBindViewHolder(@NonNull ListAdapter.ViewHolder holder, int position) {
-            holder.setListItem(listItems.get(position));
-        }
-
-        @Override
-        public int getItemCount() {
-            return listItems.size();
-        }
-
-        @Override
-        public long getItemId(int position) {
-            return listItems.get(position).id;
-        }
-
-        public class ViewHolder extends RecyclerView.ViewHolder {
-            private final TextView textView;
-            private final TextView deleteBtn;   //exercise 4
-            private ListItem listItem;
-
-            public ViewHolder(@NonNull View itemView) {
-                super(itemView);
-                this.textView = itemView.findViewById(R.id.todo_item_text);
-//                this.checkBox = itemView.findViewById(R.id.completed);
-                this.deleteBtn = itemView.findViewById(R.id.delete_btn);    //exercise 4
-
-                this.textView.setOnFocusChangeListener((view, hasFocus) -> {
-                    if (!hasFocus) {
-                        onTextEditedHandler.accept(listItem, textView.getText().toString());
-                    }
-                });
-
-                //exercise 4
-                this.deleteBtn.setOnClickListener(view -> {
-                    if (onDeleteBtnClicked == null) return;
-                    onDeleteBtnClicked.accept(listItem);
-                });
-            }
-
-            public ListItem getListItem() {
-                return listItem;
-            }
-
-            public void setListItem(ListItem todoItem) {
-                this.listItem = todoItem;
-                this.textView.setText(todoItem.text);
-//                this.checkBox.setChecked(todoItem.completed);
-            }
-        }
     }
 }

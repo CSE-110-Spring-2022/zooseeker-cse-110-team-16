@@ -14,11 +14,13 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.lang.reflect.Type;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 @Entity(tableName = "list_items")
 public class ListItem {
+
     @PrimaryKey(autoGenerate = true)
     public long id;
 
@@ -52,6 +54,9 @@ public class ListItem {
 //            e.printStackTrace();
 //            return Collections.emptyList();
 //        }
-        return Collections.emptyList();
+        ListItem listItem = new ListItem("test", 1);
+        List<ListItem> list = new ArrayList<>();
+        list.add(listItem);
+        return list;
     }
 }
