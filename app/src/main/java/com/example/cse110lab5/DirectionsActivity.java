@@ -22,6 +22,12 @@ public class DirectionsActivity extends AppCompatActivity {
     private List<String> sortedVertexList;
     private final ZooData zooData = new ZooData();
     private Graph<String, IdentifiedWeightedEdge> edgeData;
+    boolean directionType = false;
+    String current_detailed_directions = "";
+    String current_brief_directions = "";
+    String title = "";
+    String start = "";
+    String end = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,8 +45,6 @@ public class DirectionsActivity extends AppCompatActivity {
         for (int i = 0; i < sortedVertexList.size() - 1; i++) {
             route.add(DijkstraShortestPath.findPathBetween(edgeData, sortedVertexList.get(i), sortedVertexList.get(i + 1)));
         }
-
-        //addition
     }
 
 
@@ -51,24 +55,30 @@ public class DirectionsActivity extends AppCompatActivity {
         Map<String, ZooData.EdgeInfo> eInfo = zooData.getEdgeDatabase();
 
         //populate direction text
-
-        String directions = "";
         String title = "";
         int numPaths = route.size();
         int i = 0;
+        int j = 0;
         if (numNextClicks <= numPaths) {
             GraphPath<String, IdentifiedWeightedEdge> path = this.route.get(numNextClicks - 1);
-            String start = "";
-            String end = "";
-            //title = "The shortest path from " + vInfo.get(edgeData.getEdgeTarget(path.getEdgeList().get(i)).toString()).name + " to " + vInfo.get(edgeData.getEdgeTarget(path.getEdgeList().get(i+1)).toString()).name;
+
+            current_brief_directions +=
+                    (j + 1)
+                    + " Walk " + path.getWeight()
+                    + " meters from " + path.getStartVertex()
+                    + " to " + path.getEndVertex()
+                    +  "\n\n";
+            j++;
+
             for (IdentifiedWeightedEdge e : path.getEdgeList()) {
                 if (i == 0) {
                     start = vInfo.get(edgeData.getEdgeSource(e).toString()).name;
                 }
-                directions +=
+
+                current_detailed_directions +=
                         + (i + 1)
-                        + " Walk " + edgeData.getEdgeWeight(e)
-                        + " meters along " + eInfo.get(e.getId()).street
+                        + " Proceed on " + eInfo.get(e.getId()).street + " " + edgeData.getEdgeWeight(e)
+                        + " meters "
                         + " from " + vInfo.get(edgeData.getEdgeSource(e).toString()).name
                         + " to " + vInfo.get(edgeData.getEdgeTarget(e).toString()).name
                         + "\n\n";
@@ -78,12 +88,29 @@ public class DirectionsActivity extends AppCompatActivity {
             title = "The shortest path from " + start + " to " + end;
 
             TextView directionsTextView = (TextView) findViewById(R.id.directionsView);
-            directionsTextView.setText(title + "\n\n" + directions);
+            directionsTextView.setText(title + "\n\n" + current_detailed_directions);
         }
 
         else {
             TextView directionsTextView = (TextView) findViewById(R.id.directionsView);
             directionsTextView.setText("At final exhibit!");
         }
+    }
+
+    public void onToggleBtnClick(View view) {
+        title = "The shortest path from " + start + " to " + end;
+        directionType = !directionType;
+        //detailed directions
+        if (directionType == false) {
+            TextView directionsTextView = (TextView) findViewById(R.id.directionsView);
+            directionsTextView.setText(title + "\n\n" + current_detailed_directions);
+        }
+
+        //brief directions
+        else {
+            TextView directionsTextView = (TextView) findViewById(R.id.directionsView);
+            directionsTextView.setText(title + "\n\n" + current_brief_directions);
+        }
+
     }
 }
