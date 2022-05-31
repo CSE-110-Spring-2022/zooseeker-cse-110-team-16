@@ -55,14 +55,18 @@ public class TodoListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_todo_list);    //TODO rename the xml file
 
+        viewModel = new ViewModelProvider(this)
+                .get(ListViewModel.class);
+
+        ListAdapter adapter = new ListAdapter();
+        viewModel.getListItems().observe(this, adapter::setListItems);
+
 //        List<ListItem> todos = ListItem.loadJSON(this, "demo_todos.json");
 //        Log.d("TodoListActivity", todos.toString());
 
 //        viewModel = new ViewModelProvider(this)
 //                .get(ListViewModel.class);
 //
-        ListAdapter adapter = new ListAdapter();
-        adapter.setHasStableIds(true);
 //        adapter.setOnTextEditedHandler(viewModel::updateText);
 //        adapter.setOnDeleteBtnClickedHandler(viewModel::deleteItem);    //exercise 4
 //        viewModel.getListItems().observe(this, adapter::setListItems);
@@ -71,47 +75,47 @@ public class TodoListActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
 
-        adapter.setListItems(ListItem.loadJSON(this, "demo_todos.json"));   //TODO probs dont need this
-//
-//        //set item ids
-//        this.searchText = this.findViewById(R.id.search_text);
-//        this.searchButton = this.findViewById(R.id.search_btn);
-//
-//        searchButton.setOnClickListener(this::onSearchClicked);
-//
-//        //populating the app with new zoo database
-//        ZooData zooData = new ZooData();
-//        zooData.populateDatabase(this); //changed context to this
-//        nodeData = zooData.getVertexDatabase();
-//
-//        //filters nodeData based on search query
-//        searchResults = new ArrayList<String>(){};
-//        for (ZooData.VertexInfo vertex : nodeData.values()){
-//            String nodeName = vertex.getName();
-//            searchResults.add(nodeName);
-//        }
-//
-//        //preparing objects for search query
-//        listView = findViewById(R.id.search_view);
-//        arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1);
-//        listView.setAdapter(arrayAdapter);
-//
-//        //-------------Add selected items from ListView to addedAnimals array----------
-//        ListView lv = (ListView) findViewById(R.id.search_view);
-//
-//        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-//                addedAnimalsSet.add(searchResultsID.get(i));
-//                addedAnimals.add(searchResultsID.get(i));
-//                Toast.makeText(getApplicationContext(), "Selected: " + searchResults.get(i), Toast.LENGTH_LONG).show();
-//                numAnimalsSelected++;
-//
-//                //changed / added for listview display
-//                String text = searchResultsID.get(i);
-//                viewModel.createItem(text);
-//            }
-//        });
+
+
+        //set item ids
+        this.searchText = this.findViewById(R.id.search_text);
+        this.searchButton = this.findViewById(R.id.search_btn);
+
+        searchButton.setOnClickListener(this::onSearchClicked);
+
+        //populating the app with new zoo database
+        ZooData zooData = new ZooData();
+        zooData.populateDatabase(this); //changed context to this
+        nodeData = zooData.getVertexDatabase();
+
+        //filters nodeData based on search query
+        searchResults = new ArrayList<String>(){};
+        for (ZooData.VertexInfo vertex : nodeData.values()){
+            String nodeName = vertex.getName();
+            searchResults.add(nodeName);
+        }
+
+        //preparing objects for search query
+        listView = findViewById(R.id.search_view);
+        arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1);
+        listView.setAdapter(arrayAdapter);
+
+        //-------------Add selected items from ListView to addedAnimals array----------
+        ListView lv = (ListView) findViewById(R.id.search_view);
+
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                addedAnimalsSet.add(searchResultsID.get(i));
+                addedAnimals.add(searchResultsID.get(i));
+                Toast.makeText(getApplicationContext(), "Selected: " + searchResults.get(i), Toast.LENGTH_LONG).show();
+                numAnimalsSelected++;
+
+                //changed / added for listview display
+                String text = searchResultsID.get(i);
+                viewModel.createItem(text);
+            }
+        });
 
     }
 

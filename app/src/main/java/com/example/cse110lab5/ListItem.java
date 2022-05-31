@@ -54,9 +54,9 @@ public class ListItem {
 //            e.printStackTrace();
 //            return Collections.emptyList();
 //        }
-        ListItem listItem = new ListItem("test", 1);
-        List<ListItem> list = new ArrayList<>();
-        list.add(listItem);
-        return list;
+//        ListItem listItem = new ListItem("test", 1);
+//        List<ListItem> list = new ArrayList<>();
+//        list.add(listItem);
+        return Collections.emptyList();
     }
 }

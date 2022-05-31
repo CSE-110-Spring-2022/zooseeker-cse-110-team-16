@@ -11,29 +11,26 @@ import androidx.lifecycle.LiveData;
 import java.util.List;
 
 public class ListViewModel extends AndroidViewModel {
+    private LiveData<List<ListItem>> listItems;
+    private final ListItemDao listItemDao;
+
     public ListViewModel(@NonNull Application application) {
         super(application);
+        Context context = getApplication().getApplicationContext();
+        ListDatabase db = ListDatabase.getSingleton(context);
+        listItemDao = db.listItemDao();
     }
-//    private LiveData<List<ListItem>> listItems;
-//    private final ListItemDao listItemDao;
-//
-//    public ListViewModel(@NonNull Application application) {
-//        super(application);
-//        Context context = getApplication().getApplicationContext();
-//        ListDatabase db = ListDatabase.getSingleton(context);
-//        listItemDao = db.listItemDao();
-//    }
-//
-//    public LiveData<List<ListItem>> getListItems() {
-//        if (listItems == null) {
-//            loadUsers();
-//        }
-//        return listItems;
-//    }
-//
-//    private void loadUsers() {
-//        listItems = listItemDao.getAllLive();
-//    }
+
+    public LiveData<List<ListItem>> getListItems() {
+        if (listItems == null) {
+            loadUsers();
+        }
+        return listItems;
+    }
+
+    private void loadUsers() {
+        listItems = listItemDao.getAllLive();
+    }
 //
 //    //TODO delete later if not used
 //    public void updateText(ListItem listItem, String newText) {
@@ -41,12 +38,12 @@ public class ListViewModel extends AndroidViewModel {
 //        listItemDao.update(listItem);
 //    }
 //
-//    //creating new todos
-//    public void createItem(String text) {
-//        int endOfListOrder = listItemDao.getOrderForAppend();
-//        ListItem newItem = new ListItem(text, endOfListOrder);
-//        listItemDao.insert(newItem);
-//    }
+    //creating new todos
+    public void createItem(String text) {
+        int endOfListOrder = listItemDao.getOrderForAppend();
+        ListItem newItem = new ListItem(text, endOfListOrder);
+        listItemDao.insert(newItem);
+    }
 //
 //    //exercise 4
 //    public void deleteItem(ListItem listItem) {

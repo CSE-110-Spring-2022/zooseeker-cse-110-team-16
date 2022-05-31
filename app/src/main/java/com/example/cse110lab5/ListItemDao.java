@@ -14,14 +14,14 @@ public interface ListItemDao {
     @Insert
     long insert(ListItem listItem);
 
-//    @Insert
-//    List<Long> insertAll(List<ListItem> listItem);
+    @Insert
+    List<Long> insertAll(List<ListItem> listItem);
 
     @Query("SELECT * FROM `list_items` WHERE `id`=:id")
     ListItem get(long id);
 
-//    @Query("SELECT * FROM 'list_items' ORDER BY 'order'")
-//    List<ListItem> getAll();
+    @Query("SELECT * FROM `list_items` ORDER BY `order`")
+    List<ListItem> getAll();
 
     @Update
     int update(ListItem listItem);
@@ -29,10 +29,10 @@ public interface ListItemDao {
     @Delete
     int delete(ListItem listItem);
 
-//    @Query("SELECT * FROM 'list_items' ORDER BY 'order'")
-//    LiveData<List<ListItem>> getAllLive();
+    @Query("SELECT * FROM `list_items` ORDER BY `order`")
+    LiveData<List<ListItem>> getAllLive();
 
-//    //creating new todos
-//    @Query("SELECT 'order' + 1 FROM 'list_items' ORDER BY 'order' DESC LIMIT 1")
-//    int getOrderForAppend();
+    //creating new todos
+    @Query("SELECT `order` + 1 FROM `list_items` ORDER BY `order` DESC LIMIT 1")
+    int getOrderForAppend();
 }
