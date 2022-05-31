@@ -58,17 +58,21 @@ public class ZooData {
         public String name;
         public List<String> tags;
         //new info below ms2
+        public String parentId;
         public double lat;
         public double lng;
 
-        VertexInfoStore(@NonNull String id, Kind kind, String name, List<String> tags, double lat, double lng) {
+        VertexInfoStore(@NonNull String id, String parentId, Kind kind, String name, List<String> tags, double lat, double lng) {
             this.id = id;
             this.kind = kind;
             this.name = name;
             this.tags = tags;
             //new info below ms2
+            this.parentId = parentId;
             this.lat = lat;
             this.lng = lng;
+
+            System.out.println("name is: " + name + ", parent id is: " + parentId);
         }
     }
 
@@ -85,10 +89,11 @@ public class ZooData {
         public String name;
         public String tags;
         //new info below ms2
+        public String parentId;
         public double lat;
         public double lng;
 
-        VertexInfo(@NonNull String id, Kind kind, String name, String tags, double lat, double lng) {
+        VertexInfo(@NonNull String id, String parentId, Kind kind, String name, String tags, double lat, double lng) {
             this.id = id;
             this.kind = kind;
             this.name = name;
@@ -96,6 +101,8 @@ public class ZooData {
             //new info below ms2
             this.lat = lat;
             this.lng = lng;
+
+//            System.out.println("name is: " + name + ", parent id is: " + parentId);
         }
 
         //vertex info getter methods
@@ -116,6 +123,10 @@ public class ZooData {
         }
 
         //return methods for new data ms2
+        public String getParentId() {
+            return parentId;
+        }
+
         public double getLat() {
             return lat;
         }
@@ -201,8 +212,21 @@ public class ZooData {
             // loads vertexInfoStore object and stores in database as vertexInfo object
              Map<String, ZooData.VertexInfo> indexedZooData = new HashMap();
              for (ZooData.VertexInfoStore datum : zooData) {
-                 indexedZooData.put(datum.id
-                         , new VertexInfo(datum.id, datum.kind, datum.name, fromListToJson(datum.tags), datum.lat, datum.lng));
+                 //System.out.println("name: " + datum.name + " parent id: " + datum.parentId);
+                 if (datum.parentId != null) {
+                     indexedZooData.put(datum.id
+                             , new VertexInfo(datum.id, datum.parentId, datum.kind, datum.name, fromListToJson(datum.tags), datum.lat, datum.lng));
+                 }
+                 else {
+                     indexedZooData.put(datum.id
+                         , new VertexInfo(datum.id, "", datum.kind, datum.name, fromListToJson(datum.tags), datum.lat, datum.lng));
+                 }
+
+
+//
+//                 System.out.println("parent id is: " + datum.id.toString());
+//                 indexedZooData.put(datum.id
+//                         , new VertexInfo(datum.id, datum.parentId, datum.kind, datum.name, fromListToJson(datum.tags), datum.lat, datum.lng));
              }
 
             return indexedZooData;

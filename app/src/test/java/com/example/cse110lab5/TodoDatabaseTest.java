@@ -90,6 +90,7 @@ public class TodoDatabaseTest {
         assertNull(dao.get(id));
     }
 
+    //testing vertex info database
     @Test
     public void testVertexDatabaseNotNull() {
         Context context = ApplicationProvider.getApplicationContext();
@@ -97,6 +98,8 @@ public class TodoDatabaseTest {
         zooData.populateDatabase(context);
         Map<String, ZooData.VertexInfo> data = zooData.getVertexDatabase();
         assertNotNull(data);
+
+        System.out.println("lat for toucans " + data.get("toucan").getLat());
     }
 
     @Test
@@ -105,7 +108,7 @@ public class TodoDatabaseTest {
         ZooData zooData = new ZooData();
         zooData.populateDatabase(context);
         Map<String, ZooData.VertexInfo> data = zooData.getVertexDatabase();
-        assertEquals(data.get("gorillas").name ,  "Gorillas");
+        assertEquals(data.get("gorilla").getName() ,  "Gorillas");
     }
 
     @Test
@@ -114,7 +117,7 @@ public class TodoDatabaseTest {
         ZooData zooData = new ZooData();
         zooData.populateDatabase(context);
         Map<String, ZooData.VertexInfo> data = zooData.getVertexDatabase();
-        assertEquals(data.get("gorillas").getTags() ,  "[\"gorilla\",\"monkey\",\"ape\",\"mammal\"]");
+        assertEquals(data.get("gorilla").getTags() ,  "[\"gorilla\",\"primate\",\"mammal\",\"great\",\"ape\",\"primate\",\"africa\"]");
     }
 
     //testing vertex info getter methods
@@ -125,9 +128,14 @@ public class TodoDatabaseTest {
         zooData.populateDatabase(context);
         Map<String, ZooData.VertexInfo> data = zooData.getVertexDatabase();
 
-        assertEquals(data.get("gorillas").getName() ,  "Gorillas");
-        assertEquals(data.get("gorillas").getTags() ,  "[\"gorilla\",\"monkey\",\"ape\",\"mammal\"]");
-        assertEquals(data.get("gorillas").getKind().toString(), "EXHIBIT");
+        assertEquals(data.get("gorilla").getName() ,  "Gorillas");
+        assertEquals(data.get("gorilla").getTags() ,  "[\"gorilla\",\"primate\",\"mammal\",\"great\",\"ape\",\"primate\",\"africa\"]");
+        assertEquals(data.get("gorilla").getKind().toString(), "EXHIBIT");
+        assertEquals(data.get("gorilla").getParentId(), "");
+        assertEquals(data.get("gorilla").getLat(), 32.74812588554637, 0.0001);
+        assertEquals(data.get("gorilla").getLng(), -117.17565073656901, 0.0001);
+
+        assertEquals(data.get("toucan").getParentId(), "parker_aviary");
     }
 
     //Testing edge info database
