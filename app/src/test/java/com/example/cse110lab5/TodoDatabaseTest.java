@@ -18,10 +18,77 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.Map;
 
 @RunWith(AndroidJUnit4.class)
 public class TodoDatabaseTest {
+
+    private ListItemDao dao;
+    private ListDatabase db;
+
+    @Before
+    public void createDb() {
+        Context context = ApplicationProvider.getApplicationContext();
+        db = Room.inMemoryDatabaseBuilder(context, ListDatabase.class)
+                .allowMainThreadQueries()
+                .build();
+        dao = db.listItemDao();
+    }
+
+    @After
+    public void closeDb() throws IOException {
+        db.close();
+    }
+
+    @Test
+    public void testInsert() {
+        ListItem item1 = new ListItem("Pizza time", 0);
+        ListItem item2 = new ListItem("Photos of Spider man", 1);
+
+        long id1 = dao.insert(item1);
+        long id2 = dao.insert(item2);
+
+        //check that these have all been inserted with unique ids
+        assertNotEquals(id1, id2);
+    }
+
+    @Test
+    public void testGet() {
+        ListItem insertedItem = new ListItem("Pizza time", 0);
+        long id = dao.insert(insertedItem);
+
+        ListItem item = dao.get(id);
+        assertEquals(id, item.id);
+        assertEquals(insertedItem.text, item.text);
+        assertEquals(insertedItem.order, item.order);
+    }
+
+    @Test
+    public void testUpdate() {
+        ListItem item = new ListItem("Pizza time", 0);
+        long id = dao.insert(item);
+
+        item = dao.get(id);
+        item.text = "Photos of Spider-Man";
+        int itemsUpdated = dao.update(item);
+        assertEquals(1, itemsUpdated);
+
+        item = dao.get(id);
+        assertNotNull(item);
+        assertEquals("Photos of Spider-Man", item.text);
+    }
+
+    @Test
+    public void testDelete() {
+        ListItem item = new ListItem("Pizza time", 0);
+        long id = dao.insert(item);
+
+        item = dao.get(id);
+        int itemsDeleted = dao.delete(item);
+        assertEquals(1, itemsDeleted);
+        assertNull(dao.get(id));
+    }
 
     @Test
     public void testVertexDatabaseNotNull() {
