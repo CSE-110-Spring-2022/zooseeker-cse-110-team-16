@@ -64,6 +64,7 @@ public class TodoDatabaseTest {
         assertEquals(insertedItem.order, item.order);
     }
 
+
     @Test
     public void testUpdate() {
         ListItem item = new ListItem("Pizza time", 0);
@@ -98,8 +99,6 @@ public class TodoDatabaseTest {
         zooData.populateDatabase(context);
         Map<String, ZooData.VertexInfo> data = zooData.getVertexDatabase();
         assertNotNull(data);
-
-        System.out.println("lat for toucans " + data.get("toucan").getLat());
     }
 
     @Test
@@ -131,11 +130,9 @@ public class TodoDatabaseTest {
         assertEquals(data.get("gorilla").getName() ,  "Gorillas");
         assertEquals(data.get("gorilla").getTags() ,  "[\"gorilla\",\"primate\",\"mammal\",\"great\",\"ape\",\"primate\",\"africa\"]");
         assertEquals(data.get("gorilla").getKind().toString(), "EXHIBIT");
-        assertEquals(data.get("gorilla").getParentId(), "");
+        assertEquals(data.get("gorilla").getParentId(), null);
         assertEquals(data.get("gorilla").getLat(), 32.74812588554637, 0.0001);
         assertEquals(data.get("gorilla").getLng(), -117.17565073656901, 0.0001);
-
-        assertEquals(data.get("toucan").getParentId(), "parker_aviary");
     }
 
     //Testing edge info database
@@ -154,7 +151,7 @@ public class TodoDatabaseTest {
         ZooData zooData = new ZooData();
         zooData.populateDatabase(context);
         Map<String, ZooData.EdgeInfo> data = zooData.getEdgeDatabase();
-        assertEquals(data.get("edge-3").street ,  "Africa Rocks Street");
+        assertEquals(data.get("fern_to_fern").street ,  "Fern Canyon Trail");
     }
 
     @Test
@@ -163,7 +160,7 @@ public class TodoDatabaseTest {
         ZooData zooData = new ZooData();
         zooData.populateDatabase(context);
         Map<String, ZooData.EdgeInfo> data = zooData.getEdgeDatabase();
-        assertEquals(data.get("edge-3").getStreet() ,  "Africa Rocks Street");
+        assertEquals(data.get("fern_to_fern").getStreet() ,  "Fern Canyon Trail");
     }
 
     //testing graph database
@@ -183,9 +180,9 @@ public class TodoDatabaseTest {
         ZooData zooData = new ZooData();
         zooData.populateDatabase(context);
         Graph<String, IdentifiedWeightedEdge> data = zooData.getGraphDatabase();
-        IdentifiedWeightedEdge testEdge = data.getEdge("entrance_plaza", "arctic_foxes");
+        IdentifiedWeightedEdge testEdge = data.getEdge("koi", "intxn_front_lagoon_2");
 
-        assertEquals(data.getEdgeWeight(testEdge), 300.0, 0.01);
-        assertEquals(testEdge.getId(), "edge-4");
+        assertEquals(data.getEdgeWeight(testEdge), 30.0, 0.01);
+        assertEquals(testEdge.getId(), "lagoon2_to_koi");
     }
 }
