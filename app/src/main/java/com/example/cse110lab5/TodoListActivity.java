@@ -37,13 +37,16 @@ public class TodoListActivity extends AppCompatActivity {
     public RecyclerView recyclerView;
 
     private ListViewModel viewModel;
+    private ListItemDao listItemDao;
     private SearchView searchText;
     private Button searchButton;
     private ListView listView;
 
     private ArrayAdapter<String> arrayAdapter;
+    private ListAdapter adapter = new ListAdapter();
     private ArrayList<String> searchResults;
     private ArrayList<String> searchResultsID;
+    private List<ListItem> listDb;
     private ArrayList<String> addedAnimals = new ArrayList<String>();
     private Set<String> addedAnimalsSet = new HashSet<String>();
     private Map<String, ZooData.VertexInfo> nodeData;
@@ -58,8 +61,8 @@ public class TodoListActivity extends AppCompatActivity {
         viewModel = new ViewModelProvider(this)
                 .get(ListViewModel.class);
 
-        ListAdapter adapter = new ListAdapter();
-        viewModel.getListItems().observe(this, adapter::setListItems);
+        updateList();
+        listItemDao = ListDatabase.getSingleton(this).listItemDao();
 
         recyclerView = findViewById(R.id.list_items);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -94,22 +97,36 @@ public class TodoListActivity extends AppCompatActivity {
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                addedAnimalsSet.add(searchResultsID.get(i));
-                addedAnimals.add(searchResultsID.get(i));
-                Toast.makeText(getApplicationContext(), "Selected: " + searchResults.get(i), Toast.LENGTH_LONG).show();
-                numAnimalsSelected++;
+                listDb = listItemDao.getAll();
+                for (ListItem item : listDb) {
+                    addedAnimals.add(item.getText());
+                }
+                if (!addedAnimals.contains(searchResultsID.get(i))) {
+                    addedAnimals.add(searchResultsID.get(i));
+                    Toast.makeText(getApplicationContext(), "Selected: " + searchResults.get(i), Toast.LENGTH_LONG).show();
 
-                //changed / added for listview display
-                String text = searchResultsID.get(i);
-                viewModel.createItem(text);
+                    //changed / added for listview display
+                    String text = searchResultsID.get(i);
+                    viewModel.createItem(text);
+                }
             }
         });
 
     }
 
+    public void updateList() {
+        viewModel.getListItems().observe(this, adapter::setListItems);
+    }
+
     //passes addedAnimals array to plan for a plan summary
     public void onPlanBtnClicked(View view) {
         Intent intent = new Intent(this, PlanActivity.class);
+        listDb = listItemDao.getAll();
+
+        for (ListItem item : listDb) {
+            addedAnimalsSet.add(item.getText());
+        }
+
         intent.putExtra("addedAnimals", addedAnimalsSet.toArray(new String[0]));
         startActivity(intent);
     }
@@ -138,6 +155,6 @@ public class TodoListActivity extends AppCompatActivity {
     //displays the total amount of exhibits selected
     public void onCountBtnClick(View view) {
         TextView tview = (TextView) findViewById(R.id.countView);
-        tview.setText(String.valueOf(addedAnimalsSet.size()));
+        tview.setText(String.valueOf(adapter.getItemCount()));
     }
 }

@@ -207,10 +207,6 @@ public class ZooData {
             Type type = new TypeToken<List<ZooData.VertexInfoStore>>(){}.getType();
             List<ZooData.VertexInfoStore> zooData = gson.fromJson(reader, type);
 
-            for (ZooData.VertexInfoStore item : zooData) {
-                System.out.println(item.toString());
-            }
-
             // loads vertexInfoStore object and stores in database as vertexInfo object
              Map<String, ZooData.VertexInfo> indexedZooData = new HashMap();
              for (ZooData.VertexInfoStore datum : zooData) {

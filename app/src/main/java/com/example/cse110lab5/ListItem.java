@@ -41,6 +41,10 @@ public class ListItem {
                 '}';
     }
 
+    public String getText() {
+        return text;
+    }
+
     //instead of loading from json file load from map object (made in ms1)
     //load empty list
     public static List<ListItem> loadJSON(Context context, String path) {
