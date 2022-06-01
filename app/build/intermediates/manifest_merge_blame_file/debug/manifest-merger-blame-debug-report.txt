@@ -1,0 +1,94 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.cse110lab5"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="28"
+8-->C:\Users\Campbell Moco\StudioProjects\zooseeker-cse-110-team-16\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="31" />
+9-->C:\Users\Campbell Moco\StudioProjects\zooseeker-cse-110-team-16\app\src\main\AndroidManifest.xml
+10
+11    <application
+11-->C:\Users\Campbell Moco\StudioProjects\zooseeker-cse-110-team-16\app\src\main\AndroidManifest.xml:5:5-27:19
+12        android:allowBackup="true"
+12-->C:\Users\Campbell Moco\StudioProjects\zooseeker-cse-110-team-16\app\src\main\AndroidManifest.xml:6:9-35
+13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+13-->[androidx.core:core:1.7.0] C:\Users\Campbell Moco\.gradle\caches\transforms-3\d8338c189490aee58604e111af57865f\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
+14        android:debuggable="true"
+15        android:extractNativeLibs="false"
+16        android:icon="@mipmap/ic_launcher"
+16-->C:\Users\Campbell Moco\StudioProjects\zooseeker-cse-110-team-16\app\src\main\AndroidManifest.xml:7:9-43
+17        android:label="@string/app_name"
+17-->C:\Users\Campbell Moco\StudioProjects\zooseeker-cse-110-team-16\app\src\main\AndroidManifest.xml:8:9-41
+18        android:roundIcon="@mipmap/ic_launcher_round"
+18-->C:\Users\Campbell Moco\StudioProjects\zooseeker-cse-110-team-16\app\src\main\AndroidManifest.xml:9:9-54
+19        android:supportsRtl="true"
+19-->C:\Users\Campbell Moco\StudioProjects\zooseeker-cse-110-team-16\app\src\main\AndroidManifest.xml:10:9-35
+20        android:testOnly="true"
+21        android:theme="@style/Theme.CSE110Lab5" >
+21-->C:\Users\Campbell Moco\StudioProjects\zooseeker-cse-110-team-16\app\src\main\AndroidManifest.xml:11:9-48
+22        <activity
+22-->C:\Users\Campbell Moco\StudioProjects\zooseeker-cse-110-team-16\app\src\main\AndroidManifest.xml:12:9-14:40
+23            android:name="com.example.cse110lab5.DirectionsActivity"
+23-->C:\Users\Campbell Moco\StudioProjects\zooseeker-cse-110-team-16\app\src\main\AndroidManifest.xml:13:13-47
+24            android:exported="false" />
+24-->C:\Users\Campbell Moco\StudioProjects\zooseeker-cse-110-team-16\app\src\main\AndroidManifest.xml:14:13-37
+25        <activity
+25-->C:\Users\Campbell Moco\StudioProjects\zooseeker-cse-110-team-16\app\src\main\AndroidManifest.xml:15:9-17:40
+26            android:name="com.example.cse110lab5.PlanActivity"
+26-->C:\Users\Campbell Moco\StudioProjects\zooseeker-cse-110-team-16\app\src\main\AndroidManifest.xml:16:13-41
+27            android:exported="false" />
+27-->C:\Users\Campbell Moco\StudioProjects\zooseeker-cse-110-team-16\app\src\main\AndroidManifest.xml:17:13-37
+28        <activity
+28-->C:\Users\Campbell Moco\StudioProjects\zooseeker-cse-110-team-16\app\src\main\AndroidManifest.xml:18:9-26:20
+29            android:name="com.example.cse110lab5.TodoListActivity"
+29-->C:\Users\Campbell Moco\StudioProjects\zooseeker-cse-110-team-16\app\src\main\AndroidManifest.xml:19:13-45
+30            android:exported="true" >
+30-->C:\Users\Campbell Moco\StudioProjects\zooseeker-cse-110-team-16\app\src\main\AndroidManifest.xml:20:13-36
+31            <intent-filter>
+31-->C:\Users\Campbell Moco\StudioProjects\zooseeker-cse-110-team-16\app\src\main\AndroidManifest.xml:21:13-25:29
+32                <action android:name="android.intent.action.MAIN" />
+32-->C:\Users\Campbell Moco\StudioProjects\zooseeker-cse-110-team-16\app\src\main\AndroidManifest.xml:22:17-69
+32-->C:\Users\Campbell Moco\StudioProjects\zooseeker-cse-110-team-16\app\src\main\AndroidManifest.xml:22:25-66
+33
+34                <category android:name="android.intent.category.LAUNCHER" />
+34-->C:\Users\Campbell Moco\StudioProjects\zooseeker-cse-110-team-16\app\src\main\AndroidManifest.xml:24:17-77
+34-->C:\Users\Campbell Moco\StudioProjects\zooseeker-cse-110-team-16\app\src\main\AndroidManifest.xml:24:27-74
+35            </intent-filter>
+36        </activity>
+37
+38        <service
+38-->[androidx.room:room-runtime:2.4.2] C:\Users\Campbell Moco\.gradle\caches\transforms-3\35f855c212e1e8f3366b56d5dc8e47b7\transformed\room-runtime-2.4.2\AndroidManifest.xml:25:9-28:40
+39            android:name="androidx.room.MultiInstanceInvalidationService"
+39-->[androidx.room:room-runtime:2.4.2] C:\Users\Campbell Moco\.gradle\caches\transforms-3\35f855c212e1e8f3366b56d5dc8e47b7\transformed\room-runtime-2.4.2\AndroidManifest.xml:26:13-74
+40            android:directBootAware="true"
+40-->[androidx.room:room-runtime:2.4.2] C:\Users\Campbell Moco\.gradle\caches\transforms-3\35f855c212e1e8f3366b56d5dc8e47b7\transformed\room-runtime-2.4.2\AndroidManifest.xml:27:13-43
+41            android:exported="false" />
+41-->[androidx.room:room-runtime:2.4.2] C:\Users\Campbell Moco\.gradle\caches\transforms-3\35f855c212e1e8f3366b56d5dc8e47b7\transformed\room-runtime-2.4.2\AndroidManifest.xml:28:13-37
+42
+43        <provider
+43-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Campbell Moco\.gradle\caches\transforms-3\db233f3ba8947fb0f91cd701b83dfe6a\transformed\emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+44            android:name="androidx.startup.InitializationProvider"
+44-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Campbell Moco\.gradle\caches\transforms-3\db233f3ba8947fb0f91cd701b83dfe6a\transformed\emoji2-1.0.0\AndroidManifest.xml:27:13-67
+45            android:authorities="com.example.cse110lab5.androidx-startup"
+45-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Campbell Moco\.gradle\caches\transforms-3\db233f3ba8947fb0f91cd701b83dfe6a\transformed\emoji2-1.0.0\AndroidManifest.xml:28:13-68
+46            android:exported="false" >
+46-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Campbell Moco\.gradle\caches\transforms-3\db233f3ba8947fb0f91cd701b83dfe6a\transformed\emoji2-1.0.0\AndroidManifest.xml:29:13-37
+47            <meta-data
+47-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Campbell Moco\.gradle\caches\transforms-3\db233f3ba8947fb0f91cd701b83dfe6a\transformed\emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+48                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+48-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Campbell Moco\.gradle\caches\transforms-3\db233f3ba8947fb0f91cd701b83dfe6a\transformed\emoji2-1.0.0\AndroidManifest.xml:32:17-75
+49                android:value="androidx.startup" />
+49-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Campbell Moco\.gradle\caches\transforms-3\db233f3ba8947fb0f91cd701b83dfe6a\transformed\emoji2-1.0.0\AndroidManifest.xml:33:17-49
+50            <meta-data
+50-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Campbell Moco\.gradle\caches\transforms-3\45759b04922bc547a81513b82a38ba1e\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+51                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+51-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Campbell Moco\.gradle\caches\transforms-3\45759b04922bc547a81513b82a38ba1e\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+52                android:value="androidx.startup" />
+52-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Campbell Moco\.gradle\caches\transforms-3\45759b04922bc547a81513b82a38ba1e\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+53        </provider>
+54    </application>
+55
+56</manifest>

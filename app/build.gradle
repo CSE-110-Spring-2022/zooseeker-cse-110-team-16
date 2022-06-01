@@ -39,14 +39,13 @@ dependencies {
     def gson_version = "2.9.0"
     def room_version = "2.4.2"
 
-    androidTestImplementation 'com.android.support.test:runner:1.0.1'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+
     implementation "com.google.code.gson:gson:$gson_version"
     implementation "androidx.room:room-runtime:$room_version"
     annotationProcessor "androidx.room:room-compiler:$room_version"
     implementation 'org.jgrapht:jgrapht-core:1.5.0'
     implementation group: 'org.jgrapht', name: 'jgrapht-io', version: '1.5.0'
-
 
     implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation 'com.google.android.material:material:1.5.0'

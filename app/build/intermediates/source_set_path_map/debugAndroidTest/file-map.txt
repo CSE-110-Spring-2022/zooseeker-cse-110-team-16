@@ -1,0 +1,9 @@
+com.example.cse110lab5.test.app-core-1.4.1-alpha06-0 C:\Users\Campbell Moco\.gradle\caches\transforms-3\0df391eabe3bf98503aeb6c03b2978e7\transformed\core-1.4.1-alpha06\res
+com.example.cse110lab5.test.app-annotation-experimental-1.1.0-1 C:\Users\Campbell Moco\.gradle\caches\transforms-3\e36aaea95b1e10850d139e7025f21ff0\transformed\annotation-experimental-1.1.0\res
+com.example.cse110lab5.test.app-androidTest-2 C:\Users\Campbell Moco\StudioProjects\zooseeker-cse-110-team-16\app\build\generated\res\resValues\androidTest\debug
+com.example.cse110lab5.test.app-androidTest-3 C:\Users\Campbell Moco\StudioProjects\zooseeker-cse-110-team-16\app\build\generated\res\rs\androidTest\debug
+com.example.cse110lab5.test.app-mergeDebugAndroidTestResources-4 C:\Users\Campbell Moco\StudioProjects\zooseeker-cse-110-team-16\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.example.cse110lab5.test.app-mergeDebugAndroidTestResources-5 C:\Users\Campbell Moco\StudioProjects\zooseeker-cse-110-team-16\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.example.cse110lab5.test.app-merged_res-6 C:\Users\Campbell Moco\StudioProjects\zooseeker-cse-110-team-16\app\build\intermediates\merged_res\debugAndroidTest
+com.example.cse110lab5.test.app-androidTest-7 C:\Users\Campbell Moco\StudioProjects\zooseeker-cse-110-team-16\app\src\androidTest\res
+com.example.cse110lab5.test.app-androidTestDebug-8 C:\Users\Campbell Moco\StudioProjects\zooseeker-cse-110-team-16\app\src\androidTestDebug\res

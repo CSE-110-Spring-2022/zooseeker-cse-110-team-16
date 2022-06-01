@@ -1,0 +1,973 @@
+05-31 23:17:35.986 27803 27824 I TestRunner: started: sBST3IntrumentedTest(com.example.cse110lab5.SBST3IntrumentedTest)
+05-31 23:17:35.991 27803 27824 W ActivityTestRule: getActivityIntent() returned null using default: Intent(Intent.ACTION_MAIN)
+05-31 23:17:36.002   556  1716 W InputReader: Device virtio_input_multi_touch_4 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:36.002   556  1716 W InputReader: Device virtio_input_multi_touch_10 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:36.002   556  1716 W InputReader: Device virtio_input_multi_touch_8 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:36.002   556  1716 W InputReader: Device virtio_input_multi_touch_2 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:36.002   556  1716 W InputReader: Device virtio_input_multi_touch_9 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:36.002   556  1716 W InputReader: Device virtio_input_multi_touch_3 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:36.002   556  1716 W InputReader: Device virtio_input_multi_touch_7 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:36.002   556  1716 W InputReader: Device virtio_input_multi_touch_5 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:36.002   556  1716 W InputReader: Device virtio_input_multi_touch_6 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:36.002   556  1716 W InputReader: Device virtio_input_multi_touch_11 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:36.002   556  1716 W InputReader: Device virtio_input_multi_touch_4 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:36.002   556  1716 W InputReader: Device virtio_input_multi_touch_10 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:36.003   556  1716 W InputReader: Device virtio_input_multi_touch_8 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:36.003   556  1716 W InputReader: Device virtio_input_multi_touch_2 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:36.003   556  1716 W InputReader: Device virtio_input_multi_touch_9 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:36.003   556  1716 W InputReader: Device virtio_input_multi_touch_3 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:36.003   556  1716 W InputReader: Device virtio_input_multi_touch_7 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:36.003   556  1716 W InputReader: Device virtio_input_multi_touch_5 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:36.003   556  1716 W InputReader: Device virtio_input_multi_touch_6 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:36.004   556  1716 W InputReader: Device virtio_input_multi_touch_11 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:36.013 27803 27829 D libEGL  : loaded /vendor/lib64/egl/libEGL_emulation.so
+05-31 23:17:36.014 27803 27829 D libEGL  : loaded /vendor/lib64/egl/libGLESv1_CM_emulation.so
+05-31 23:17:36.016 27803 27829 D libEGL  : loaded /vendor/lib64/egl/libGLESv2_emulation.so
+05-31 23:17:36.028   384   425 D goldfish-address-space: claimShared: Ask to claim region [0x3f0000000 0x3f0965000]
+05-31 23:17:36.035   384   425 D goldfish-address-space: claimShared: Ask to claim region [0x3f0965000 0x3f12ca000]
+05-31 23:17:36.036   384   435 D goldfish-address-space: claimShared: Ask to claim region [0x3f12ca000 0x3f1c2f000]
+05-31 23:17:36.057 27803 27803 D LifecycleMonitor: Lifecycle status change: com.example.cse110lab5.TodoListActivity@aa9d812 in: PRE_ON_CREATE
+05-31 23:17:36.107  2927  2927 I GsaVoiceInteractionSrv: Handling ACTION_STOP_HOTWORD
+05-31 23:17:36.108  2927  2927 E HwDetectorWithState: a: 3
+05-31 23:17:36.116 27803 27803 W mple.cse110lab: Accessing hidden method Landroid/view/View;->computeFitSystemWindows(Landroid/graphics/Rect;Landroid/graphics/Rect;)Z (unsupported, reflection, allowed)
+05-31 23:17:36.117 27803 27803 W mple.cse110lab: Accessing hidden method Landroid/view/ViewGroup;->makeOptionalFitsSystemWindows()V (unsupported, reflection, allowed)
+05-31 23:17:36.200 27803 27803 D CompatibilityChangeReporter: Compat change id reported: 171228096; UID 10148; state: ENABLED
+05-31 23:17:36.343 27803 27803 D LifecycleMonitor: Lifecycle status change: com.example.cse110lab5.TodoListActivity@aa9d812 in: CREATED
+05-31 23:17:36.345 27803 27803 D LifecycleMonitor: Lifecycle status change: com.example.cse110lab5.TodoListActivity@aa9d812 in: STARTED
+05-31 23:17:36.346 27803 27803 D LifecycleMonitor: Lifecycle status change: com.example.cse110lab5.TodoListActivity@aa9d812 in: RESUMED
+05-31 23:17:36.349   812   873 D EGL_emulation: app_time_stats: avg=47558.56ms min=51.31ms max=237393.50ms count=5
+05-31 23:17:36.390 27803 27827 D HostConnection: createUnique: call
+05-31 23:17:36.391 27803 27827 D HostConnection: HostConnection::get() New Host Connection established 0x7b151b35bf10, tid 27827
+05-31 23:17:36.395 27803 27827 D HostConnection: HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_native_sync_v3 ANDROID_EMU_native_sync_v4 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 ANDROID_EMU_host_composition_v2 ANDROID_EMU_vulkan ANDROID_EMU_deferred_vulkan_commands ANDROID_EMU_vulkan_null_optional_strings ANDROID_EMU_vulkan_create_resources_with_requirements ANDROID_EMU_YUV_Cache ANDROID_EMU_vulkan_ignored_handles ANDROID_EMU_has_shared_slots_host_memory_allocator ANDROID_EMU_vulkan_free_memory_sync ANDROID_EMU_vulkan_shader_float16_int8 ANDROID_EMU_vulkan_async_queue_submit ANDROID_EMU_vulkan_queue_submit_with_commands ANDROID_EMU_sync_buffer_data ANDROID_EMU_read_color_buffer_dma GL_OES_EGL_image_external_essl3 GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_3_0
+05-31 23:17:36.395   214   214 I hwservicemanager: getTransport: Cannot find entry android.hardware.configstore@1.0::ISurfaceFlingerConfigs/default in either framework or device VINTF manifest.
+05-31 23:17:36.396 27803 27827 W OpenGLRenderer: Failed to choose config with EGL_SWAP_BEHAVIOR_PRESERVED, retrying without...
+05-31 23:17:36.396 27803 27827 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+05-31 23:17:36.404 27803 27827 D EGL_emulation: eglCreateContext: 0x7b151b35aa10: maj 3 min 0 rcv 3
+05-31 23:17:36.431 27803 27827 D EGL_emulation: eglMakeCurrent: 0x7b151b35aa10: ver 3 0 (tinfo 0x7b173f063080) (first time)
+05-31 23:17:36.436   812   873 D EGL_emulation: app_time_stats: avg=36413.08ms min=36413.08ms max=36413.08ms count=1
+05-31 23:17:36.438   214   214 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+05-31 23:17:36.438 27803 27827 I Gralloc4: mapper 4.x is not supported
+05-31 23:17:36.439 27803 27827 D HostConnection: createUnique: call
+05-31 23:17:36.439 27803 27827 D HostConnection: HostConnection::get() New Host Connection established 0x7b151b35b610, tid 27827
+05-31 23:17:36.440 27803 27827 D goldfish-address-space: allocate: Ask for block of size 0x100
+05-31 23:17:36.440 27803 27827 D goldfish-address-space: allocate: ioctl allocate returned offset 0x3efffe000 size 0x2000
+05-31 23:17:36.470   214   214 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.allocator@4.0::IAllocator/default in either framework or device VINTF manifest.
+05-31 23:17:36.471 27803 27827 W Gralloc4: allocator 4.x is not supported
+05-31 23:17:36.473   384   425 D goldfish-address-space: claimShared: Ask to claim region [0x3f1c2f000 0x3f2594000]
+05-31 23:17:36.483 27803 27827 D HostConnection: HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_native_sync_v3 ANDROID_EMU_native_sync_v4 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 ANDROID_EMU_host_composition_v2 ANDROID_EMU_vulkan ANDROID_EMU_deferred_vulkan_commands ANDROID_EMU_vulkan_null_optional_strings ANDROID_EMU_vulkan_create_resources_with_requirements ANDROID_EMU_YUV_Cache ANDROID_EMU_vulkan_ignored_handles ANDROID_EMU_has_shared_slots_host_memory_allocator ANDROID_EMU_vulkan_free_memory_sync ANDROID_EMU_vulkan_shader_float16_int8 ANDROID_EMU_vulkan_async_queue_submit ANDROID_EMU_vulkan_queue_submit_with_commands ANDROID_EMU_sync_buffer_data ANDROID_EMU_read_color_buffer_dma GL_OES_EGL_image_external_essl3 GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_3_0
+05-31 23:17:36.484   384   425 D goldfish-address-space: claimShared: Ask to claim region [0x3f2594000 0x3f2ef9000]
+05-31 23:17:36.488   384   425 D goldfish-address-space: claimShared: Ask to claim region [0x3f2ef9000 0x3f385e000]
+05-31 23:17:36.546   556   592 I ActivityTaskManager: Displayed com.example.cse110lab5/.TodoListActivity: +547ms
+05-31 23:17:36.577  7921  7921 I GoogleInputMethodService: GoogleInputMethodService.onStartInputView():2057
+05-31 23:17:36.581  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.581  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.583  7921  7921 I KeyboardViewUtil: KeyboardViewUtil.getKeyboardHeightRatio():168 systemKeyboardHeightRatio:1.000000; userKeyboardHeightRatio:1.000000.
+05-31 23:17:36.584  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.584  7921  7921 I AndroidIME: AbstractIme.onActivate():86 PasswordIme.onActivate() : EditorInfo = inputType=Text imeActionName=UNSPECIFIED dump=[inputType=0x0 imeOptions=0x0 privateImeOptions=null actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.google.android.apps.nexuslauncher autofillId=1 fieldId=-1 fieldName=null extras=null hintLocales=null contentMimeTypes=null ], IncognitoMode = false, DeviceLocked = false
+05-31 23:17:36.584  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.597  7921  7921 I KeyboardViewHelper: KeyboardViewHelper.getView():166 Get view with height ratio:1.000000
+05-31 23:17:36.612  7921  7921 I KeyboardViewUtil: KeyboardViewUtil.calculateMaxKeyboardBodyHeight():53 leave 344 height for app when screen height:2148, header height:121 and isFullscreenMode:false, so the max keyboard body height is:1683
+05-31 23:17:36.612  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.612  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.613  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.613  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.613  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.614  7921  7921 I KeyboardViewUtil: KeyboardViewUtil.calculateMaxKeyboardBodyHeight():53 leave 344 height for app when screen height:2148, header height:121 and isFullscreenMode:false, so the max keyboard body height is:1683
+05-31 23:17:36.615  7921  7921 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():111 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+05-31 23:17:36.615  7921  7921 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():111 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+05-31 23:17:36.618  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.618  7921  7921 I VoiceImeExtension: VoiceImeExtension.shouldStartVoiceInputAutomatically():364 No private IME option set to start voice input.
+05-31 23:17:36.621  7921  7921 I GoogleInputMethodService: GoogleInputMethodService.onFinishInputView():2291
+05-31 23:17:36.621  7921  7921 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():157 Tooltip with id spell_check_add_to_dictionary not found in tooltipManager.
+05-31 23:17:36.622  7921  7921 I AndroidIME: AbstractIme.onDeactivate():207 PasswordIme.onDeactivate()
+05-31 23:17:36.622  7921  7921 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3269
+05-31 23:17:36.622  7921  7921 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1947
+05-31 23:17:36.623  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.623  7921  7921 I GoogleInputMethodService: GoogleInputMethodService.onStartInputView():2057
+05-31 23:17:36.624  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.624  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.636  9955  9955 D BoundBrokerSvc: onBind: Intent { act=com.google.firebase.dynamiclinks.service.START pkg=com.google.android.gms }
+05-31 23:17:36.636  9955  9955 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.firebase.dynamiclinks.service.START pkg=com.google.android.gms }
+05-31 23:17:36.648 27803 27824 W FileTestStorage: Output properties is not supported.
+05-31 23:17:36.648  7921  7921 I KeyboardViewUtil: KeyboardViewUtil.getKeyboardHeightRatio():168 systemKeyboardHeightRatio:1.000000; userKeyboardHeightRatio:1.000000.
+05-31 23:17:36.648 27803 27824 I Tracing : Tracer added: class androidx.test.platform.tracing.AndroidXTracer
+05-31 23:17:36.649  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.649  7921  7921 I AndroidIME: AbstractIme.onActivate():86 LatinIme.onActivate() : EditorInfo = inputType=Text imeActionName=NEXT dump=[inputType=0x1 imeOptions=0xc000005 privateImeOptions=null actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.example.cse110lab5 autofillId=1073741825 fieldId=2131230952 fieldName=null extras=null hintLocales=null contentMimeTypes=null ], IncognitoMode = false, DeviceLocked = false
+05-31 23:17:36.649  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.650  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.650  7921  7921 I Delight5Facilitator: Delight5Facilitator.initializeForIme():769 initializeForIme() : Locale = [en_US], layout = qwerty
+05-31 23:17:36.651  7921  7921 I Delight5Facilitator: Delight5Facilitator.resetDecoder():925 resetDecoder() : Locale = [en_US]
+05-31 23:17:36.653  7921  7921 E UserFeatureCache: UserFeatureCache.getStore():468 Wrong feature id provided PERSONALIZED_FST_MODEL_PARAMS for protobuf lab.
+05-31 23:17:36.653  7921  7921 E InputContextLock: InputContextLock.mayLockAndRun():126 Failed to run
+05-31 23:17:36.653  7921  7921 E InputContextLock: java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.Class java.lang.Object.getClass()' on a null object reference
+05-31 23:17:36.653  7921  7921 E InputContextLock: 	at com.google.android.libraries.inputmethod.userfeaturecache.UserFeatureCache.c(PG:8)
+05-31 23:17:36.653  7921  7921 E InputContextLock: 	at com.google.android.apps.inputmethod.libs.delight5.Delight5Facilitator.K(PG:131)
+05-31 23:17:36.653  7921  7921 E InputContextLock: 	at cng.call(Unknown Source:4)
+05-31 23:17:36.653  7921  7921 E InputContextLock: 	at con.a(PG:8)
+05-31 23:17:36.653  7921  7921 E InputContextLock: 	at com.google.android.apps.inputmethod.libs.delight5.Delight5Facilitator.G(PG:37)
+05-31 23:17:36.653  7921  7921 E InputContextLock: 	at com.google.android.apps.inputmethod.libs.latin5.LatinIme.h(PG:17)
+05-31 23:17:36.653  7921  7921 E InputContextLock: 	at jlx.g(PG:6)
+05-31 23:17:36.653  7921  7921 E InputContextLock: 	at jlx.m(PG:2)
+05-31 23:17:36.653  7921  7921 E InputContextLock: 	at dww.u(PG:18)
+05-31 23:17:36.653  7921  7921 E InputContextLock: 	at com.android.inputmethod.latin.LatinIME.u(PG:104)
+05-31 23:17:36.653  7921  7921 E InputContextLock: 	at dww.onStartInputView(PG:29)
+05-31 23:17:36.653  7921  7921 E InputContextLock: 	at android.inputmethodservice.InputMethodService.doStartInput(InputMethodService.java:2443)
+05-31 23:17:36.653  7921  7921 E InputContextLock: 	at android.inputmethodservice.InputMethodService$InputMethodImpl.startInput(InputMethodService.java:689)
+05-31 23:17:36.653  7921  7921 E InputContextLock: 	at android.inputmethodservice.InputMethodService$InputMethodImpl.dispatchStartInputWithToken(InputMethodService.java:719)
+05-31 23:17:36.653  7921  7921 E InputContextLock: 	at android.inputmethodservice.IInputMethodWrapper.executeMessage(IInputMethodWrapper.java:199)
+05-31 23:17:36.653  7921  7921 E InputContextLock: 	at com.android.internal.os.HandlerCaller$MyHandler.handleMessage(HandlerCaller.java:44)
+05-31 23:17:36.653  7921  7921 E InputContextLock: 	at android.os.Handler.dispatchMessage(Handler.java:106)
+05-31 23:17:36.653  7921  7921 E InputContextLock: 	at android.os.Looper.loopOnce(Looper.java:201)
+05-31 23:17:36.653  7921  7921 E InputContextLock: 	at android.os.Looper.loop(Looper.java:288)
+05-31 23:17:36.653  7921  7921 E InputContextLock: 	at android.app.ActivityThread.main(ActivityThread.java:7842)
+05-31 23:17:36.653  7921  7921 E InputContextLock: 	at java.lang.reflect.Method.invoke(Native Method)
+05-31 23:17:36.653  7921  7921 E InputContextLock: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:548)
+05-31 23:17:36.653  7921  7921 E InputContextLock: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1003)
+05-31 23:17:36.655  7921  7921 I VoiceInputManagerWrapper: VoiceInputManagerWrapper.cancelShutdown():55 cancelShutdown()
+05-31 23:17:36.655  7921  7921 I VoiceInputManagerWrapper: VoiceInputManagerWrapper.syncLanguagePacks():67 syncLanguagePacks()
+05-31 23:17:36.656  7921  7921 I LatinIme: LatinIme.updateEnableInlineSuggestionsOnDecoderSideFlags():1264 inline flag updated to:false
+05-31 23:17:36.656 27803 27824 D EventInjectionStrategy: Creating injection strategy with input manager.
+05-31 23:17:36.656  7921  8642 I SpeechFactory: SpeechRecognitionFactory.maybeScheduleAutoPackDownloadForFallback():184 maybeScheduleAutoPackDownloadForFallback()
+05-31 23:17:36.656  7921  8642 I FallbackOnDeviceRecognitionProvider: FallbackOnDeviceRecognitionProvider.maybeScheduleAutoPackDownload():196 maybeScheduleAutoPackDownload() for language tag en-US
+05-31 23:17:36.657 27803 27824 W mple.cse110lab: Accessing hidden method Landroid/hardware/input/InputManager;->getInstance()Landroid/hardware/input/InputManager; (unsupported, reflection, allowed)
+05-31 23:17:36.657 27803 27824 W mple.cse110lab: Accessing hidden method Landroid/hardware/input/InputManager;->injectInputEvent(Landroid/view/InputEvent;I)Z (unsupported, reflection, allowed)
+05-31 23:17:36.657 27803 27824 W mple.cse110lab: Accessing hidden field Landroid/hardware/input/InputManager;->INJECT_INPUT_EVENT_MODE_WAIT_FOR_FINISH:I (unsupported, reflection, allowed)
+05-31 23:17:36.659  7921  7921 W Delight5Decoder: Decoder.setRuntimeParams():372 setRuntimeParams() : Native lib is not ready.
+05-31 23:17:36.661  7921  7921 I KeyboardWrapper: KeyboardWrapper.consumeEvent():284 Skip consuming an event as current keyboard is deactivated (state=0, keyboard existence=true)
+05-31 23:17:36.664  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.664  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.667  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.667  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.668  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.668  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.669  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.669  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.675  7921  7921 I KeyboardViewHelper: KeyboardViewHelper.getView():166 Get view with height ratio:1.000000
+05-31 23:17:36.683  7921  7921 I KeyboardViewUtil: KeyboardViewUtil.calculateMaxKeyboardBodyHeight():53 leave 344 height for app when screen height:2148, header height:121 and isFullscreenMode:false, so the max keyboard body height is:1683
+05-31 23:17:36.685  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.686  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.686 27803 27824 W mple.cse110lab: Accessing hidden method Landroid/view/ViewConfiguration;->getDoubleTapMinTime()I (unsupported, reflection, allowed)
+05-31 23:17:36.686  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.686  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.686  7921  7921 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():96 Get device mode phone by ui mode:1 and smallestScreenWidthDp:392
+05-31 23:17:36.687  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.689  7921  7921 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():111 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+05-31 23:17:36.689  7921  7921 I KeyboardViewUtil: KeyboardViewUtil.calculateMaxKeyboardBodyHeight():53 leave 344 height for app when screen height:2148, header height:121 and isFullscreenMode:false, so the max keyboard body height is:1683
+05-31 23:17:36.690 27803 27824 W FileTestStorage: Test input args is not supported.
+05-31 23:17:36.690  7921  7921 E LatinPrimeKeyboard: LatinPrimeKeyboard.updateCurrentImeLocales():414 consumeEvent: UPDATE_CURRENT_IME_LOCALES, Illegal argument
+05-31 23:17:36.690  7921  7921 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():111 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+05-31 23:17:36.690  7921  7921 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():111 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+05-31 23:17:36.696  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.696  7921  7921 I VoiceImeExtension: VoiceImeExtension.shouldStartVoiceInputAutomatically():364 No private IME option set to start voice input.
+05-31 23:17:36.696 27803 27803 W mple.cse110lab: Accessing hidden method Landroid/os/MessageQueue;->next()Landroid/os/Message; (unsupported, reflection, allowed)
+05-31 23:17:36.696 27803 27803 W mple.cse110lab: Accessing hidden field Landroid/os/MessageQueue;->mMessages:Landroid/os/Message; (unsupported, reflection, allowed)
+05-31 23:17:36.696  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.697 27803 27803 W mple.cse110lab: Accessing hidden method Landroid/os/Message;->recycleUnchecked()V (unsupported, reflection, allowed)
+05-31 23:17:36.697  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.698  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.698  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.698  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.699  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.700  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.700  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.701  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.701  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.702  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.702  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.703 27803 27803 W mple.cse110lab: Accessing hidden method Landroid/view/WindowManagerGlobal;->getInstance()Landroid/view/WindowManagerGlobal; (unsupported, reflection, allowed)
+05-31 23:17:36.703 27803 27803 W mple.cse110lab: Accessing hidden field Landroid/view/WindowManagerGlobal;->mViews:Ljava/util/ArrayList; (unsupported, reflection, allowed)
+05-31 23:17:36.703 27803 27803 W mple.cse110lab: Accessing hidden field Landroid/view/WindowManagerGlobal;->mParams:Ljava/util/ArrayList; (unsupported, reflection, allowed)
+05-31 23:17:36.710 27803 27803 I ViewInteraction: Performing 'single click' action on view (view.getClass().getName() matches: is "androidx.appcompat.widget.AppCompatImageView" and view.getContentDescription() is "Search" and Child at position 1 in parent (view.getClass().getName() matches: is "android.widget.LinearLayout" and Child at position 0 in parent view.getId() is <2131231096/com.example.cse110lab5:id/search_text>) and (view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle))
+05-31 23:17:36.711   384   425 D goldfish-address-space: claimShared: Ask to claim region [0x3f4000000 0x3f4920000]
+05-31 23:17:36.729   384   425 D goldfish-address-space: claimShared: Ask to claim region [0x3f4920000 0x3f5240000]
+05-31 23:17:36.735  7921  7921 I GoogleInputMethodService: GoogleInputMethodService.onFinishInputView():2291
+05-31 23:17:36.736  7921  7921 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():157 Tooltip with id spell_check_add_to_dictionary not found in tooltipManager.
+05-31 23:17:36.737  7921  7921 I InputBundle: InputBundle.consumeEvent():920 Skip consuming an event as keyboard status is 0
+05-31 23:17:36.738   384   425 D goldfish-address-space: claimShared: Ask to claim region [0x3f5240000 0x3f5b60000]
+05-31 23:17:36.739  7921  7921 I KeyboardWrapper: KeyboardWrapper.consumeEvent():284 Skip consuming an event as current keyboard is deactivated (state=0, keyboard existence=true)
+05-31 23:17:36.739  7921  7921 I VoiceInputManagerWrapper: VoiceInputManagerWrapper.shutdown():77 shutdown()
+05-31 23:17:36.740  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.742  7921  7921 I AndroidIME: AbstractIme.onDeactivate():207 LatinIme.onDeactivate()
+05-31 23:17:36.744   384   425 D goldfish-address-space: claimShared: Ask to claim region [0x3f385e000 0x3f3d19000]
+05-31 23:17:36.749  7921  7921 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3269
+05-31 23:17:36.750  7921  7921 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1947
+05-31 23:17:36.752  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.754  7921  7921 I GoogleInputMethodService: GoogleInputMethodService.onStartInputView():2057
+05-31 23:17:36.755  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.755 27803 27803 D InsetsController: show(ime(), fromIme=true)
+05-31 23:17:36.756  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.757   418   551 I BpBinder: onLastStrongRef automatically unlinking death recipients: <uncached descriptor>
+05-31 23:17:36.772  9955  9955 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-31 23:17:36.772  9955  9955 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-31 23:17:36.774  9955  9955 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-31 23:17:36.777  9955  9955 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-31 23:17:36.777  9955  9955 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-31 23:17:36.778  9955  9955 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-31 23:17:36.779  9955  9955 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-31 23:17:36.779  9955  9955 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-31 23:17:36.780  9955  9955 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-31 23:17:36.783  9955  9955 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-31 23:17:36.783  9955  9955 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-31 23:17:36.784  9955  9955 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-31 23:17:36.808   384   425 D goldfish-address-space: claimShared: Ask to claim region [0x3f3d19000 0x3f3d4b000]
+05-31 23:17:36.811   384   425 D goldfish-address-space: claimShared: Ask to claim region [0x3f3d4b000 0x3f3d7d000]
+05-31 23:17:36.813   384   425 D goldfish-address-space: claimShared: Ask to claim region [0x3f3d7d000 0x3f3daf000]
+05-31 23:17:36.825  7921  7921 I KeyboardViewUtil: KeyboardViewUtil.getKeyboardHeightRatio():168 systemKeyboardHeightRatio:1.000000; userKeyboardHeightRatio:1.000000.
+05-31 23:17:36.826  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.826  7921  7921 I AndroidIME: AbstractIme.onActivate():86 PasswordIme.onActivate() : EditorInfo = inputType=Text imeActionName=UNSPECIFIED dump=[inputType=0x0 imeOptions=0x0 privateImeOptions=null actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.example.cse110lab5 autofillId=1073741826 fieldId=2131230966 fieldName=null extras=null hintLocales=null contentMimeTypes=null ], IncognitoMode = false, DeviceLocked = false
+05-31 23:17:36.827  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.829  7921  7921 I KeyboardViewHelper: KeyboardViewHelper.getView():166 Get view with height ratio:1.000000
+05-31 23:17:36.832  7921  7921 I KeyboardViewUtil: KeyboardViewUtil.calculateMaxKeyboardBodyHeight():53 leave 344 height for app when screen height:2148, header height:121 and isFullscreenMode:false, so the max keyboard body height is:1683
+05-31 23:17:36.833  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.833  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.834  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.834  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.834  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.835  7921  7921 I KeyboardViewUtil: KeyboardViewUtil.calculateMaxKeyboardBodyHeight():53 leave 344 height for app when screen height:2148, header height:121 and isFullscreenMode:false, so the max keyboard body height is:1683
+05-31 23:17:36.835  7921  7921 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():111 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+05-31 23:17:36.836  7921  7921 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():111 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+05-31 23:17:36.838  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.838  7921  7921 I VoiceImeExtension: VoiceImeExtension.shouldStartVoiceInputAutomatically():364 No private IME option set to start voice input.
+05-31 23:17:36.841   812  1530 I OpenGLRenderer: Davey! duration=810205ms; Flags=1, FrameTimelineVsyncId=868151, IntendedVsync=24428339985728, Vsync=24428339985728, InputEventId=0, HandleInputStart=24428340667000, AnimationStart=24428340679200, PerformTraversalsStart=24428340781600, DrawStart=24428350673300, FrameDeadline=24428389985726, FrameInterval=24428340658600, FrameStartTime=16666666, SyncQueued=24428350761100, SyncStart=24428351470300, IssueDrawCommandsStart=24428351565500, SwapBuffers=24428351665400, FrameCompleted=25238546421400, DequeueBufferDuration=256100, QueueBufferDuration=480400, GpuCompleted=25238546421400, SwapBuffersCompleted=24428352854200, DisplayPresentTime=0,
+05-31 23:17:36.848   556   942 W InputManager-JNI: Input channel object 'ea39aac Splash Screen com.example.cse110lab5 (client)' was disposed without first being removed with the input manager!
+05-31 23:17:36.859  9955  9955 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-31 23:17:36.859  9955  9955 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-31 23:17:36.861 27803 27803 D InsetsController: show(ime(), fromIme=true)
+05-31 23:17:36.861  9955  9955 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-31 23:17:36.865   418   463 I BpBinder: onLastStrongRef automatically unlinking death recipients: <uncached descriptor>
+05-31 23:17:36.868  7921  7921 I GoogleInputMethodService: GoogleInputMethodService.onFinishInputView():2291
+05-31 23:17:36.868  7921  7921 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():157 Tooltip with id spell_check_add_to_dictionary not found in tooltipManager.
+05-31 23:17:36.869 27803 27803 D CompatibilityChangeReporter: Compat change id reported: 163400105; UID 10148; state: DISABLED
+05-31 23:17:36.869 27803 27803 D InputMethodManager: showSoftInput() view=android.widget.SearchView$SearchAutoComplete{3889cef VFED..CL. .F....ID 0,0-0,0 #1020464 android:id/search_src_text aid=1073741824} flags=0 reason=SHOW_SOFT_INPUT
+05-31 23:17:36.876  9955  9955 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-31 23:17:36.876  9955  9955 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-31 23:17:36.876   373   373 E android.hardware.audio@7.0-impl.ranchu: device/generic/goldfish/audio/stream_out.cpp:updateSourceMetadata:377 failure: Result::NOT_SUPPORTED
+05-31 23:17:36.877  7921  7921 I AndroidIME: AbstractIme.onDeactivate():207 PasswordIme.onDeactivate()
+05-31 23:17:36.881  7638  7869 I FontLog : Received query Noto Color Emoji Compat, URI content://com.google.android.gms.fonts [CONTEXT service_id=132 ]
+05-31 23:17:36.881  7638  7869 I FontLog : Query [emojicompat-emoji-font] resolved to {Noto Color Emoji Compat, wdth 100.0, wght 400, ital 0.0, bestEffort false} [CONTEXT service_id=132 ]
+05-31 23:17:36.883  7638  7869 I FontLog : Fetch {Noto Color Emoji Compat, wdth 100.0, wght 400, ital 0.0, bestEffort false} end status Status{statusCode=SUCCESS, resolution=null} [CONTEXT service_id=132 ]
+05-31 23:17:36.884  9955  9955 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-31 23:17:36.888  7921  7921 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3269
+05-31 23:17:36.893  7921  7921 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1947
+05-31 23:17:36.894  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.894  7921  7921 I GoogleInputMethodService: GoogleInputMethodService.onStartInputView():2057
+05-31 23:17:36.895  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.897  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.898  7921  7921 I KeyboardViewUtil: KeyboardViewUtil.getKeyboardHeightRatio():168 systemKeyboardHeightRatio:1.000000; userKeyboardHeightRatio:1.000000.
+05-31 23:17:36.899  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.899  7921  7921 I AndroidIME: AbstractIme.onActivate():86 LatinIme.onActivate() : EditorInfo = inputType=Text imeActionName=SEARCH dump=[inputType=0x90001 imeOptions=0x8000003 privateImeOptions=null actionLabel=null actionId=0 initialSelStart=0 initialSelEnd=0 initialCapsMode=0x0 hintText=    label=null packageName=com.example.cse110lab5 autofillId=1073741824 fieldId=16909412 fieldName=null extras=null hintLocales=null contentMimeTypes=null ], IncognitoMode = false, DeviceLocked = false
+05-31 23:17:36.900  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.900  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.901  7921  7921 I Delight5Facilitator: Delight5Facilitator.initializeForIme():769 initializeForIme() : Locale = [en_US], layout = qwerty
+05-31 23:17:36.901  7921  7921 I Delight5Facilitator: Delight5Facilitator.resetDecoder():925 resetDecoder() : Locale = [en_US]
+05-31 23:17:36.901  7921  7921 E UserFeatureCache: UserFeatureCache.getStore():468 Wrong feature id provided PERSONALIZED_FST_MODEL_PARAMS for protobuf lab.
+05-31 23:17:36.901  7921  7921 E InputContextLock: InputContextLock.mayLockAndRun():126 Failed to run
+05-31 23:17:36.901  7921  7921 E InputContextLock: java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.Class java.lang.Object.getClass()' on a null object reference
+05-31 23:17:36.901  7921  7921 E InputContextLock: 	at com.google.android.libraries.inputmethod.userfeaturecache.UserFeatureCache.c(PG:8)
+05-31 23:17:36.901  7921  7921 E InputContextLock: 	at com.google.android.apps.inputmethod.libs.delight5.Delight5Facilitator.K(PG:131)
+05-31 23:17:36.901  7921  7921 E InputContextLock: 	at cng.call(Unknown Source:4)
+05-31 23:17:36.901  7921  7921 E InputContextLock: 	at con.a(PG:8)
+05-31 23:17:36.901  7921  7921 E InputContextLock: 	at com.google.android.apps.inputmethod.libs.delight5.Delight5Facilitator.G(PG:37)
+05-31 23:17:36.901  7921  7921 E InputContextLock: 	at com.google.android.apps.inputmethod.libs.latin5.LatinIme.h(PG:17)
+05-31 23:17:36.901  7921  7921 E InputContextLock: 	at jlx.g(PG:6)
+05-31 23:17:36.901  7921  7921 E InputContextLock: 	at jlx.m(PG:2)
+05-31 23:17:36.901  7921  7921 E InputContextLock: 	at dww.u(PG:18)
+05-31 23:17:36.901  7921  7921 E InputContextLock: 	at com.android.inputmethod.latin.LatinIME.u(PG:104)
+05-31 23:17:36.901  7921  7921 E InputContextLock: 	at dww.onStartInputView(PG:29)
+05-31 23:17:36.901  7921  7921 E InputContextLock: 	at android.inputmethodservice.InputMethodService.doStartInput(InputMethodService.java:2443)
+05-31 23:17:36.901  7921  7921 E InputContextLock: 	at android.inputmethodservice.InputMethodService$InputMethodImpl.startInput(InputMethodService.java:689)
+05-31 23:17:36.901  7921  7921 E InputContextLock: 	at android.inputmethodservice.InputMethodService$InputMethodImpl.dispatchStartInputWithToken(InputMethodService.java:719)
+05-31 23:17:36.901  7921  7921 E InputContextLock: 	at android.inputmethodservice.IInputMethodWrapper.executeMessage(IInputMethodWrapper.java:199)
+05-31 23:17:36.901  7921  7921 E InputContextLock: 	at com.android.internal.os.HandlerCaller$MyHandler.handleMessage(HandlerCaller.java:44)
+05-31 23:17:36.901  7921  7921 E InputContextLock: 	at android.os.Handler.dispatchMessage(Handler.java:106)
+05-31 23:17:36.901  7921  7921 E InputContextLock: 	at android.os.Looper.loopOnce(Looper.java:201)
+05-31 23:17:36.901  7921  7921 E InputContextLock: 	at android.os.Looper.loop(Looper.java:288)
+05-31 23:17:36.901  7921  7921 E InputContextLock: 	at android.app.ActivityThread.main(ActivityThread.java:7842)
+05-31 23:17:36.901  7921  7921 E InputContextLock: 	at java.lang.reflect.Method.invoke(Native Method)
+05-31 23:17:36.901  7921  7921 E InputContextLock: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:548)
+05-31 23:17:36.901  7921  7921 E InputContextLock: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1003)
+05-31 23:17:36.901  7921  7921 I VoiceInputManagerWrapper: VoiceInputManagerWrapper.cancelShutdown():55 cancelShutdown()
+05-31 23:17:36.901  7921  7921 I VoiceInputManagerWrapper: VoiceInputManagerWrapper.syncLanguagePacks():67 syncLanguagePacks()
+05-31 23:17:36.902  7921  7921 I LatinIme: LatinIme.updateEnableInlineSuggestionsOnDecoderSideFlags():1264 inline flag updated to:false
+05-31 23:17:36.902  7921  8642 I SpeechFactory: SpeechRecognitionFactory.maybeScheduleAutoPackDownloadForFallback():184 maybeScheduleAutoPackDownloadForFallback()
+05-31 23:17:36.902  7921  8642 I FallbackOnDeviceRecognitionProvider: FallbackOnDeviceRecognitionProvider.maybeScheduleAutoPackDownload():196 maybeScheduleAutoPackDownload() for language tag en-US
+05-31 23:17:36.902  7921  7921 W Delight5Decoder: Decoder.setRuntimeParams():372 setRuntimeParams() : Native lib is not ready.
+05-31 23:17:36.906   413   528 D AudioFlinger: mixer(0x79e45ad25a60) throttle end: throttle time(118)
+05-31 23:17:36.908  7921  7921 I KeyboardWrapper: KeyboardWrapper.consumeEvent():284 Skip consuming an event as current keyboard is deactivated (state=0, keyboard existence=true)
+05-31 23:17:36.910  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.912  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.913  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.914  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.914  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.914  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.918  7638  7952 I FontLog : Pulling font file for id = 89, cache size = 6 [CONTEXT service_id=132 ]
+05-31 23:17:36.926  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.927  7921  7921 I KeyboardViewHelper: KeyboardViewHelper.getView():166 Get view with height ratio:1.000000
+05-31 23:17:36.931  7638  7952 I FontLog : Pulling font file for id = 89, cache size = 6 [CONTEXT service_id=132 ]
+05-31 23:17:36.932  7921  7921 I KeyboardViewUtil: KeyboardViewUtil.calculateMaxKeyboardBodyHeight():53 leave 344 height for app when screen height:2148, header height:121 and isFullscreenMode:false, so the max keyboard body height is:1683
+05-31 23:17:36.933  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.934  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.934  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.935  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.935  7921  7921 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():96 Get device mode phone by ui mode:1 and smallestScreenWidthDp:392
+05-31 23:17:36.937  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.938 27803 27803 I AssistStructure: Flattened final assist data: 2200 bytes, containing 1 windows, 14 views
+05-31 23:17:36.938  7921  7921 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():111 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+05-31 23:17:36.939  7921  7921 I KeyboardViewUtil: KeyboardViewUtil.calculateMaxKeyboardBodyHeight():53 leave 344 height for app when screen height:2148, header height:121 and isFullscreenMode:false, so the max keyboard body height is:1683
+05-31 23:17:36.940  7921  7921 E LatinPrimeKeyboard: LatinPrimeKeyboard.updateCurrentImeLocales():414 consumeEvent: UPDATE_CURRENT_IME_LOCALES, Illegal argument
+05-31 23:17:36.940  7921  7921 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():111 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+05-31 23:17:36.940  7921  7921 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():111 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+05-31 23:17:36.945   384   425 D goldfish-address-space: claimShared: Ask to claim region [0x3f3d19000 0x3f3d24000]
+05-31 23:17:36.949  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.950  7921  7921 I VoiceImeExtension: VoiceImeExtension.shouldStartVoiceInputAutomatically():364 No private IME option set to start voice input.
+05-31 23:17:36.953  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.954  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.955  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.957  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.958  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.958  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.960  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.960  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.960  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.961  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.961  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.962  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:36.965 27803 27803 D InsetsController: show(ime(), fromIme=true)
+05-31 23:17:36.967 27803 27803 D InsetsController: show(ime(), fromIme=true)
+05-31 23:17:36.968  7921  7921 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():111 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+05-31 23:17:36.980  9955  9955 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-31 23:17:36.980  9955  9955 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-31 23:17:36.989  9955  9955 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-31 23:17:36.991  7638  7638 W pfi     : Pending fill request while another request in the same session was triggered. [CONTEXT service_id=177 ]
+05-31 23:17:36.996  9955  9955 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-31 23:17:36.996  9955  9955 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-31 23:17:37.001  1390  1390 V InlineSuggestionRenderService: handleDestroySuggestionViews called for 0:269828776
+05-31 23:17:37.002  9955  9955 D BoundBrokerSvc: onBind: Intent { act=com.google.android.mdd.service.START dat=chimera-action:com.google.android.mdd.service.START cmp=com.google.android.gms/.chimera.GmsBoundBrokerService }
+05-31 23:17:37.002  9955  9955 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.mdd.service.START dat=chimera-action:com.google.android.mdd.service.START cmp=com.google.android.gms/.chimera.GmsBoundBrokerService }
+05-31 23:17:37.008  9955  9955 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-31 23:17:37.017   373   373 E android.hardware.audio@7.0-impl.ranchu: device/generic/goldfish/audio/stream_out.cpp:updateSourceMetadata:377 failure: Result::NOT_SUPPORTED
+05-31 23:17:37.018  7921  7921 I ShortcutsDataManager: ShortcutsDataManager.onContentChanged():70 onContentChanged()
+05-31 23:17:37.018  7921  7921 I ContactsDataManager: ContactsDataManager.onContentChanged():155 onContentChanged()
+05-31 23:17:37.110  7921  7921 W SpellCheckerExtension: SpellCheckerExtension.consumeEvent():156 SPELL_CHECK_SUGGESTIONS received with bad key data.
+05-31 23:17:37.110  7921  7921 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():157 Tooltip with id spell_check_add_to_dictionary not found in tooltipManager.
+05-31 23:17:37.181 27803 27803 I ViewInteraction: Performing 'replace text(koi)' action on view (view.getClass().getName() matches: is "android.widget.SearchView$SearchAutoComplete" and Child at position 0 in parent (view.getClass().getName() matches: is "android.widget.LinearLayout" and Child at position 1 in parent view.getClass().getName() matches: is "android.widget.LinearLayout") and (view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle))
+05-31 23:17:37.185  7921  7921 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1947
+05-31 23:17:37.185  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:37.185  7921  7921 W SessionManager: SessionManager.beginSession():53 Try to begin an already begun session [INPUT_SESSION], end it first
+05-31 23:17:37.185  7921  7921 W SessionManager: SessionManager.endSession():96 Child session [INPUT_VIEW_SESSION] is not ended while ending session [{IME_SESSION=1654064256898, INPUT_VIEW_SESSION=1654064256894, INPUT_SESSION=1654064256894, TRAINING_CACHE_SESSION=1654064256900}], ending it now.
+05-31 23:17:37.185  7921  7921 W SessionManager: SessionManager.endSession():96 Child session [IME_SESSION] is not ended while ending session [{IME_SESSION=1654064256898, INPUT_VIEW_SESSION=1654064256894, INPUT_SESSION=1654064256894, TRAINING_CACHE_SESSION=1654064256900}], ending it now.
+05-31 23:17:37.186  7921  7921 I GoogleInputMethodService: GoogleInputMethodService.onStartInputView():2057
+05-31 23:17:37.187  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:37.188  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:37.190 27803 27803 I ViewInteraction: Performing 'close keyboard' action on view (view.getClass().getName() matches: is "android.widget.SearchView$SearchAutoComplete" and Child at position 0 in parent (view.getClass().getName() matches: is "android.widget.LinearLayout" and Child at position 1 in parent view.getClass().getName() matches: is "android.widget.LinearLayout") and (view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle))
+05-31 23:17:37.192 27803 27803 D IdlingRegistry: Registering idling resources: [androidx.test.espresso.action.CloseKeyboardAction$CloseKeyboardIdlingResult@3736571]
+05-31 23:17:37.196  7921  7921 I KeyboardViewUtil: KeyboardViewUtil.getKeyboardHeightRatio():168 systemKeyboardHeightRatio:1.000000; userKeyboardHeightRatio:1.000000.
+05-31 23:17:37.197  7921  7921 W SpellCheckerExtension: SpellCheckerExtension.consumeEvent():156 SPELL_CHECK_SUGGESTIONS received with bad key data.
+05-31 23:17:37.197  7921  7921 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():157 Tooltip with id spell_check_add_to_dictionary not found in tooltipManager.
+05-31 23:17:37.197  7921  7921 I KeyboardWrapper: KeyboardWrapper.consumeEvent():284 Skip consuming an event as current keyboard is deactivated (state=0, keyboard existence=true)
+05-31 23:17:37.197  7921  7921 I VoiceInputManagerWrapper: VoiceInputManagerWrapper.shutdown():77 shutdown()
+05-31 23:17:37.198  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:37.198  7921  7921 I AndroidIME: AbstractIme.onDeactivate():207 LatinIme.onDeactivate()
+05-31 23:17:37.199  7921  7921 W SessionManager: SessionManager.endSession():88 Try to end a not begun session [IME_SESSION].
+05-31 23:17:37.199  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:37.199  7921  7921 I AndroidIME: AbstractIme.onActivate():86 LatinIme.onActivate() : EditorInfo = inputType=Text imeActionName=SEARCH dump=[inputType=0x90001 imeOptions=0x8000003 privateImeOptions=null actionLabel=null actionId=0 initialSelStart=0 initialSelEnd=0 initialCapsMode=0x0 hintText=    label=null packageName=com.example.cse110lab5 autofillId=1073741824 fieldId=16909412 fieldName=null extras=null hintLocales=null contentMimeTypes=null ], IncognitoMode = false, DeviceLocked = false
+05-31 23:17:37.200  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:37.200  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:37.200  7921  7921 I Delight5Facilitator: Delight5Facilitator.initializeForIme():769 initializeForIme() : Locale = [en_US], layout = qwerty
+05-31 23:17:37.200  7921  7921 I Delight5Facilitator: Delight5Facilitator.resetDecoder():925 resetDecoder() : Locale = [en_US]
+05-31 23:17:37.201  7921  7921 E UserFeatureCache: UserFeatureCache.getStore():468 Wrong feature id provided PERSONALIZED_FST_MODEL_PARAMS for protobuf lab.
+05-31 23:17:37.201  7921  7921 E InputContextLock: InputContextLock.mayLockAndRun():126 Failed to run
+05-31 23:17:37.201  7921  7921 E InputContextLock: java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.Class java.lang.Object.getClass()' on a null object reference
+05-31 23:17:37.201  7921  7921 E InputContextLock: 	at com.google.android.libraries.inputmethod.userfeaturecache.UserFeatureCache.c(PG:8)
+05-31 23:17:37.201  7921  7921 E InputContextLock: 	at com.google.android.apps.inputmethod.libs.delight5.Delight5Facilitator.K(PG:131)
+05-31 23:17:37.201  7921  7921 E InputContextLock: 	at cng.call(Unknown Source:4)
+05-31 23:17:37.201  7921  7921 E InputContextLock: 	at con.a(PG:8)
+05-31 23:17:37.201  7921  7921 E InputContextLock: 	at com.google.android.apps.inputmethod.libs.delight5.Delight5Facilitator.G(PG:37)
+05-31 23:17:37.201  7921  7921 E InputContextLock: 	at com.google.android.apps.inputmethod.libs.latin5.LatinIme.h(PG:17)
+05-31 23:17:37.201  7921  7921 E InputContextLock: 	at jlx.g(PG:6)
+05-31 23:17:37.201  7921  7921 E InputContextLock: 	at jlx.m(PG:2)
+05-31 23:17:37.201  7921  7921 E InputContextLock: 	at dww.u(PG:18)
+05-31 23:17:37.201  7921  7921 E InputContextLock: 	at com.android.inputmethod.latin.LatinIME.u(PG:104)
+05-31 23:17:37.201  7921  7921 E InputContextLock: 	at dww.onStartInputView(PG:29)
+05-31 23:17:37.201  7921  7921 E InputContextLock: 	at android.inputmethodservice.InputMethodService.doStartInput(InputMethodService.java:2443)
+05-31 23:17:37.201  7921  7921 E InputContextLock: 	at android.inputmethodservice.InputMethodService$InputMethodImpl.restartInput(InputMethodService.java:701)
+05-31 23:17:37.201  7921  7921 E InputContextLock: 	at android.inputmethodservice.InputMethodService$InputMethodImpl.dispatchStartInputWithToken(InputMethodService.java:717)
+05-31 23:17:37.201  7921  7921 E InputContextLock: 	at android.inputmethodservice.IInputMethodWrapper.executeMessage(IInputMethodWrapper.java:199)
+05-31 23:17:37.201  7921  7921 E InputContextLock: 	at com.android.internal.os.HandlerCaller$MyHandler.handleMessage(HandlerCaller.java:44)
+05-31 23:17:37.201  7921  7921 E InputContextLock: 	at android.os.Handler.dispatchMessage(Handler.java:106)
+05-31 23:17:37.201  7921  7921 E InputContextLock: 	at android.os.Looper.loopOnce(Looper.java:201)
+05-31 23:17:37.201  7921  7921 E InputContextLock: 	at android.os.Looper.loop(Looper.java:288)
+05-31 23:17:37.201  7921  7921 E InputContextLock: 	at android.app.ActivityThread.main(ActivityThread.java:7842)
+05-31 23:17:37.201  7921  7921 E InputContextLock: 	at java.lang.reflect.Method.invoke(Native Method)
+05-31 23:17:37.201  7921  7921 E InputContextLock: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:548)
+05-31 23:17:37.201  7921  7921 E InputContextLock: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1003)
+05-31 23:17:37.201  7921  7921 I VoiceInputManagerWrapper: VoiceInputManagerWrapper.cancelShutdown():55 cancelShutdown()
+05-31 23:17:37.201  7921  7921 I VoiceInputManagerWrapper: VoiceInputManagerWrapper.syncLanguagePacks():67 syncLanguagePacks()
+05-31 23:17:37.201  7921  7921 I LatinIme: LatinIme.updateEnableInlineSuggestionsOnDecoderSideFlags():1264 inline flag updated to:false
+05-31 23:17:37.201  7921  8642 I SpeechFactory: SpeechRecognitionFactory.maybeScheduleAutoPackDownloadForFallback():184 maybeScheduleAutoPackDownloadForFallback()
+05-31 23:17:37.201  7921  8642 I FallbackOnDeviceRecognitionProvider: FallbackOnDeviceRecognitionProvider.maybeScheduleAutoPackDownload():196 maybeScheduleAutoPackDownload() for language tag en-US
+05-31 23:17:37.202  7921  7921 W Delight5Decoder: Decoder.setRuntimeParams():372 setRuntimeParams() : Native lib is not ready.
+05-31 23:17:37.203  7921  7921 I KeyboardWrapper: KeyboardWrapper.consumeEvent():284 Skip consuming an event as current keyboard is deactivated (state=0, keyboard existence=true)
+05-31 23:17:37.206  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:37.208  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:37.208  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:37.209  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:37.209  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:37.209  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:37.210  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:37.210  7921  7921 I KeyboardViewUtil: KeyboardViewUtil.calculateMaxKeyboardBodyHeight():53 leave 344 height for app when screen height:2148, header height:121 and isFullscreenMode:false, so the max keyboard body height is:1683
+05-31 23:17:37.210  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:37.211  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:37.211  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:37.211  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:37.211  7921  7921 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():96 Get device mode phone by ui mode:1 and smallestScreenWidthDp:392
+05-31 23:17:37.212  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:37.212  7921  7921 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():111 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+05-31 23:17:37.213  7921  7921 I KeyboardViewUtil: KeyboardViewUtil.calculateMaxKeyboardBodyHeight():53 leave 344 height for app when screen height:2148, header height:121 and isFullscreenMode:false, so the max keyboard body height is:1683
+05-31 23:17:37.213  7921  7921 E LatinPrimeKeyboard: LatinPrimeKeyboard.updateCurrentImeLocales():414 consumeEvent: UPDATE_CURRENT_IME_LOCALES, Illegal argument
+05-31 23:17:37.213  7921  7921 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():111 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+05-31 23:17:37.213  7921  7921 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():111 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+05-31 23:17:37.215  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:37.215  7921  7921 I VoiceImeExtension: VoiceImeExtension.shouldStartVoiceInputAutomatically():364 No private IME option set to start voice input.
+05-31 23:17:37.216  7921  7921 I ShortcutsDataManager: AbstractContentDataManager.startImportContentTask():235 startImportContentTask()
+05-31 23:17:37.216  7921  7921 I GoogleInputMethodService: GoogleInputMethodService.onFinishInputView():2291
+05-31 23:17:37.216  7921  7921 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():157 Tooltip with id spell_check_add_to_dictionary not found in tooltipManager.
+05-31 23:17:37.217 27803 27803 D InsetsController: show(ime(), fromIme=true)
+05-31 23:17:37.217  7921  7921 I InputBundle: InputBundle.consumeEvent():920 Skip consuming an event as keyboard status is 0
+05-31 23:17:37.218  7921  7921 I KeyboardWrapper: KeyboardWrapper.consumeEvent():284 Skip consuming an event as current keyboard is deactivated (state=0, keyboard existence=true)
+05-31 23:17:37.218  7921  7921 I VoiceInputManagerWrapper: VoiceInputManagerWrapper.shutdown():77 shutdown()
+05-31 23:17:37.224  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:37.225  9955  9955 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-31 23:17:37.225  9955  9955 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-31 23:17:37.226  7921  7921 I AndroidIME: AbstractIme.onDeactivate():207 LatinIme.onDeactivate()
+05-31 23:17:37.228  9955  9955 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-31 23:17:37.237  7921  8034 I ShortcutsDataManager: AbstractContentDataManager$ImportContentTask.doInBackground():249 doInBackground()
+05-31 23:17:37.237  7921  8034 I PersonalDictionaryDataHandler: PersonalDictionaryDataHandler.beginProcess():111 LanguageTags = [en-US]
+05-31 23:17:37.238  7921  8034 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:37.245  9955  9955 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-31 23:17:37.245  9955  9955 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-31 23:17:37.246  9955  9955 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-31 23:17:37.253  7921  8034 I ShortcutsDataManager: AbstractContentDataManager.importRecords():339 importRecords() : Success : Count = 0
+05-31 23:17:37.254  7921  8034 I ShortcutsDataManager: AbstractContentDataManager.importContentData():289 importContentData() : Ending import process
+05-31 23:17:37.264  7921  8034 I PersonalLanguageModelUpdater: PersonalLanguageModelUpdater$UpdateOperation.performInternal():160 run() : Added 0 words and 0 shortcuts
+05-31 23:17:37.264  7921  8034 I DynamicLanguageModelOperation: DynamicLanguageModelOperation.perform():38 perform() : 4 : csf : Completed
+05-31 23:17:37.265  7921  7921 I ShortcutsDataManager: AbstractContentDataManager$ImportContentTask.onPostExecute():260 onPostExecute() : Result = [2,0]
+05-31 23:17:37.265  7921  7921 I ShortcutsDataManager: ShortcutsDataManager.onImportFinished():80 onImportFinished() : Result = 2 : Count = 0
+05-31 23:17:37.358   812   873 D EGL_emulation: app_time_stats: avg=14.65ms min=0.97ms max=97.49ms count=53
+05-31 23:17:37.544 27803 27803 D IdlingRegistry: Unregistering idling resources: [androidx.test.espresso.action.CloseKeyboardAction$CloseKeyboardIdlingResult@3736571]
+05-31 23:17:37.547 27803 27803 I ViewInteraction: Performing 'single click' action on view (view.getId() is <2131231088/com.example.cse110lab5:id/search_btn> and an instance of android.widget.TextView and view.getText() with or without transformation to match: is "Search" and Child at position 2 in parent Child at position 0 in parent view.getId() is <16908290/android:id/content> and (view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle))
+05-31 23:17:37.565 27803 27827 D EGL_emulation: app_time_stats: avg=36.04ms min=1.10ms max=322.66ms count=27
+05-31 23:17:37.592   373   373 E android.hardware.audio@7.0-impl.ranchu: device/generic/goldfish/audio/stream_out.cpp:updateSourceMetadata:377 failure: Result::NOT_SUPPORTED
+05-31 23:17:37.725   373   373 E android.hardware.audio@7.0-impl.ranchu: device/generic/goldfish/audio/stream_out.cpp:updateSourceMetadata:377 failure: Result::NOT_SUPPORTED
+05-31 23:17:37.840 27803 27803 I ViewInteraction: Performing 'load adapter data' action on view (view.getId() is <2131231097/com.example.cse110lab5:id/search_view> and Child at position 3 in parent view.getClass().getName() matches: is "androidx.constraintlayout.widget.ConstraintLayout")
+05-31 23:17:37.856 27803 27803 I ViewInteraction: Performing 'single click' action on view  displaying data matching: ANYTHING within adapter view matching: (view.getId() is <2131231097/com.example.cse110lab5:id/search_view> and Child at position 3 in parent view.getClass().getName() matches: is "androidx.constraintlayout.widget.ConstraintLayout")
+05-31 23:17:37.968   373   373 E android.hardware.audio@7.0-impl.ranchu: device/generic/goldfish/audio/stream_out.cpp:updateSourceMetadata:377 failure: Result::NOT_SUPPORTED
+05-31 23:17:38.102   373   373 E android.hardware.audio@7.0-impl.ranchu: device/generic/goldfish/audio/stream_out.cpp:updateSourceMetadata:377 failure: Result::NOT_SUPPORTED
+05-31 23:17:38.152 27803 27803 I ViewInteraction: Performing 'single click' action on view (view.getClass().getName() matches: is "androidx.appcompat.widget.AppCompatImageView" and view.getContentDescription() is "Clear query" and Child at position 1 in parent (view.getClass().getName() matches: is "android.widget.LinearLayout" and Child at position 1 in parent view.getClass().getName() matches: is "android.widget.LinearLayout") and (view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle))
+05-31 23:17:38.196  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:38.211 27803 27803 D InputMethodManager: showSoftInput() view=android.widget.SearchView$SearchAutoComplete{3889cef VFED..CL. .F....ID 0,18-701,117 #1020464 android:id/search_src_text aid=1073741824} flags=0 reason=SHOW_SOFT_INPUT
+05-31 23:17:38.211  7921  7921 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1947
+05-31 23:17:38.211  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:38.211  7921  7921 W SessionManager: SessionManager.beginSession():53 Try to begin an already begun session [INPUT_SESSION], end it first
+05-31 23:17:38.212  7921  7921 I GoogleInputMethodService: GoogleInputMethodService.onStartInputView():2057
+05-31 23:17:38.213  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:38.214   373   373 E android.hardware.audio@7.0-impl.ranchu: device/generic/goldfish/audio/stream_out.cpp:updateSourceMetadata:377 failure: Result::NOT_SUPPORTED
+05-31 23:17:38.214  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:38.239  7921  7921 I KeyboardViewUtil: KeyboardViewUtil.getKeyboardHeightRatio():168 systemKeyboardHeightRatio:1.000000; userKeyboardHeightRatio:1.000000.
+05-31 23:17:38.240  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:38.240  7921  7921 I AndroidIME: AbstractIme.onActivate():86 LatinIme.onActivate() : EditorInfo = inputType=Text imeActionName=SEARCH dump=[inputType=0x90001 imeOptions=0x8000003 privateImeOptions=null actionLabel=null actionId=0 initialSelStart=0 initialSelEnd=0 initialCapsMode=0x0 hintText=    label=null packageName=com.example.cse110lab5 autofillId=1073741824 fieldId=16909412 fieldName=null extras=null hintLocales=null contentMimeTypes=null ], IncognitoMode = false, DeviceLocked = false
+05-31 23:17:38.240  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:38.241  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:38.241  7921  7921 I Delight5Facilitator: Delight5Facilitator.initializeForIme():769 initializeForIme() : Locale = [en_US], layout = qwerty
+05-31 23:17:38.241  7921  7921 I Delight5Facilitator: Delight5Facilitator.resetDecoder():925 resetDecoder() : Locale = [en_US]
+05-31 23:17:38.242  7921  7921 E UserFeatureCache: UserFeatureCache.getStore():468 Wrong feature id provided PERSONALIZED_FST_MODEL_PARAMS for protobuf lab.
+05-31 23:17:38.242  7921  7921 E InputContextLock: InputContextLock.mayLockAndRun():126 Failed to run
+05-31 23:17:38.242  7921  7921 E InputContextLock: java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.Class java.lang.Object.getClass()' on a null object reference
+05-31 23:17:38.242  7921  7921 E InputContextLock: 	at com.google.android.libraries.inputmethod.userfeaturecache.UserFeatureCache.c(PG:8)
+05-31 23:17:38.242  7921  7921 E InputContextLock: 	at com.google.android.apps.inputmethod.libs.delight5.Delight5Facilitator.K(PG:131)
+05-31 23:17:38.242  7921  7921 E InputContextLock: 	at cng.call(Unknown Source:4)
+05-31 23:17:38.242  7921  7921 E InputContextLock: 	at con.a(PG:8)
+05-31 23:17:38.242  7921  7921 E InputContextLock: 	at com.google.android.apps.inputmethod.libs.delight5.Delight5Facilitator.G(PG:37)
+05-31 23:17:38.242  7921  7921 E InputContextLock: 	at com.google.android.apps.inputmethod.libs.latin5.LatinIme.h(PG:17)
+05-31 23:17:38.242  7921  7921 E InputContextLock: 	at jlx.g(PG:6)
+05-31 23:17:38.242  7921  7921 E InputContextLock: 	at jlx.m(PG:2)
+05-31 23:17:38.242  7921  7921 E InputContextLock: 	at dww.u(PG:18)
+05-31 23:17:38.242  7921  7921 E InputContextLock: 	at com.android.inputmethod.latin.LatinIME.u(PG:104)
+05-31 23:17:38.242  7921  7921 E InputContextLock: 	at dww.onStartInputView(PG:29)
+05-31 23:17:38.242  7921  7921 E InputContextLock: 	at android.inputmethodservice.InputMethodService.startViews(InputMethodService.java:2291)
+05-31 23:17:38.242  7921  7921 E InputContextLock: 	at android.inputmethodservice.InputMethodService.showWindow(InputMethodService.java:2237)
+05-31 23:17:38.242  7921  7921 E InputContextLock: 	at android.inputmethodservice.InputMethodService$InputMethodImpl.showSoftInput(InputMethodService.java:808)
+05-31 23:17:38.242  7921  7921 E InputContextLock: 	at android.inputmethodservice.InputMethodService$InputMethodImpl.showSoftInputWithToken(InputMethodService.java:782)
+05-31 23:17:38.242  7921  7921 E InputContextLock: 	at android.inputmethodservice.IInputMethodWrapper.executeMessage(IInputMethodWrapper.java:225)
+05-31 23:17:38.242  7921  7921 E InputContextLock: 	at com.android.internal.os.HandlerCaller$MyHandler.handleMessage(HandlerCaller.java:44)
+05-31 23:17:38.242  7921  7921 E InputContextLock: 	at android.os.Handler.dispatchMessage(Handler.java:106)
+05-31 23:17:38.242  7921  7921 E InputContextLock: 	at android.os.Looper.loopOnce(Looper.java:201)
+05-31 23:17:38.242  7921  7921 E InputContextLock: 	at android.os.Looper.loop(Looper.java:288)
+05-31 23:17:38.242  7921  7921 E InputContextLock: 	at android.app.ActivityThread.main(ActivityThread.java:7842)
+05-31 23:17:38.242  7921  7921 E InputContextLock: 	at java.lang.reflect.Method.invoke(Native Method)
+05-31 23:17:38.242  7921  7921 E InputContextLock: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:548)
+05-31 23:17:38.242  7921  7921 E InputContextLock: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1003)
+05-31 23:17:38.242  7921  7921 I VoiceInputManagerWrapper: VoiceInputManagerWrapper.cancelShutdown():55 cancelShutdown()
+05-31 23:17:38.242  7921  7921 I VoiceInputManagerWrapper: VoiceInputManagerWrapper.syncLanguagePacks():67 syncLanguagePacks()
+05-31 23:17:38.242  7921  7921 I LatinIme: LatinIme.updateEnableInlineSuggestionsOnDecoderSideFlags():1264 inline flag updated to:false
+05-31 23:17:38.242  7921  8642 I SpeechFactory: SpeechRecognitionFactory.maybeScheduleAutoPackDownloadForFallback():184 maybeScheduleAutoPackDownloadForFallback()
+05-31 23:17:38.242  7921  8642 I FallbackOnDeviceRecognitionProvider: FallbackOnDeviceRecognitionProvider.maybeScheduleAutoPackDownload():196 maybeScheduleAutoPackDownload() for language tag en-US
+05-31 23:17:38.243  7921  7921 W Delight5Decoder: Decoder.setRuntimeParams():372 setRuntimeParams() : Native lib is not ready.
+05-31 23:17:38.244  7921  7921 I KeyboardWrapper: KeyboardWrapper.consumeEvent():284 Skip consuming an event as current keyboard is deactivated (state=0, keyboard existence=true)
+05-31 23:17:38.245  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:38.246  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:38.246  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:38.247  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:38.247  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:38.247  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:38.247  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:38.249  7921  7921 I KeyboardViewUtil: KeyboardViewUtil.calculateMaxKeyboardBodyHeight():53 leave 344 height for app when screen height:2148, header height:121 and isFullscreenMode:false, so the max keyboard body height is:1683
+05-31 23:17:38.249  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:38.249  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:38.250  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:38.250  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:38.251  7921  7921 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():96 Get device mode phone by ui mode:1 and smallestScreenWidthDp:392
+05-31 23:17:38.251  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:38.252  7921  7921 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():111 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+05-31 23:17:38.253  7921  7921 I KeyboardViewUtil: KeyboardViewUtil.calculateMaxKeyboardBodyHeight():53 leave 344 height for app when screen height:2148, header height:121 and isFullscreenMode:false, so the max keyboard body height is:1683
+05-31 23:17:38.253  7921  7921 E LatinPrimeKeyboard: LatinPrimeKeyboard.updateCurrentImeLocales():414 consumeEvent: UPDATE_CURRENT_IME_LOCALES, Illegal argument
+05-31 23:17:38.253  7921  7921 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():111 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+05-31 23:17:38.254  7921  7921 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():111 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+05-31 23:17:38.255  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:38.256  7921  7921 I VoiceImeExtension: VoiceImeExtension.shouldStartVoiceInputAutomatically():364 No private IME option set to start voice input.
+05-31 23:17:38.258 27803 27803 D InsetsController: show(ime(), fromIme=true)
+05-31 23:17:38.263  7921  8064 D EGL_emulation: app_time_stats: avg=218.06ms min=6.99ms max=1027.54ms count=7
+05-31 23:17:38.264  9955  9955 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-31 23:17:38.264  9955  9955 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-31 23:17:38.267  9955  9955 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-31 23:17:38.274  9955  9955 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-31 23:17:38.274  9955  9955 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-31 23:17:38.276  9955  9955 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-31 23:17:38.345   373   373 E android.hardware.audio@7.0-impl.ranchu: device/generic/goldfish/audio/stream_out.cpp:updateSourceMetadata:377 failure: Result::NOT_SUPPORTED
+05-31 23:17:38.374   812   873 D EGL_emulation: app_time_stats: avg=17.72ms min=13.17ms max=34.99ms count=57
+05-31 23:17:38.445  7921  7921 W SpellCheckerExtension: SpellCheckerExtension.consumeEvent():156 SPELL_CHECK_SUGGESTIONS received with bad key data.
+05-31 23:17:38.445  7921  7921 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():157 Tooltip with id spell_check_add_to_dictionary not found in tooltipManager.
+05-31 23:17:38.455 27803 27803 I ViewInteraction: Performing 'replace text(crocodile)' action on view (view.getClass().getName() matches: is "android.widget.SearchView$SearchAutoComplete" and Child at position 0 in parent (view.getClass().getName() matches: is "android.widget.LinearLayout" and Child at position 1 in parent view.getClass().getName() matches: is "android.widget.LinearLayout") and (view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle))
+05-31 23:17:38.459  7921  7921 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1947
+05-31 23:17:38.459  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:38.459  7921  7921 W SessionManager: SessionManager.beginSession():53 Try to begin an already begun session [INPUT_SESSION], end it first
+05-31 23:17:38.459  7921  7921 W SessionManager: SessionManager.endSession():96 Child session [INPUT_VIEW_SESSION] is not ended while ending session [{IME_SESSION=1654064258239, INPUT_VIEW_SESSION=1654064258213, INPUT_SESSION=1654064258211, TRAINING_CACHE_SESSION=1654064258241}], ending it now.
+05-31 23:17:38.460  7921  7921 W SessionManager: SessionManager.endSession():96 Child session [IME_SESSION] is not ended while ending session [{IME_SESSION=1654064258239, INPUT_VIEW_SESSION=1654064258213, INPUT_SESSION=1654064258211, TRAINING_CACHE_SESSION=1654064258241}], ending it now.
+05-31 23:17:38.461  7921  7921 I GoogleInputMethodService: GoogleInputMethodService.onStartInputView():2057
+05-31 23:17:38.461  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:38.462  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:38.472 27803 27803 I ViewInteraction: Performing 'close keyboard' action on view (view.getClass().getName() matches: is "android.widget.SearchView$SearchAutoComplete" and Child at position 0 in parent (view.getClass().getName() matches: is "android.widget.LinearLayout" and Child at position 1 in parent view.getClass().getName() matches: is "android.widget.LinearLayout") and (view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle))
+05-31 23:17:38.472 27803 27803 D IdlingRegistry: Registering idling resources: [androidx.test.espresso.action.CloseKeyboardAction$CloseKeyboardIdlingResult@651660]
+05-31 23:17:38.477  7921  7921 I KeyboardViewUtil: KeyboardViewUtil.getKeyboardHeightRatio():168 systemKeyboardHeightRatio:1.000000; userKeyboardHeightRatio:1.000000.
+05-31 23:17:38.477  7921  7921 W SpellCheckerExtension: SpellCheckerExtension.consumeEvent():156 SPELL_CHECK_SUGGESTIONS received with bad key data.
+05-31 23:17:38.477  7921  7921 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():157 Tooltip with id spell_check_add_to_dictionary not found in tooltipManager.
+05-31 23:17:38.478  7921  7921 I KeyboardWrapper: KeyboardWrapper.consumeEvent():284 Skip consuming an event as current keyboard is deactivated (state=0, keyboard existence=true)
+05-31 23:17:38.478  7921  7921 I VoiceInputManagerWrapper: VoiceInputManagerWrapper.shutdown():77 shutdown()
+05-31 23:17:38.479  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:38.479  7921  7921 I AndroidIME: AbstractIme.onDeactivate():207 LatinIme.onDeactivate()
+05-31 23:17:38.479  7921  7921 W SessionManager: SessionManager.endSession():88 Try to end a not begun session [IME_SESSION].
+05-31 23:17:38.480  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:38.480  7921  7921 I AndroidIME: AbstractIme.onActivate():86 LatinIme.onActivate() : EditorInfo = inputType=Text imeActionName=SEARCH dump=[inputType=0x90001 imeOptions=0x8000003 privateImeOptions=null actionLabel=null actionId=0 initialSelStart=0 initialSelEnd=0 initialCapsMode=0x0 hintText=    label=null packageName=com.example.cse110lab5 autofillId=1073741824 fieldId=16909412 fieldName=null extras=null hintLocales=null contentMimeTypes=null ], IncognitoMode = false, DeviceLocked = false
+05-31 23:17:38.480  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:38.480  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:38.480  7921  7921 I Delight5Facilitator: Delight5Facilitator.initializeForIme():769 initializeForIme() : Locale = [en_US], layout = qwerty
+05-31 23:17:38.480  7921  7921 I Delight5Facilitator: Delight5Facilitator.resetDecoder():925 resetDecoder() : Locale = [en_US]
+05-31 23:17:38.481  7921  7921 E UserFeatureCache: UserFeatureCache.getStore():468 Wrong feature id provided PERSONALIZED_FST_MODEL_PARAMS for protobuf lab.
+05-31 23:17:38.481  7921  7921 E InputContextLock: InputContextLock.mayLockAndRun():126 Failed to run
+05-31 23:17:38.481  7921  7921 E InputContextLock: java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.Class java.lang.Object.getClass()' on a null object reference
+05-31 23:17:38.481  7921  7921 E InputContextLock: 	at com.google.android.libraries.inputmethod.userfeaturecache.UserFeatureCache.c(PG:8)
+05-31 23:17:38.481  7921  7921 E InputContextLock: 	at com.google.android.apps.inputmethod.libs.delight5.Delight5Facilitator.K(PG:131)
+05-31 23:17:38.481  7921  7921 E InputContextLock: 	at cng.call(Unknown Source:4)
+05-31 23:17:38.481  7921  7921 E InputContextLock: 	at con.a(PG:8)
+05-31 23:17:38.481  7921  7921 E InputContextLock: 	at com.google.android.apps.inputmethod.libs.delight5.Delight5Facilitator.G(PG:37)
+05-31 23:17:38.481  7921  7921 E InputContextLock: 	at com.google.android.apps.inputmethod.libs.latin5.LatinIme.h(PG:17)
+05-31 23:17:38.481  7921  7921 E InputContextLock: 	at jlx.g(PG:6)
+05-31 23:17:38.481  7921  7921 E InputContextLock: 	at jlx.m(PG:2)
+05-31 23:17:38.481  7921  7921 E InputContextLock: 	at dww.u(PG:18)
+05-31 23:17:38.481  7921  7921 E InputContextLock: 	at com.android.inputmethod.latin.LatinIME.u(PG:104)
+05-31 23:17:38.481  7921  7921 E InputContextLock: 	at dww.onStartInputView(PG:29)
+05-31 23:17:38.481  7921  7921 E InputContextLock: 	at android.inputmethodservice.InputMethodService.doStartInput(InputMethodService.java:2443)
+05-31 23:17:38.481  7921  7921 E InputContextLock: 	at android.inputmethodservice.InputMethodService$InputMethodImpl.restartInput(InputMethodService.java:701)
+05-31 23:17:38.481  7921  7921 E InputContextLock: 	at android.inputmethodservice.InputMethodService$InputMethodImpl.dispatchStartInputWithToken(InputMethodService.java:717)
+05-31 23:17:38.481  7921  7921 E InputContextLock: 	at android.inputmethodservice.IInputMethodWrapper.executeMessage(IInputMethodWrapper.java:199)
+05-31 23:17:38.481  7921  7921 E InputContextLock: 	at com.android.internal.os.HandlerCaller$MyHandler.handleMessage(HandlerCaller.java:44)
+05-31 23:17:38.481  7921  7921 E InputContextLock: 	at android.os.Handler.dispatchMessage(Handler.java:106)
+05-31 23:17:38.481  7921  7921 E InputContextLock: 	at android.os.Looper.loopOnce(Looper.java:201)
+05-31 23:17:38.481  7921  7921 E InputContextLock: 	at android.os.Looper.loop(Looper.java:288)
+05-31 23:17:38.481  7921  7921 E InputContextLock: 	at android.app.ActivityThread.main(ActivityThread.java:7842)
+05-31 23:17:38.481  7921  7921 E InputContextLock: 	at java.lang.reflect.Method.invoke(Native Method)
+05-31 23:17:38.481  7921  7921 E InputContextLock: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:548)
+05-31 23:17:38.481  7921  7921 E InputContextLock: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1003)
+05-31 23:17:38.481  7921  7921 I VoiceInputManagerWrapper: VoiceInputManagerWrapper.cancelShutdown():55 cancelShutdown()
+05-31 23:17:38.481  7921  7921 I VoiceInputManagerWrapper: VoiceInputManagerWrapper.syncLanguagePacks():67 syncLanguagePacks()
+05-31 23:17:38.481  7921  7921 I LatinIme: LatinIme.updateEnableInlineSuggestionsOnDecoderSideFlags():1264 inline flag updated to:false
+05-31 23:17:38.481  7921  8642 I SpeechFactory: SpeechRecognitionFactory.maybeScheduleAutoPackDownloadForFallback():184 maybeScheduleAutoPackDownloadForFallback()
+05-31 23:17:38.481  7921  8642 I FallbackOnDeviceRecognitionProvider: FallbackOnDeviceRecognitionProvider.maybeScheduleAutoPackDownload():196 maybeScheduleAutoPackDownload() for language tag en-US
+05-31 23:17:38.482  7921  7921 W Delight5Decoder: Decoder.setRuntimeParams():372 setRuntimeParams() : Native lib is not ready.
+05-31 23:17:38.483  7921  7921 I KeyboardWrapper: KeyboardWrapper.consumeEvent():284 Skip consuming an event as current keyboard is deactivated (state=0, keyboard existence=true)
+05-31 23:17:38.484  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:38.485  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:38.485  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:38.486  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:38.487  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:38.487  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:38.490  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:38.491  7921  7921 I KeyboardViewUtil: KeyboardViewUtil.calculateMaxKeyboardBodyHeight():53 leave 344 height for app when screen height:2148, header height:121 and isFullscreenMode:false, so the max keyboard body height is:1683
+05-31 23:17:38.492  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:38.492  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:38.493  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:38.493  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:38.493  7921  7921 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():96 Get device mode phone by ui mode:1 and smallestScreenWidthDp:392
+05-31 23:17:38.494  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:38.495  7921  7921 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():111 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+05-31 23:17:38.495  7921  7921 I KeyboardViewUtil: KeyboardViewUtil.calculateMaxKeyboardBodyHeight():53 leave 344 height for app when screen height:2148, header height:121 and isFullscreenMode:false, so the max keyboard body height is:1683
+05-31 23:17:38.496  7921  7921 E LatinPrimeKeyboard: LatinPrimeKeyboard.updateCurrentImeLocales():414 consumeEvent: UPDATE_CURRENT_IME_LOCALES, Illegal argument
+05-31 23:17:38.496  7921  7921 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():111 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+05-31 23:17:38.496  7921  7921 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():111 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+05-31 23:17:38.497  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:38.497  7921  7921 I VoiceImeExtension: VoiceImeExtension.shouldStartVoiceInputAutomatically():364 No private IME option set to start voice input.
+05-31 23:17:38.500 27803 27803 D InsetsController: show(ime(), fromIme=true)
+05-31 23:17:38.500  7921  7921 I GoogleInputMethodService: GoogleInputMethodService.onFinishInputView():2291
+05-31 23:17:38.501  7921  7921 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():157 Tooltip with id spell_check_add_to_dictionary not found in tooltipManager.
+05-31 23:17:38.501  7921  7921 I InputBundle: InputBundle.consumeEvent():920 Skip consuming an event as keyboard status is 0
+05-31 23:17:38.501  7921  7921 I KeyboardWrapper: KeyboardWrapper.consumeEvent():284 Skip consuming an event as current keyboard is deactivated (state=0, keyboard existence=true)
+05-31 23:17:38.501  7921  7921 I VoiceInputManagerWrapper: VoiceInputManagerWrapper.shutdown():77 shutdown()
+05-31 23:17:38.502  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:38.502  9955  9955 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-31 23:17:38.502  9955  9955 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-31 23:17:38.502  7921  7921 I AndroidIME: AbstractIme.onDeactivate():207 LatinIme.onDeactivate()
+05-31 23:17:38.509  9955  9955 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-31 23:17:38.511  9955  9955 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-31 23:17:38.511  9955  9955 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-31 23:17:38.512  9955  9955 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-31 23:17:38.574 27803 27827 D EGL_emulation: app_time_stats: avg=17.32ms min=6.34ms max=35.92ms count=58
+05-31 23:17:38.826 27803 27803 D IdlingRegistry: Unregistering idling resources: [androidx.test.espresso.action.CloseKeyboardAction$CloseKeyboardIdlingResult@651660]
+05-31 23:17:38.828 27803 27803 I ViewInteraction: Performing 'single click' action on view (view.getId() is <2131231088/com.example.cse110lab5:id/search_btn> and an instance of android.widget.TextView and view.getText() with or without transformation to match: is "Search" and Child at position 2 in parent Child at position 0 in parent view.getId() is <16908290/android:id/content> and (view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle))
+05-31 23:17:38.876   373   373 E android.hardware.audio@7.0-impl.ranchu: device/generic/goldfish/audio/stream_out.cpp:updateSourceMetadata:377 failure: Result::NOT_SUPPORTED
+05-31 23:17:39.009   373   373 E android.hardware.audio@7.0-impl.ranchu: device/generic/goldfish/audio/stream_out.cpp:updateSourceMetadata:377 failure: Result::NOT_SUPPORTED
+05-31 23:17:39.122 27803 27803 I ViewInteraction: Performing 'load adapter data' action on view (view.getId() is <2131231097/com.example.cse110lab5:id/search_view> and Child at position 3 in parent view.getClass().getName() matches: is "androidx.constraintlayout.widget.ConstraintLayout")
+05-31 23:17:39.140 27803 27803 I ViewInteraction: Performing 'single click' action on view  displaying data matching: ANYTHING within adapter view matching: (view.getId() is <2131231097/com.example.cse110lab5:id/search_view> and Child at position 3 in parent view.getClass().getName() matches: is "androidx.constraintlayout.widget.ConstraintLayout")
+05-31 23:17:39.274   373   373 E android.hardware.audio@7.0-impl.ranchu: device/generic/goldfish/audio/stream_out.cpp:updateSourceMetadata:377 failure: Result::NOT_SUPPORTED
+05-31 23:17:39.390   812   873 D EGL_emulation: app_time_stats: avg=17.96ms min=11.97ms max=35.06ms count=56
+05-31 23:17:39.408   373   373 E android.hardware.audio@7.0-impl.ranchu: device/generic/goldfish/audio/stream_out.cpp:updateSourceMetadata:377 failure: Result::NOT_SUPPORTED
+05-31 23:17:39.437 27803 27803 I ViewInteraction: Performing 'single click' action on view (view.getClass().getName() matches: is "androidx.appcompat.widget.AppCompatImageView" and view.getContentDescription() is "Clear query" and Child at position 1 in parent (view.getClass().getName() matches: is "android.widget.LinearLayout" and Child at position 1 in parent view.getClass().getName() matches: is "android.widget.LinearLayout") and (view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle))
+05-31 23:17:39.493 27803 27803 D InputMethodManager: showSoftInput() view=android.widget.SearchView$SearchAutoComplete{3889cef VFED..CL. .F....ID 0,18-701,117 #1020464 android:id/search_src_text aid=1073741824} flags=0 reason=SHOW_SOFT_INPUT
+05-31 23:17:39.496   373   373 E android.hardware.audio@7.0-impl.ranchu: device/generic/goldfish/audio/stream_out.cpp:updateSourceMetadata:377 failure: Result::NOT_SUPPORTED
+05-31 23:17:39.504  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:39.504  7921  7921 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1947
+05-31 23:17:39.505  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:39.505  7921  7921 W SessionManager: SessionManager.beginSession():53 Try to begin an already begun session [INPUT_SESSION], end it first
+05-31 23:17:39.507  7921  7921 I GoogleInputMethodService: GoogleInputMethodService.onStartInputView():2057
+05-31 23:17:39.508  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:39.508  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:39.522  7921  7921 I KeyboardViewUtil: KeyboardViewUtil.getKeyboardHeightRatio():168 systemKeyboardHeightRatio:1.000000; userKeyboardHeightRatio:1.000000.
+05-31 23:17:39.523  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:39.524  7921  7921 I AndroidIME: AbstractIme.onActivate():86 LatinIme.onActivate() : EditorInfo = inputType=Text imeActionName=SEARCH dump=[inputType=0x90001 imeOptions=0x8000003 privateImeOptions=null actionLabel=null actionId=0 initialSelStart=0 initialSelEnd=0 initialCapsMode=0x0 hintText=    label=null packageName=com.example.cse110lab5 autofillId=1073741824 fieldId=16909412 fieldName=null extras=null hintLocales=null contentMimeTypes=null ], IncognitoMode = false, DeviceLocked = false
+05-31 23:17:39.525  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:39.525  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:39.526  7921  7921 I Delight5Facilitator: Delight5Facilitator.initializeForIme():769 initializeForIme() : Locale = [en_US], layout = qwerty
+05-31 23:17:39.526  7921  7921 I Delight5Facilitator: Delight5Facilitator.resetDecoder():925 resetDecoder() : Locale = [en_US]
+05-31 23:17:39.527  7921  7921 E UserFeatureCache: UserFeatureCache.getStore():468 Wrong feature id provided PERSONALIZED_FST_MODEL_PARAMS for protobuf lab.
+05-31 23:17:39.527  7921  7921 E InputContextLock: InputContextLock.mayLockAndRun():126 Failed to run
+05-31 23:17:39.527  7921  7921 E InputContextLock: java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.Class java.lang.Object.getClass()' on a null object reference
+05-31 23:17:39.527  7921  7921 E InputContextLock: 	at com.google.android.libraries.inputmethod.userfeaturecache.UserFeatureCache.c(PG:8)
+05-31 23:17:39.527  7921  7921 E InputContextLock: 	at com.google.android.apps.inputmethod.libs.delight5.Delight5Facilitator.K(PG:131)
+05-31 23:17:39.527  7921  7921 E InputContextLock: 	at cng.call(Unknown Source:4)
+05-31 23:17:39.527  7921  7921 E InputContextLock: 	at con.a(PG:8)
+05-31 23:17:39.527  7921  7921 E InputContextLock: 	at com.google.android.apps.inputmethod.libs.delight5.Delight5Facilitator.G(PG:37)
+05-31 23:17:39.527  7921  7921 E InputContextLock: 	at com.google.android.apps.inputmethod.libs.latin5.LatinIme.h(PG:17)
+05-31 23:17:39.527  7921  7921 E InputContextLock: 	at jlx.g(PG:6)
+05-31 23:17:39.527  7921  7921 E InputContextLock: 	at jlx.m(PG:2)
+05-31 23:17:39.527  7921  7921 E InputContextLock: 	at dww.u(PG:18)
+05-31 23:17:39.527  7921  7921 E InputContextLock: 	at com.android.inputmethod.latin.LatinIME.u(PG:104)
+05-31 23:17:39.527  7921  7921 E InputContextLock: 	at dww.onStartInputView(PG:29)
+05-31 23:17:39.527  7921  7921 E InputContextLock: 	at android.inputmethodservice.InputMethodService.startViews(InputMethodService.java:2291)
+05-31 23:17:39.527  7921  7921 E InputContextLock: 	at android.inputmethodservice.InputMethodService.showWindow(InputMethodService.java:2237)
+05-31 23:17:39.527  7921  7921 E InputContextLock: 	at android.inputmethodservice.InputMethodService$InputMethodImpl.showSoftInput(InputMethodService.java:808)
+05-31 23:17:39.527  7921  7921 E InputContextLock: 	at android.inputmethodservice.InputMethodService$InputMethodImpl.showSoftInputWithToken(InputMethodService.java:782)
+05-31 23:17:39.527  7921  7921 E InputContextLock: 	at android.inputmethodservice.IInputMethodWrapper.executeMessage(IInputMethodWrapper.java:225)
+05-31 23:17:39.527  7921  7921 E InputContextLock: 	at com.android.internal.os.HandlerCaller$MyHandler.handleMessage(HandlerCaller.java:44)
+05-31 23:17:39.527  7921  7921 E InputContextLock: 	at android.os.Handler.dispatchMessage(Handler.java:106)
+05-31 23:17:39.527  7921  7921 E InputContextLock: 	at android.os.Looper.loopOnce(Looper.java:201)
+05-31 23:17:39.527  7921  7921 E InputContextLock: 	at android.os.Looper.loop(Looper.java:288)
+05-31 23:17:39.527  7921  7921 E InputContextLock: 	at android.app.ActivityThread.main(ActivityThread.java:7842)
+05-31 23:17:39.527  7921  7921 E InputContextLock: 	at java.lang.reflect.Method.invoke(Native Method)
+05-31 23:17:39.527  7921  7921 E InputContextLock: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:548)
+05-31 23:17:39.527  7921  7921 E InputContextLock: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1003)
+05-31 23:17:39.527  7921  7921 I VoiceInputManagerWrapper: VoiceInputManagerWrapper.cancelShutdown():55 cancelShutdown()
+05-31 23:17:39.527  7921  7921 I VoiceInputManagerWrapper: VoiceInputManagerWrapper.syncLanguagePacks():67 syncLanguagePacks()
+05-31 23:17:39.528  7921  8642 I SpeechFactory: SpeechRecognitionFactory.maybeScheduleAutoPackDownloadForFallback():184 maybeScheduleAutoPackDownloadForFallback()
+05-31 23:17:39.528  7921  7921 I LatinIme: LatinIme.updateEnableInlineSuggestionsOnDecoderSideFlags():1264 inline flag updated to:false
+05-31 23:17:39.528  7921  8642 I FallbackOnDeviceRecognitionProvider: FallbackOnDeviceRecognitionProvider.maybeScheduleAutoPackDownload():196 maybeScheduleAutoPackDownload() for language tag en-US
+05-31 23:17:39.528  7921  7921 W Delight5Decoder: Decoder.setRuntimeParams():372 setRuntimeParams() : Native lib is not ready.
+05-31 23:17:39.530  7921  7921 I KeyboardWrapper: KeyboardWrapper.consumeEvent():284 Skip consuming an event as current keyboard is deactivated (state=0, keyboard existence=true)
+05-31 23:17:39.531  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:39.532  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:39.533  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:39.533  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:39.533  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:39.534  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:39.534  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:39.535  7921  7921 I KeyboardViewUtil: KeyboardViewUtil.calculateMaxKeyboardBodyHeight():53 leave 344 height for app when screen height:2148, header height:121 and isFullscreenMode:false, so the max keyboard body height is:1683
+05-31 23:17:39.535  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:39.535  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:39.536  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:39.536  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:39.536  7921  7921 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():96 Get device mode phone by ui mode:1 and smallestScreenWidthDp:392
+05-31 23:17:39.537  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:39.537  7921  7921 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():111 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+05-31 23:17:39.538  7921  7921 I KeyboardViewUtil: KeyboardViewUtil.calculateMaxKeyboardBodyHeight():53 leave 344 height for app when screen height:2148, header height:121 and isFullscreenMode:false, so the max keyboard body height is:1683
+05-31 23:17:39.538  7921  7921 E LatinPrimeKeyboard: LatinPrimeKeyboard.updateCurrentImeLocales():414 consumeEvent: UPDATE_CURRENT_IME_LOCALES, Illegal argument
+05-31 23:17:39.538  7921  7921 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():111 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+05-31 23:17:39.538  7921  7921 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():111 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+05-31 23:17:39.540  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:39.541  7921  7921 I VoiceImeExtension: VoiceImeExtension.shouldStartVoiceInputAutomatically():364 No private IME option set to start voice input.
+05-31 23:17:39.543 27803 27803 D InsetsController: show(ime(), fromIme=true)
+05-31 23:17:39.548  7921  8064 D EGL_emulation: app_time_stats: avg=428.12ms min=23.16ms max=1022.89ms count=3
+05-31 23:17:39.548  9955  9955 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-31 23:17:39.548  9955  9955 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-31 23:17:39.550  9955  9955 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-31 23:17:39.551  9955  9955 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-31 23:17:39.551  9955  9955 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-31 23:17:39.552  9955  9955 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-31 23:17:39.589 27803 27827 D EGL_emulation: app_time_stats: avg=17.14ms min=14.21ms max=32.30ms count=59
+05-31 23:17:39.629   373   373 E android.hardware.audio@7.0-impl.ranchu: device/generic/goldfish/audio/stream_out.cpp:updateSourceMetadata:377 failure: Result::NOT_SUPPORTED
+05-31 23:17:39.732  7921  7921 W SpellCheckerExtension: SpellCheckerExtension.consumeEvent():156 SPELL_CHECK_SUGGESTIONS received with bad key data.
+05-31 23:17:39.732  7921  7921 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():157 Tooltip with id spell_check_add_to_dictionary not found in tooltipManager.
+05-31 23:17:39.770 27803 27803 I ViewInteraction: Performing 'replace text(gorilla)' action on view (view.getClass().getName() matches: is "android.widget.SearchView$SearchAutoComplete" and Child at position 0 in parent (view.getClass().getName() matches: is "android.widget.LinearLayout" and Child at position 1 in parent view.getClass().getName() matches: is "android.widget.LinearLayout") and (view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle))
+05-31 23:17:39.774  7921  7921 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1947
+05-31 23:17:39.775  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:39.775  7921  7921 W SessionManager: SessionManager.beginSession():53 Try to begin an already begun session [INPUT_SESSION], end it first
+05-31 23:17:39.775  7921  7921 W SessionManager: SessionManager.endSession():96 Child session [INPUT_VIEW_SESSION] is not ended while ending session [{IME_SESSION=1654064259523, INPUT_VIEW_SESSION=1654064259507, INPUT_SESSION=1654064259505, TRAINING_CACHE_SESSION=1654064259525}], ending it now.
+05-31 23:17:39.775  7921  7921 W SessionManager: SessionManager.endSession():96 Child session [IME_SESSION] is not ended while ending session [{IME_SESSION=1654064259523, INPUT_VIEW_SESSION=1654064259507, INPUT_SESSION=1654064259505, TRAINING_CACHE_SESSION=1654064259525}], ending it now.
+05-31 23:17:39.776  7921  7921 I GoogleInputMethodService: GoogleInputMethodService.onStartInputView():2057
+05-31 23:17:39.776  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:39.777  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:39.790 27803 27803 I ViewInteraction: Performing 'close keyboard' action on view (view.getClass().getName() matches: is "android.widget.SearchView$SearchAutoComplete" and Child at position 0 in parent (view.getClass().getName() matches: is "android.widget.LinearLayout" and Child at position 1 in parent view.getClass().getName() matches: is "android.widget.LinearLayout") and (view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle))
+05-31 23:17:39.791 27803 27803 D IdlingRegistry: Registering idling resources: [androidx.test.espresso.action.CloseKeyboardAction$CloseKeyboardIdlingResult@5fddcbc]
+05-31 23:17:39.794  7921  7921 I KeyboardViewUtil: KeyboardViewUtil.getKeyboardHeightRatio():168 systemKeyboardHeightRatio:1.000000; userKeyboardHeightRatio:1.000000.
+05-31 23:17:39.794  7921  7921 W SpellCheckerExtension: SpellCheckerExtension.consumeEvent():156 SPELL_CHECK_SUGGESTIONS received with bad key data.
+05-31 23:17:39.794  7921  7921 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():157 Tooltip with id spell_check_add_to_dictionary not found in tooltipManager.
+05-31 23:17:39.795  7921  7921 I KeyboardWrapper: KeyboardWrapper.consumeEvent():284 Skip consuming an event as current keyboard is deactivated (state=0, keyboard existence=true)
+05-31 23:17:39.795  7921  7921 I VoiceInputManagerWrapper: VoiceInputManagerWrapper.shutdown():77 shutdown()
+05-31 23:17:39.796  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:39.796  7921  7921 I AndroidIME: AbstractIme.onDeactivate():207 LatinIme.onDeactivate()
+05-31 23:17:39.796  7921  7921 W SessionManager: SessionManager.endSession():88 Try to end a not begun session [IME_SESSION].
+05-31 23:17:39.797  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:39.797  7921  7921 I AndroidIME: AbstractIme.onActivate():86 LatinIme.onActivate() : EditorInfo = inputType=Text imeActionName=SEARCH dump=[inputType=0x90001 imeOptions=0x8000003 privateImeOptions=null actionLabel=null actionId=0 initialSelStart=0 initialSelEnd=0 initialCapsMode=0x0 hintText=    label=null packageName=com.example.cse110lab5 autofillId=1073741824 fieldId=16909412 fieldName=null extras=null hintLocales=null contentMimeTypes=null ], IncognitoMode = false, DeviceLocked = false
+05-31 23:17:39.798  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:39.798  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:39.798  7921  7921 I Delight5Facilitator: Delight5Facilitator.initializeForIme():769 initializeForIme() : Locale = [en_US], layout = qwerty
+05-31 23:17:39.798  7921  7921 I Delight5Facilitator: Delight5Facilitator.resetDecoder():925 resetDecoder() : Locale = [en_US]
+05-31 23:17:39.799  7921  7921 E UserFeatureCache: UserFeatureCache.getStore():468 Wrong feature id provided PERSONALIZED_FST_MODEL_PARAMS for protobuf lab.
+05-31 23:17:39.799  7921  7921 E InputContextLock: InputContextLock.mayLockAndRun():126 Failed to run
+05-31 23:17:39.799  7921  7921 E InputContextLock: java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.Class java.lang.Object.getClass()' on a null object reference
+05-31 23:17:39.799  7921  7921 E InputContextLock: 	at com.google.android.libraries.inputmethod.userfeaturecache.UserFeatureCache.c(PG:8)
+05-31 23:17:39.799  7921  7921 E InputContextLock: 	at com.google.android.apps.inputmethod.libs.delight5.Delight5Facilitator.K(PG:131)
+05-31 23:17:39.799  7921  7921 E InputContextLock: 	at cng.call(Unknown Source:4)
+05-31 23:17:39.799  7921  7921 E InputContextLock: 	at con.a(PG:8)
+05-31 23:17:39.799  7921  7921 E InputContextLock: 	at com.google.android.apps.inputmethod.libs.delight5.Delight5Facilitator.G(PG:37)
+05-31 23:17:39.799  7921  7921 E InputContextLock: 	at com.google.android.apps.inputmethod.libs.latin5.LatinIme.h(PG:17)
+05-31 23:17:39.799  7921  7921 E InputContextLock: 	at jlx.g(PG:6)
+05-31 23:17:39.799  7921  7921 E InputContextLock: 	at jlx.m(PG:2)
+05-31 23:17:39.799  7921  7921 E InputContextLock: 	at dww.u(PG:18)
+05-31 23:17:39.799  7921  7921 E InputContextLock: 	at com.android.inputmethod.latin.LatinIME.u(PG:104)
+05-31 23:17:39.799  7921  7921 E InputContextLock: 	at dww.onStartInputView(PG:29)
+05-31 23:17:39.799  7921  7921 E InputContextLock: 	at android.inputmethodservice.InputMethodService.doStartInput(InputMethodService.java:2443)
+05-31 23:17:39.799  7921  7921 E InputContextLock: 	at android.inputmethodservice.InputMethodService$InputMethodImpl.restartInput(InputMethodService.java:701)
+05-31 23:17:39.799  7921  7921 E InputContextLock: 	at android.inputmethodservice.InputMethodService$InputMethodImpl.dispatchStartInputWithToken(InputMethodService.java:717)
+05-31 23:17:39.799  7921  7921 E InputContextLock: 	at android.inputmethodservice.IInputMethodWrapper.executeMessage(IInputMethodWrapper.java:199)
+05-31 23:17:39.799  7921  7921 E InputContextLock: 	at com.android.internal.os.HandlerCaller$MyHandler.handleMessage(HandlerCaller.java:44)
+05-31 23:17:39.799  7921  7921 E InputContextLock: 	at android.os.Handler.dispatchMessage(Handler.java:106)
+05-31 23:17:39.799  7921  7921 E InputContextLock: 	at android.os.Looper.loopOnce(Looper.java:201)
+05-31 23:17:39.799  7921  7921 E InputContextLock: 	at android.os.Looper.loop(Looper.java:288)
+05-31 23:17:39.799  7921  7921 E InputContextLock: 	at android.app.ActivityThread.main(ActivityThread.java:7842)
+05-31 23:17:39.799  7921  7921 E InputContextLock: 	at java.lang.reflect.Method.invoke(Native Method)
+05-31 23:17:39.799  7921  7921 E InputContextLock: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:548)
+05-31 23:17:39.799  7921  7921 E InputContextLock: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1003)
+05-31 23:17:39.799  7921  7921 I VoiceInputManagerWrapper: VoiceInputManagerWrapper.cancelShutdown():55 cancelShutdown()
+05-31 23:17:39.799  7921  7921 I VoiceInputManagerWrapper: VoiceInputManagerWrapper.syncLanguagePacks():67 syncLanguagePacks()
+05-31 23:17:39.799  7921  8642 I SpeechFactory: SpeechRecognitionFactory.maybeScheduleAutoPackDownloadForFallback():184 maybeScheduleAutoPackDownloadForFallback()
+05-31 23:17:39.799  7921  8642 I FallbackOnDeviceRecognitionProvider: FallbackOnDeviceRecognitionProvider.maybeScheduleAutoPackDownload():196 maybeScheduleAutoPackDownload() for language tag en-US
+05-31 23:17:39.800  7921  7921 I LatinIme: LatinIme.updateEnableInlineSuggestionsOnDecoderSideFlags():1264 inline flag updated to:false
+05-31 23:17:39.800  7921  7921 W Delight5Decoder: Decoder.setRuntimeParams():372 setRuntimeParams() : Native lib is not ready.
+05-31 23:17:39.801  7921  7921 I KeyboardWrapper: KeyboardWrapper.consumeEvent():284 Skip consuming an event as current keyboard is deactivated (state=0, keyboard existence=true)
+05-31 23:17:39.802  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:39.803  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:39.808  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:39.809  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:39.809  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:39.809  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:39.810  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:39.810  7921  7921 I KeyboardViewUtil: KeyboardViewUtil.calculateMaxKeyboardBodyHeight():53 leave 344 height for app when screen height:2148, header height:121 and isFullscreenMode:false, so the max keyboard body height is:1683
+05-31 23:17:39.811  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:39.811  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:39.812  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:39.812  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:39.812  7921  7921 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():96 Get device mode phone by ui mode:1 and smallestScreenWidthDp:392
+05-31 23:17:39.813  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:39.814  7921  7921 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():111 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+05-31 23:17:39.814  7921  7921 I KeyboardViewUtil: KeyboardViewUtil.calculateMaxKeyboardBodyHeight():53 leave 344 height for app when screen height:2148, header height:121 and isFullscreenMode:false, so the max keyboard body height is:1683
+05-31 23:17:39.815  7921  7921 E LatinPrimeKeyboard: LatinPrimeKeyboard.updateCurrentImeLocales():414 consumeEvent: UPDATE_CURRENT_IME_LOCALES, Illegal argument
+05-31 23:17:39.815  7921  7921 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():111 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+05-31 23:17:39.815  7921  7921 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():111 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+05-31 23:17:39.817  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:39.817  7921  7921 I VoiceImeExtension: VoiceImeExtension.shouldStartVoiceInputAutomatically():364 No private IME option set to start voice input.
+05-31 23:17:39.819 27803 27803 D InsetsController: show(ime(), fromIme=true)
+05-31 23:17:39.820  7921  7921 I GoogleInputMethodService: GoogleInputMethodService.onFinishInputView():2291
+05-31 23:17:39.824  7921  7921 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():157 Tooltip with id spell_check_add_to_dictionary not found in tooltipManager.
+05-31 23:17:39.824  7921  7921 I InputBundle: InputBundle.consumeEvent():920 Skip consuming an event as keyboard status is 0
+05-31 23:17:39.824  7921  7921 I KeyboardWrapper: KeyboardWrapper.consumeEvent():284 Skip consuming an event as current keyboard is deactivated (state=0, keyboard existence=true)
+05-31 23:17:39.825  7921  7921 I VoiceInputManagerWrapper: VoiceInputManagerWrapper.shutdown():77 shutdown()
+05-31 23:17:39.826  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:39.826  7921  7921 I AndroidIME: AbstractIme.onDeactivate():207 LatinIme.onDeactivate()
+05-31 23:17:39.831  9955  9955 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-31 23:17:39.831  9955  9955 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-31 23:17:39.832  9955  9955 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-31 23:17:39.834  9955  9955 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-31 23:17:39.834  9955  9955 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-31 23:17:39.835  9955  9955 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+05-31 23:17:40.144 27803 27803 D IdlingRegistry: Unregistering idling resources: [androidx.test.espresso.action.CloseKeyboardAction$CloseKeyboardIdlingResult@5fddcbc]
+05-31 23:17:40.145 27803 27803 I ViewInteraction: Performing 'single click' action on view (view.getId() is <2131231088/com.example.cse110lab5:id/search_btn> and an instance of android.widget.TextView and view.getText() with or without transformation to match: is "Search" and Child at position 2 in parent Child at position 0 in parent view.getId() is <16908290/android:id/content> and (view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle))
+05-31 23:17:40.192   373   373 E android.hardware.audio@7.0-impl.ranchu: device/generic/goldfish/audio/stream_out.cpp:updateSourceMetadata:377 failure: Result::NOT_SUPPORTED
+05-31 23:17:40.315   373   373 E android.hardware.audio@7.0-impl.ranchu: device/generic/goldfish/audio/stream_out.cpp:updateSourceMetadata:377 failure: Result::NOT_SUPPORTED
+05-31 23:17:40.406   812   873 D EGL_emulation: app_time_stats: avg=18.34ms min=12.76ms max=35.03ms count=55
+05-31 23:17:40.440 27803 27803 I ViewInteraction: Performing 'load adapter data' action on view (view.getId() is <2131231097/com.example.cse110lab5:id/search_view> and Child at position 3 in parent view.getClass().getName() matches: is "androidx.constraintlayout.widget.ConstraintLayout")
+05-31 23:17:40.456 27803 27803 I ViewInteraction: Performing 'single click' action on view  displaying data matching: ANYTHING within adapter view matching: (view.getId() is <2131231097/com.example.cse110lab5:id/search_view> and Child at position 3 in parent view.getClass().getName() matches: is "androidx.constraintlayout.widget.ConstraintLayout")
+05-31 23:17:40.566   373   373 E android.hardware.audio@7.0-impl.ranchu: device/generic/goldfish/audio/stream_out.cpp:updateSourceMetadata:377 failure: Result::NOT_SUPPORTED
+05-31 23:17:40.589 27803 27827 D EGL_emulation: app_time_stats: avg=16.91ms min=13.80ms max=32.62ms count=59
+05-31 23:17:40.691   373   373 E android.hardware.audio@7.0-impl.ranchu: device/generic/goldfish/audio/stream_out.cpp:updateSourceMetadata:377 failure: Result::NOT_SUPPORTED
+05-31 23:17:40.737 27803 27803 I ViewInteraction: Performing 'single click' action on view (view.getId() is <2131230819/com.example.cse110lab5:id/button> and an instance of android.widget.TextView and view.getText() with or without transformation to match: is "Count" and Child at position 4 in parent Child at position 0 in parent view.getId() is <16908290/android:id/content> and (view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle))
+05-31 23:17:40.799  7638 21360 V NativeCrypto: Read error: ssl=0x7b151b35c458: I/O error during system call, Connection reset by peer
+05-31 23:17:40.799  7638 27462 E WakeLock: GCM_HB_ALARM release without a matched acquire!
+05-31 23:17:40.800  7638 27462 V NativeCrypto: SSL shutdown failed: ssl=0x7b151b35c458: I/O error during system call, Broken pipe
+05-31 23:17:40.801  7638 27462 E WakeLock: GCM_HB_ALARM release without a matched acquire!
+05-31 23:17:40.801  7638 27462 W WakeLock: GCM_HB_ALARM counter does not exist
+05-31 23:17:40.801   373   373 E android.hardware.audio@7.0-impl.ranchu: device/generic/goldfish/audio/stream_out.cpp:updateSourceMetadata:377 failure: Result::NOT_SUPPORTED
+05-31 23:17:40.803   556   750 D ConnectivityService: reportNetworkConnectivity(102, false) by 10102
+05-31 23:17:40.803  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:40.814   943 18509 D NetworkMonitor/102: Forcing reevaluation for UID 10102. Dns signal count: 0
+05-31 23:17:40.827   943 27854 D NetworkMonitor/102: PROBE_DNS connectivitycheck.gstatic.com 9ms OK 142.250.217.131,2607:f8b0:4007:813::2003
+05-31 23:17:40.831  7638 21360 I NetworkManagementSocketTagger: tagSocketFd(-1, 536871943, -1) failed with errno-9
+05-31 23:17:40.846   943 27853 D NetworkMonitor/102: PROBE_DNS www.google.com 28ms OK 142.250.72.132,2607:f8b0:4007:810::2004
+05-31 23:17:40.864   943 27854 D NetworkMonitor/102: PROBE_HTTP http://connectivitycheck.gstatic.com/generate_204 time=33ms ret=204 request={Connection=[close], User-Agent=[Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.32 Safari/537.36]} headers={null=[HTTP/1.1 204 No Content], Connection=[close], Content-Length=[0], Date=[Wed, 01 Jun 2022 06:17:44 GMT], X-Android-Received-Millis=[1654064260864], X-Android-Response-Source=[NETWORK 204], X-Android-Selected-Protocol=[http/1.1], X-Android-Sent-Millis=[1654064260847]}
+05-31 23:17:40.907   943 27853 D NetworkMonitor/102: PROBE_HTTPS https://www.google.com/generate_204 time=60ms ret=204 request={Connection=[close], User-Agent=[Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.32 Safari/537.36]} headers={null=[HTTP/1.1 204 No Content], Alt-Svc=[h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"], Connection=[close], Content-Length=[0], Date=[Wed, 01 Jun 2022 06:17:44 GMT], X-Android-Received-Millis=[1654064260906], X-Android-Response-Source=[NETWORK 204], X-Android-Selected-Protocol=[http/1.1], X-Android-Sent-Millis=[1654064260891]}
+05-31 23:17:40.908   943 27852 D NetworkMonitor/102: isCaptivePortal: isSuccessful()=true isPortal()=false RedirectUrl=null isPartialConnectivity()=false Time=92ms
+05-31 23:17:40.910   556   750 D ConnectivityService: [102 WIFI] validation passed
+05-31 23:17:40.940   373   373 E android.hardware.audio@7.0-impl.ranchu: device/generic/goldfish/audio/stream_out.cpp:updateSourceMetadata:377 failure: Result::NOT_SUPPORTED
+05-31 23:17:40.946  7638 27462 E WakeLock: GCM_CONN_ALARM release without a matched acquire!
+05-31 23:17:41.042 27803 27803 I ViewInteraction: Performing 'input method editor' action on view (view.getClass().getName() matches: is "android.widget.SearchView$SearchAutoComplete" and an instance of android.widget.TextView and view.getText() with or without transformation to match: is "gorilla" and Child at position 0 in parent (view.getClass().getName() matches: is "android.widget.LinearLayout" and Child at position 1 in parent view.getClass().getName() matches: is "android.widget.LinearLayout") and (view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle))
+05-31 23:17:41.045 27803 27803 I ViewInteraction: Performing 'single click' action on view (view.getId() is <2131230922/com.example.cse110lab5:id/go_to_plan_btn> and an instance of android.widget.TextView and view.getText() with or without transformation to match: is "Plan" and Child at position 6 in parent Child at position 0 in parent view.getId() is <16908290/android:id/content> and (view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle))
+05-31 23:17:41.092   373   373 E android.hardware.audio@7.0-impl.ranchu: device/generic/goldfish/audio/stream_out.cpp:updateSourceMetadata:377 failure: Result::NOT_SUPPORTED
+05-31 23:17:41.097 27803 27803 D LifecycleMonitor: Lifecycle status change: com.example.cse110lab5.TodoListActivity@aa9d812 in: PAUSED
+05-31 23:17:41.098   556  1448 W InputReader: Device virtio_input_multi_touch_4 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:41.098   556  1448 W InputReader: Device virtio_input_multi_touch_10 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:41.098   556  1448 W InputReader: Device virtio_input_multi_touch_8 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:41.098   556  1448 W InputReader: Device virtio_input_multi_touch_2 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:41.098   556  1448 W InputReader: Device virtio_input_multi_touch_9 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:41.099   556  1448 W InputReader: Device virtio_input_multi_touch_3 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:41.099   556  1448 W InputReader: Device virtio_input_multi_touch_7 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:41.099   556  1448 W InputReader: Device virtio_input_multi_touch_5 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:41.099   556  1448 W InputReader: Device virtio_input_multi_touch_6 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:41.099   556  1448 W InputReader: Device virtio_input_multi_touch_11 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:41.099   556  1448 W InputReader: Device virtio_input_multi_touch_4 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:41.099   556  1448 W InputReader: Device virtio_input_multi_touch_10 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:41.099   556  1448 W InputReader: Device virtio_input_multi_touch_8 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:41.099   556  1448 W InputReader: Device virtio_input_multi_touch_2 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:41.099   556  1448 W InputReader: Device virtio_input_multi_touch_9 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:41.099   556  1448 W InputReader: Device virtio_input_multi_touch_3 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:41.099   556  1448 W InputReader: Device virtio_input_multi_touch_7 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:41.099   556  1448 W InputReader: Device virtio_input_multi_touch_5 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:41.100   556  1448 W InputReader: Device virtio_input_multi_touch_6 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:41.100   556  1448 W InputReader: Device virtio_input_multi_touch_11 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:41.109 27803 27803 D LifecycleMonitor: Lifecycle status change: com.example.cse110lab5.PlanActivity@443896d in: PRE_ON_CREATE
+05-31 23:17:41.179 27803 27803 D LifecycleMonitor: Lifecycle status change: com.example.cse110lab5.PlanActivity@443896d in: CREATED
+05-31 23:17:41.180 27803 27803 D LifecycleMonitor: Lifecycle status change: com.example.cse110lab5.PlanActivity@443896d in: STARTED
+05-31 23:17:41.180 27803 27803 D LifecycleMonitor: Lifecycle status change: com.example.cse110lab5.PlanActivity@443896d in: RESUMED
+05-31 23:17:41.198   384   425 D goldfish-address-space: claimShared: Ask to claim region [0x3f0000000 0x3f0965000]
+05-31 23:17:41.203   384   425 D goldfish-address-space: claimShared: Ask to claim region [0x3f0965000 0x3f12ca000]
+05-31 23:17:41.204   384   425 D goldfish-address-space: claimShared: Ask to claim region [0x3f12ca000 0x3f1c2f000]
+05-31 23:17:41.218   556   592 I ActivityTaskManager: Displayed com.example.cse110lab5/.PlanActivity: +126ms
+05-31 23:17:41.225   373   373 E android.hardware.audio@7.0-impl.ranchu: device/generic/goldfish/audio/stream_out.cpp:updateSourceMetadata:377 failure: Result::NOT_SUPPORTED
+05-31 23:17:41.232  7921  7921 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3269
+05-31 23:17:41.232  7921  7921 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1947
+05-31 23:17:41.233  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:41.456   812   873 D EGL_emulation: app_time_stats: avg=29.97ms min=13.20ms max=116.69ms count=35
+05-31 23:17:41.608 27803 27827 D EGL_emulation: app_time_stats: avg=17.15ms min=12.92ms max=32.08ms count=59
+05-31 23:17:41.626 27803 27803 D LifecycleMonitor: Lifecycle status change: com.example.cse110lab5.TodoListActivity@aa9d812 in: STOPPED
+05-31 23:17:41.638 27803 27827 D OpenGLRenderer: endAllActiveAnimators on 0x7b159b3793d0 (RippleDrawable) with handle 0x7b14ab3a0e10
+05-31 23:17:41.638 27803 27827 D OpenGLRenderer: endAllActiveAnimators on 0x7b159b37a720 (RippleDrawable) with handle 0x7b14ab3a7620
+05-31 23:17:41.655 27803 27803 I ViewInteraction: Performing 'single click' action on view (view.getId() is <2131230880/com.example.cse110lab5:id/directions_btn> and an instance of android.widget.TextView and view.getText() with or without transformation to match: is "Directions" and Child at position 3 in parent Child at position 0 in parent view.getId() is <16908290/android:id/content> and (view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle))
+05-31 23:17:41.701 27803 27803 D LifecycleMonitor: Lifecycle status change: com.example.cse110lab5.PlanActivity@443896d in: PAUSED
+05-31 23:17:41.702   556  1448 W InputReader: Device virtio_input_multi_touch_4 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:41.702   556  1448 W InputReader: Device virtio_input_multi_touch_10 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:41.702   556  1448 W InputReader: Device virtio_input_multi_touch_8 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:41.702   556  1448 W InputReader: Device virtio_input_multi_touch_2 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:41.702   556  1448 W InputReader: Device virtio_input_multi_touch_9 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:41.702   556  1448 W InputReader: Device virtio_input_multi_touch_3 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:41.702   556  1448 W InputReader: Device virtio_input_multi_touch_7 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:41.702   556  1448 W InputReader: Device virtio_input_multi_touch_5 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:41.702   556  1448 W InputReader: Device virtio_input_multi_touch_6 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:41.702   556  1448 W InputReader: Device virtio_input_multi_touch_11 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:41.702   556  1448 W InputReader: Device virtio_input_multi_touch_4 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:41.702   556  1448 W InputReader: Device virtio_input_multi_touch_10 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:41.702   556  1448 W InputReader: Device virtio_input_multi_touch_8 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:41.702   556  1448 W InputReader: Device virtio_input_multi_touch_2 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:41.702   556  1448 W InputReader: Device virtio_input_multi_touch_9 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:41.703   556  1448 W InputReader: Device virtio_input_multi_touch_3 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:41.703   556  1448 W InputReader: Device virtio_input_multi_touch_7 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:41.703   556  1448 W InputReader: Device virtio_input_multi_touch_5 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:41.703   556  1448 W InputReader: Device virtio_input_multi_touch_6 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:41.703   556  1448 W InputReader: Device virtio_input_multi_touch_11 is associated with display ADISPLAY_ID_NONE.
+05-31 23:17:41.709   373   373 E android.hardware.audio@7.0-impl.ranchu: device/generic/goldfish/audio/stream_out.cpp:updateSourceMetadata:377 failure: Result::NOT_SUPPORTED
+05-31 23:17:41.724 27803 27803 D LifecycleMonitor: Lifecycle status change: com.example.cse110lab5.DirectionsActivity@99b3fb8 in: PRE_ON_CREATE
+05-31 23:17:41.784 27803 27803 D LifecycleMonitor: Lifecycle status change: com.example.cse110lab5.DirectionsActivity@99b3fb8 in: CREATED
+05-31 23:17:41.785 27803 27803 D LifecycleMonitor: Lifecycle status change: com.example.cse110lab5.DirectionsActivity@99b3fb8 in: STARTED
+05-31 23:17:41.785 27803 27803 D LifecycleMonitor: Lifecycle status change: com.example.cse110lab5.DirectionsActivity@99b3fb8 in: RESUMED
+05-31 23:17:41.798   384   425 D goldfish-address-space: claimShared: Ask to claim region [0x3f1c2f000 0x3f2594000]
+05-31 23:17:41.802   384   425 D goldfish-address-space: claimShared: Ask to claim region [0x3f2594000 0x3f2ef9000]
+05-31 23:17:41.808   384   425 D goldfish-address-space: claimShared: Ask to claim region [0x3f2ef9000 0x3f385e000]
+05-31 23:17:41.821   556   592 I ActivityTaskManager: Displayed com.example.cse110lab5/.DirectionsActivity: +123ms
+05-31 23:17:41.841   373   373 E android.hardware.audio@7.0-impl.ranchu: device/generic/goldfish/audio/stream_out.cpp:updateSourceMetadata:377 failure: Result::NOT_SUPPORTED
+05-31 23:17:41.844  7921  7921 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3269
+05-31 23:17:41.845  7921  7921 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1947
+05-31 23:17:41.845  7921  7921 I DeviceUnlockedTag: DeviceUnlockedTag.notifyDeviceLockStatusChanged():79 Notify device unlocked.
+05-31 23:17:42.059 27803 27803 I ViewInteraction: Performing 'single click' action on view (view.getId() is <2131231033/com.example.cse110lab5:id/next_btn> and an instance of android.widget.TextView and view.getText() with or without transformation to match: is "Next" and Child at position 1 in parent Child at position 0 in parent view.getId() is <16908290/android:id/content> and (view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle))
+05-31 23:17:42.129   373   373 E android.hardware.audio@7.0-impl.ranchu: device/generic/goldfish/audio/stream_out.cpp:updateSourceMetadata:377 failure: Result::NOT_SUPPORTED
+05-31 23:17:42.225 27803 27827 D EGL_emulation: app_time_stats: avg=24.63ms min=8.15ms max=341.93ms count=41
+05-31 23:17:42.254 27803 27827 D OpenGLRenderer: endAllActiveAnimators on 0x7b159b38bbf0 (RippleDrawable) with handle 0x7b14ab391c90
+05-31 23:17:42.260 27803 27803 D LifecycleMonitor: Lifecycle status change: com.example.cse110lab5.PlanActivity@443896d in: STOPPED
+05-31 23:17:42.262   373   373 E android.hardware.audio@7.0-impl.ranchu: device/generic/goldfish/audio/stream_out.cpp:updateSourceMetadata:377 failure: Result::NOT_SUPPORTED
+05-31 23:17:42.361 27803 27803 I ViewInteraction: Performing 'single click' action on view (view.getId() is <2131230878/com.example.cse110lab5:id/directionsTypeButton> and an instance of android.widget.TextView and view.getText() with or without transformation to match: is "OFF" and Child at position 2 in parent Child at position 0 in parent view.getId() is <16908290/android:id/content> and (view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle))
+05-31 23:17:42.417   373   373 E android.hardware.audio@7.0-impl.ranchu: device/generic/goldfish/audio/stream_out.cpp:updateSourceMetadata:377 failure: Result::NOT_SUPPORTED
+05-31 23:17:42.474   812   873 D EGL_emulation: app_time_stats: avg=48.05ms min=13.69ms max=449.80ms count=21
+05-31 23:17:42.550   373   373 E android.hardware.audio@7.0-impl.ranchu: device/generic/goldfish/audio/stream_out.cpp:updateSourceMetadata:377 failure: Result::NOT_SUPPORTED
+05-31 23:17:42.655 27803 27803 I ViewInteraction: Performing 'single click' action on view (view.getId() is <2131231033/com.example.cse110lab5:id/next_btn> and an instance of android.widget.TextView and view.getText() with or without transformation to match: is "Next" and Child at position 1 in parent Child at position 0 in parent view.getId() is <16908290/android:id/content> and (view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle))
+05-31 23:17:42.704   373   373 E android.hardware.audio@7.0-impl.ranchu: device/generic/goldfish/audio/stream_out.cpp:updateSourceMetadata:377 failure: Result::NOT_SUPPORTED
+05-31 23:17:42.818  7921  7970 W LatinCommonCountersMetricsProcessor: LatinCommonCountersMetricsProcessor$DelightProblemReporter.run():765 Missing LM for 'en'
+05-31 23:17:42.838   373   373 E android.hardware.audio@7.0-impl.ranchu: device/generic/goldfish/audio/stream_out.cpp:updateSourceMetadata:377 failure: Result::NOT_SUPPORTED
+05-31 23:17:42.839 27803 27827 D EGL_emulation: app_time_stats: avg=18.54ms min=9.73ms max=116.21ms count=55
+05-31 23:17:42.941 27803 27803 I ViewInteraction: Performing 'single click' action on view (view.getId() is <2131230878/com.example.cse110lab5:id/directionsTypeButton> and an instance of android.widget.TextView and view.getText() with or without transformation to match: is "ON" and Child at position 2 in parent Child at position 0 in parent view.getId() is <16908290/android:id/content> and (view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle))
+05-31 23:17:42.992   373   373 E android.hardware.audio@7.0-impl.ranchu: device/generic/goldfish/audio/stream_out.cpp:updateSourceMetadata:377 failure: Result::NOT_SUPPORTED
+05-31 23:17:43.126   373   373 E android.hardware.audio@7.0-impl.ranchu: device/generic/goldfish/audio/stream_out.cpp:updateSourceMetadata:377 failure: Result::NOT_SUPPORTED
+05-31 23:17:43.238 27803 27803 I ViewInteraction: Performing 'single click' action on view (view.getId() is <2131230878/com.example.cse110lab5:id/directionsTypeButton> and an instance of android.widget.TextView and view.getText() with or without transformation to match: is "OFF" and Child at position 2 in parent Child at position 0 in parent view.getId() is <16908290/android:id/content> and (view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle))
+05-31 23:17:43.282   373   373 E android.hardware.audio@7.0-impl.ranchu: device/generic/goldfish/audio/stream_out.cpp:updateSourceMetadata:377 failure: Result::NOT_SUPPORTED
+05-31 23:17:43.413   373   373 E android.hardware.audio@7.0-impl.ranchu: device/generic/goldfish/audio/stream_out.cpp:updateSourceMetadata:377 failure: Result::NOT_SUPPORTED
+05-31 23:17:43.540 27803 27803 I ViewInteraction: Performing 'single click' action on view (view.getId() is <2131231033/com.example.cse110lab5:id/next_btn> and an instance of android.widget.TextView and view.getText() with or without transformation to match: is "Next" and Child at position 1 in parent Child at position 0 in parent view.getId() is <16908290/android:id/content> and (view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle))
+05-31 23:17:43.591   373   373 E android.hardware.audio@7.0-impl.ranchu: device/generic/goldfish/audio/stream_out.cpp:updateSourceMetadata:377 failure: Result::NOT_SUPPORTED
+05-31 23:17:43.723   373   373 E android.hardware.audio@7.0-impl.ranchu: device/generic/goldfish/audio/stream_out.cpp:updateSourceMetadata:377 failure: Result::NOT_SUPPORTED
+05-31 23:17:43.822 27803 27803 I ViewInteraction: Performing 'single click' action on view (view.getId() is <2131230878/com.example.cse110lab5:id/directionsTypeButton> and an instance of android.widget.TextView and view.getText() with or without transformation to match: is "ON" and Child at position 2 in parent Child at position 0 in parent view.getId() is <16908290/android:id/content> and (view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle))
+05-31 23:17:43.857 27803 27827 D EGL_emulation: app_time_stats: avg=16.63ms min=14.11ms max=19.06ms count=61
+05-31 23:17:43.865   373   373 E android.hardware.audio@7.0-impl.ranchu: device/generic/goldfish/audio/stream_out.cpp:updateSourceMetadata:377 failure: Result::NOT_SUPPORTED
+05-31 23:17:43.989   373   373 E android.hardware.audio@7.0-impl.ranchu: device/generic/goldfish/audio/stream_out.cpp:updateSourceMetadata:377 failure: Result::NOT_SUPPORTED
+05-31 23:17:44.122 27803 27803 I ViewInteraction: Performing 'single click' action on view (view.getId() is <2131231033/com.example.cse110lab5:id/next_btn> and an instance of android.widget.TextView and view.getText() with or without transformation to match: is "Next" and Child at position 1 in parent Child at position 0 in parent view.getId() is <16908290/android:id/content> and (view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle))
+05-31 23:17:44.166   373   373 E android.hardware.audio@7.0-impl.ranchu: device/generic/goldfish/audio/stream_out.cpp:updateSourceMetadata:377 failure: Result::NOT_SUPPORTED
+05-31 23:17:44.299   373   373 E android.hardware.audio@7.0-impl.ranchu: device/generic/goldfish/audio/stream_out.cpp:updateSourceMetadata:377 failure: Result::NOT_SUPPORTED
+05-31 23:17:44.424 27803 27803 I ViewInteraction: Performing 'single click' action on view (view.getId() is <2131231033/com.example.cse110lab5:id/next_btn> and an instance of android.widget.TextView and view.getText() with or without transformation to match: is "Next" and Child at position 1 in parent Child at position 0 in parent view.getId() is <16908290/android:id/content> and (view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle))
+05-31 23:17:44.475   373   373 E android.hardware.audio@7.0-impl.ranchu: device/generic/goldfish/audio/stream_out.cpp:updateSourceMetadata:377 failure: Result::NOT_SUPPORTED
+05-31 23:17:44.608   373   373 E android.hardware.audio@7.0-impl.ranchu: device/generic/goldfish/audio/stream_out.cpp:updateSourceMetadata:377 failure: Result::NOT_SUPPORTED
+05-31 23:17:44.705 27803 27803 W mple.cse110lab: Accessing hidden field Landroid/app/Activity;->mResultCode:I (unsupported, reflection, allowed)
+05-31 23:17:44.705 27803 27803 W mple.cse110lab: Accessing hidden field Landroid/app/Activity;->mResultData:Landroid/content/Intent; (unsupported, reflection, allowed)
+05-31 23:17:44.706 27803 27803 D LifecycleMonitor: Lifecycle status change: com.example.cse110lab5.TodoListActivity@aa9d812 in: DESTROYED
+05-31 23:17:44.709   556  1193 W InputManager-JNI: Input channel object 'b99df0c com.example.cse110lab5/com.example.cse110lab5.TodoListActivity (client)' was disposed without first being removed with the input manager!
+05-31 23:17:44.711 27803 27824 I TestRunner: finished: sBST3IntrumentedTest(com.example.cse110lab5.SBST3IntrumentedTest)

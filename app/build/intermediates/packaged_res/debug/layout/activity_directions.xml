@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DirectionsActivity">
+
+    <TextView
+        android:id="@+id/directionsView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="149dp"
+        android:hint="Click next to continue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/next_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="224dp"
+        android:onClick="onNextBtnClick"
+        android:text="Next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.77"
+        app:layout_constraintStart_toEndOf="@+id/back_btn"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/directionsTypeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="88dp"
+        android:onClick="onToggleBtnClick"
+        android:text="Brief/Detailed Toggle"
+        app:layout_constraintEnd_toEndOf="@+id/next_btn"
+        app:layout_constraintTop_toBottomOf="@+id/next_btn" />
+
+    <Button
+        android:id="@+id/back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="59dp"
+        android:text="Step Back
+"
+        android:onClick="onBackBtnClick"
+        app:layout_constraintBottom_toTopOf="@+id/directionsTypeButton"
+        app:layout_constraintEnd_toStartOf="@+id/next_btn"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,28 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.example.cse110lab5.test.app-mergeDebugAndroidTestResources-4:/values-v18/values-v18.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Campbell Moco\\.gradle\\caches\\transforms-3\\0df391eabe3bf98503aeb6c03b2978e7\\transformed\\core-1.4.1-alpha06\\res\\values-v18\\values.xml",
+                    "from": {
+                        "startLines": "4,12",
+                        "startColumns": "0,0",
+                        "startOffsets": "180,596",
+                        "endLines": "11,19",
+                        "endColumns": "8,8",
+                        "endOffsets": "595,1009"
+                    },
+                    "to": {
+                        "startLines": "2,10",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,475",
+                        "endLines": "9,17",
+                        "endColumns": "8,8",
+                        "endOffsets": "470,888"
+                    }
+                }
+            ]
+        }
+    ]
+}
