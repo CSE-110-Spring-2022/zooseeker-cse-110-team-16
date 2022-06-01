@@ -39,22 +39,23 @@ public class NearestNeighborTest {
 
     @Test
     public void test2Vertices() {
-        List<String> selectedExhibits = new ArrayList<>(Arrays.asList("entrance_exit_gate", "elephant_odyssey"));
-        List<String> expected = Arrays.asList("entrance_exit_gate", "elephant_odyssey");
+        List<String> selectedExhibits = new ArrayList<>(Arrays.asList("entrance_exit_gate", "intxn_front_treetops"));
+        List<String> expected = Arrays.asList("entrance_exit_gate", "intxn_front_treetops");
         assertEquals(expected, s.makeRoute(edgeData, selectedExhibits));
     }
 
     @Test
     public void test3Vertices() {
-        List<String> selectedExhibits = new ArrayList<>(Arrays.asList("entrance_exit_gate", "gorillas", "lions"));
-        List<String> expected = Arrays.asList("entrance_exit_gate", "gorillas", "lions");
+        List<String> selectedExhibits = new ArrayList<>(Arrays.asList("entrance_exit_gate", "intxn_front_treetops", "intxn_front_monkey"));
+        List<String> expected = Arrays.asList("entrance_exit_gate", "intxn_front_treetops", "intxn_front_monkey");
         assertEquals(expected, s.makeRoute(edgeData, selectedExhibits));
     }
 
     @Test
     public void test3VerticesOppositeOrder() {
-        List<String> selectedExhibits = new ArrayList<>(Arrays.asList("lions", "gorillas", "entrance_exit_gate"));
-        List<String> expected = Arrays.asList("entrance_exit_gate", "gorillas", "lions");
+        List<String> selectedExhibits = new ArrayList<>(Arrays.asList("entrance_exit_gate", "intxn_front_treetops", "intxn_front_monkey"));
+        List<String> expected = Arrays.asList("entrance_exit_gate", "intxn_front_treetops", "intxn_front_monkey");
+        //"intxn_front_monkey", "intxn_front_treetops", "entrance_exit_gate"
         assertEquals(expected, s.makeRoute(edgeData, selectedExhibits));
     }
 }

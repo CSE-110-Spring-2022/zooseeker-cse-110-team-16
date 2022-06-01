@@ -12,11 +12,11 @@ import androidx.sqlite.db.SupportSQLiteDatabase;
 import java.util.List;
 import java.util.concurrent.Executors;
 
-@Database(entities = {TodoListItem.class}, version = 1)
+@Database(entities = {ListItem.class}, version = 1)
 public abstract class ListDatabase extends RoomDatabase {
     private static ListDatabase singleton = null;
 
-    public abstract TodoListItemDao todoListItemDao();
+    public abstract ListItemDao listItemDao();
 
     public synchronized static ListDatabase getSingleton(Context context) {
         if (singleton == null) {
@@ -27,16 +27,16 @@ public abstract class ListDatabase extends RoomDatabase {
 
     //deleted contents of demo_todos.json so list is not populated at start
     private static ListDatabase makeDatabase(Context context) {
-        return Room.databaseBuilder(context, ListDatabase.class, "todo_app.db")
+        return Room.databaseBuilder(context, ListDatabase.class, "zoo_app.db")
                 .allowMainThreadQueries()
                 .addCallback(new Callback() {
                     @Override
                     public void onCreate(@NonNull SupportSQLiteDatabase db) {
                         super.onCreate(db);
                         Executors.newSingleThreadScheduledExecutor().execute(() -> {
-                            List<TodoListItem> todos = TodoListItem
-                                    .loadJSON(context, "demo_todos.json");
-                            getSingleton(context).todoListItemDao().insertAll(todos);
+                            List<ListItem> items = ListItem
+                                    .loadJSON(context, "demo_todos.json");  //TODO refactor/delete unused parameters
+                            getSingleton(context).listItemDao().insertAll(items);
                         });
                     }
                 })

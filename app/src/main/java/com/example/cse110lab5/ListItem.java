@@ -14,44 +14,36 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.lang.reflect.Type;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-@Entity(tableName = "todo_list_items")
-public class TodoListItem {
+@Entity(tableName = "list_items")
+public class ListItem {
+
     @PrimaryKey(autoGenerate = true)
     public long id;
 
     @NonNull
     public String text;
-    public boolean completed;
     public int order;
 
-    TodoListItem(@NonNull String text, boolean completed, int order) {
+    ListItem(@NonNull String text, int order) {
         this.text = text;
-        this.completed = completed;
         this.order = order;
     }
 
     @Override
     public String toString() {
-        return "TodoListItem{" +
+        return "ListItem{" +
                 ", text='" + text + '\'' +
-                ", completed=" + completed +
                 ", order=" + order +
                 '}';
     }
 
-    public static List<TodoListItem> loadJSON(Context context, String path) {
-        try {
-            InputStream input = context.getAssets().open(path);
-            Reader reader = new InputStreamReader(input);
-            Gson gson = new Gson();
-            Type type = new TypeToken<List<TodoListItem>>(){}.getType();
-            return gson.fromJson(reader, type);
-        } catch (IOException e) {
-            e.printStackTrace();
-            return Collections.emptyList();
-        }
+    //instead of loading from json file load from map object (made in ms1)
+    //load empty list
+    public static List<ListItem> loadJSON(Context context, String path) {
+        return Collections.emptyList();
     }
 }

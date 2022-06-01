@@ -50,7 +50,7 @@ public class GuiFunctionalityTest {
                         childAtPosition(
                                 allOf(withClassName(is("android.widget.LinearLayout")),
                                         childAtPosition(
-                                                withId(R.id.new_todo_text),
+                                                withId(R.id.search_text),
                                                 0)),
                                 1),
                         isDisplayed()));
@@ -68,7 +68,7 @@ public class GuiFunctionalityTest {
         searchAutoComplete.perform(replaceText("exit"), closeSoftKeyboard());
 
         ViewInteraction materialButton = onView(
-                allOf(withId(R.id.add_todo_btn), withText("Search"),
+                allOf(withId(R.id.search_btn), withText("Search"),
                         childAtPosition(
                                 childAtPosition(
                                         withId(android.R.id.content),
@@ -78,7 +78,7 @@ public class GuiFunctionalityTest {
         materialButton.perform(click());
 
         DataInteraction textView = onData(anything())
-                .inAdapterView(allOf(withId(R.id.listView),
+                .inAdapterView(allOf(withId(R.id.search_view),
                         childAtPosition(
                                 withClassName(is("androidx.constraintlayout.widget.ConstraintLayout")),
                                 3)))
