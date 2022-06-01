@@ -224,7 +224,7 @@ public class ZooData {
                  }
                  else {
                      indexedZooData.put(datum.id
-                             , new VertexInfo(datum.id, datum.groupId, true, datum.kind, datum.name, fromListToJson(datum.tags), datum.lat, datum.lng));
+                             , new VertexInfo(datum.id, datum.groupId, true, datum.kind, datum.name, fromListToJson(datum.tags), indexedZooData.get(datum.groupId).getLat(), indexedZooData.get(datum.groupId).getLng()));
                  }
              }
 

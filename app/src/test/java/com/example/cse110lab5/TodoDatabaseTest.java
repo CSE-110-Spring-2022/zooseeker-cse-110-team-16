@@ -136,6 +136,8 @@ public class TodoDatabaseTest {
 
         assertEquals(data.get("toucan").getGroupId(), "parker_aviary");
         assertEquals(data.get("toucan").getInGroup(), true);
+        assertEquals(data.get("toucan").getLat(), 32.73870593465047, 0.0001);
+        assertEquals(data.get("toucan").getLng(), -117.1695850705821, 0.0001);
     }
 
     //Testing edge info database
