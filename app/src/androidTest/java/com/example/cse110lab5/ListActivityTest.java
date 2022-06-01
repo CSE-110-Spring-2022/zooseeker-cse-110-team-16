@@ -36,22 +36,4 @@ public class ListActivityTest {
         listItemDao = testDb.listItemDao();
         listItemDao.insertAll(items);
     }
-
-//    @Test
-//    public void testAddNewItem() {
-//        String newText = "Ensure all tests pass";
-//
-//        ActivityScenario<TodoListActivity> scenario
-//                = ActivityScenario.launch(TodoListActivity.class);
-//        scenario.moveToState(Lifecycle.State.CREATED);
-//        scenario.moveToState(Lifecycle.State.STARTED);
-//        scenario.moveToState(Lifecycle.State.RESUMED);
-//
-//        scenario.onActivity(activity -> {
-//            List<ListItem> beforeList = listItemDao.getAll();
-//
-//            newItemText.setText(newText);
-//
-//        })
-//    }
 }
