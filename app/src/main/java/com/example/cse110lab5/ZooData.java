@@ -209,14 +209,8 @@ public class ZooData {
             // loads vertexInfoStore object and stores in database as vertexInfo object
              Map<String, ZooData.VertexInfo> indexedZooData = new HashMap();
              for (ZooData.VertexInfoStore datum : zooData) {
-                 if (datum.parentId != null) {
-                     indexedZooData.put(datum.id
-                             , new VertexInfo(datum.id, datum.parentId, datum.kind, datum.name, fromListToJson(datum.tags), datum.lat, datum.lng));
-                 }
-                 else {
-                     indexedZooData.put(datum.id
-                         , new VertexInfo(datum.id, "", datum.kind, datum.name, fromListToJson(datum.tags), datum.lat, datum.lng));
-                 }
+                 indexedZooData.put(datum.id
+                         , new VertexInfo(datum.id, datum.parentId, datum.kind, datum.name, fromListToJson(datum.tags), datum.lat, datum.lng));
              }
 
             return indexedZooData;
