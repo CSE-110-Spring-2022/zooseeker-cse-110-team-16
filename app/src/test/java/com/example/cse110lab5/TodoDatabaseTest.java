@@ -18,7 +18,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import java.io.IOException;
-import java.util.List;
 import java.util.Map;
 
 @RunWith(AndroidJUnit4.class)
@@ -130,9 +129,11 @@ public class TodoDatabaseTest {
         assertEquals(data.get("gorilla").getName() ,  "Gorillas");
         assertEquals(data.get("gorilla").getTags() ,  "[\"gorilla\",\"primate\",\"mammal\",\"great\",\"ape\",\"primate\",\"africa\"]");
         assertEquals(data.get("gorilla").getKind().toString(), "EXHIBIT");
-        assertEquals(data.get("gorilla").getParentId(), null);
+        assertEquals(data.get("gorilla").getGroupId(), null);
         assertEquals(data.get("gorilla").getLat(), 32.74711745394194, 0.0001);
         assertEquals(data.get("gorilla").getLng(), -117.18047982358976, 0.0001);
+
+        assertEquals(data.get("toucan").getGroupId(), "parker_aviary");
     }
 
     //Testing edge info database

@@ -13,7 +13,6 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.lang.reflect.Type;
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
@@ -58,17 +57,18 @@ public class ZooData {
         public String name;
         public List<String> tags;
         //new info below ms2
-        public String parentId;
+        @SerializedName("group_id")
+        public String groupId;
         public double lat;
         public double lng;
 
-        VertexInfoStore(@NonNull String id, String parentId, Kind kind, String name, List<String> tags, double lat, double lng) {
+        VertexInfoStore(@NonNull String id, String groupId, Kind kind, String name, List<String> tags, double lat, double lng) {
             this.id = id;
             this.kind = kind;
             this.name = name;
             this.tags = tags;
             //new info below ms2
-            this.parentId = parentId;
+            this.groupId = groupId;
             this.lat = lat;
             this.lng = lng;
         }
@@ -87,17 +87,18 @@ public class ZooData {
         public String name;
         public String tags;
         //new info below ms2
-        public String parentId;
+        @SerializedName("group_id")
+        public String groupId;
         public double lat;
         public double lng;
 
-        VertexInfo(@NonNull String id, String parentId, Kind kind, String name, String tags, double lat, double lng) {
+        VertexInfo(@NonNull String id, String groupId, Kind kind, String name, String tags, double lat, double lng) {
             this.id = id;
             this.kind = kind;
             this.name = name;
             this.tags = tags;
             //new info below ms2
-            this.parentId = parentId;
+            this.groupId = groupId;
             this.lat = lat;
             this.lng = lng;
         }
@@ -120,8 +121,8 @@ public class ZooData {
         }
 
         //return methods for new data ms2
-        public String getParentId() {
-            return parentId;
+        public String getGroupId() {
+            return groupId;
         }
 
         public double getLat() {
@@ -206,11 +207,15 @@ public class ZooData {
             Type type = new TypeToken<List<ZooData.VertexInfoStore>>(){}.getType();
             List<ZooData.VertexInfoStore> zooData = gson.fromJson(reader, type);
 
+            for (ZooData.VertexInfoStore item : zooData) {
+                System.out.println(item.toString());
+            }
+
             // loads vertexInfoStore object and stores in database as vertexInfo object
              Map<String, ZooData.VertexInfo> indexedZooData = new HashMap();
              for (ZooData.VertexInfoStore datum : zooData) {
                  indexedZooData.put(datum.id
-                         , new VertexInfo(datum.id, datum.parentId, datum.kind, datum.name, fromListToJson(datum.tags), datum.lat, datum.lng));
+                         , new VertexInfo(datum.id, datum.groupId, datum.kind, datum.name, fromListToJson(datum.tags), datum.lat, datum.lng));
              }
 
             return indexedZooData;
