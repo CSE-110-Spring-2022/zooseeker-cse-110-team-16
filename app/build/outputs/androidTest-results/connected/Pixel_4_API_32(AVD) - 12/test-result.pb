@@ -1,7 +1,7 @@
 
-ý
-_
-SBST3IntrumentedTestcom.example.cse110lab5sBST3IntrumentedTest2ƒ‰Ü”ÀõÒ¡:Œ‰Ü”€¢•"í
+þ
+`
+SBST3IntrumentedTestcom.example.cse110lab5sBST3IntrumentedTest2«‹Ü”À¥¶Ï:¸‹Ü”€æÚ¡"í
 
 logcatandroid×
 ÔC:\Users\Campbell Moco\StudioProjects\zooseeker-cse-110-team-16\app\build\outputs\androidTest-results\connected\Pixel_4_API_32(AVD) - 12\logcat-com.example.cse110lab5.SBST3IntrumentedTest-sBST3IntrumentedTest.txt"µ

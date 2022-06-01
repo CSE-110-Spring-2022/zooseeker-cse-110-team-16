@@ -1,4 +1,4 @@
-# 2022-06-01T06:17:49.510Z:
+# 2022-06-01T06:22:50.403Z:
 test_suite_meta_data {
   scheduled_test_case_count: 1
 }
@@ -9,12 +9,12 @@ test_result {
     test_package: "com.example.cse110lab5"
     test_method: "sBST3IntrumentedTest"
     start_time {
-      seconds: 1654064259
-      nanos: 339000000
+      seconds: 1654064555
+      nanos: 435000000
     }
     end_time {
-      seconds: 1654064268
-      nanos: 36000000
+      seconds: 1654064568
+      nanos: 876000000
     }
   }
   test_status: PASSED

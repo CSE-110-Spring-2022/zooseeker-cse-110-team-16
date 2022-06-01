@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' ?>
-<testsuite name="com.example.cse110lab5.SBST3IntrumentedTest" tests="1" failures="0" errors="0" skipped="0" time="10.127" timestamp="2022-06-01T06:17:49" hostname="localhost">
+<testsuite name="com.example.cse110lab5.SBST3IntrumentedTest" tests="1" failures="0" errors="0" skipped="0" time="14.926" timestamp="2022-06-01T06:22:50" hostname="localhost">
   <properties>
     <property name="device" value="Pixel_4_API_32(AVD) - 12" />
     <property name="flavor" value="" />
     <property name="project" value=":app" />
   </properties>
-  <testcase name="sBST3IntrumentedTest" classname="com.example.cse110lab5.SBST3IntrumentedTest" time="8.678" />
+  <testcase name="sBST3IntrumentedTest" classname="com.example.cse110lab5.SBST3IntrumentedTest" time="13.424" />
 </testsuite>
