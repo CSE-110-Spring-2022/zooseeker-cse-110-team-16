@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
         <entry key="../../../../layout/custom_preview.xml" value="0.145083932853717" />
         <entry key="app/src/main/res/layout/activity_directions.xml" value="0.33605072463768115" />
       </map>
@@ -11,6 +13,7 @@
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK" />
 =======
+>>>>>>> main
         <entry key="..\:/Users/Laura Tian/AndroidStudioProjects/zooseeker-cse-110-team-16/app/src/main/res/layout/activity_todo_list.xml" value="0.22" />
         <entry key="..\:/Users/Laura Tian/AndroidStudioProjects/zooseeker-cse-110-team-16/app/src/main/res/layout/list_item.xml" value="0.1" />
         <entry key="..\:/Users/Laura Tian/AndroidStudioProjects/zooseeker-cse-110-team-16/app/src/main/res/layout/todo_list_item.xml" value="0.1796875" />
@@ -18,5 +21,16 @@
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
+<<<<<<< HEAD
+=======
+        <entry key="../../../../layout/custom_preview.xml" value="0.145083932853717" />
+        <entry key="app/src/main/res/layout/activity_directions.xml" value="0.33605072463768115" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK" />
+>>>>>>> origin
+=======
 >>>>>>> persistent-database
+>>>>>>> main
 </project>
