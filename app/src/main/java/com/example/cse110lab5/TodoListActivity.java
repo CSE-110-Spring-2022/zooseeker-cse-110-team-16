@@ -61,7 +61,6 @@ public class TodoListActivity extends AppCompatActivity {
         viewModel = new ViewModelProvider(this)
                 .get(ListViewModel.class);
 
-//        viewModel.getListItems().observe(this, adapter::setListItems);
         updateList();
         listItemDao = ListDatabase.getSingleton(this).listItemDao();
 
@@ -98,10 +97,11 @@ public class TodoListActivity extends AppCompatActivity {
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-//                addedAnimalsSet.add(searchResultsID.get(i));
-                //updateList();
                 listDb = listItemDao.getAll();
-                if (!listDb.contains(searchResultsID.get(i))) {
+                for (ListItem item : listDb) {
+                    addedAnimals.add(item.getText());
+                }
+                if (!addedAnimals.contains(searchResultsID.get(i))) {
                     addedAnimals.add(searchResultsID.get(i));
                     Toast.makeText(getApplicationContext(), "Selected: " + searchResults.get(i), Toast.LENGTH_LONG).show();
 
@@ -109,12 +109,6 @@ public class TodoListActivity extends AppCompatActivity {
                     String text = searchResultsID.get(i);
                     viewModel.createItem(text);
                 }
-
-//
-//                List<ListItem> test = adapter.getListItems();
-//                for (ListItem item : test) {
-//                    System.out.println(item.getText());
-//                }
             }
         });
 
