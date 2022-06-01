@@ -31,8 +31,8 @@ import org.jgrapht.nio.json.JSONImporter;
 public class ZooData {
 
     // json filenames for updating zoo data
-    private String vertexInfoFile = "zoo_node_info.json";
-    private String edgeInfoFile = "zoo_edge_info.json";
+    private String vertexInfoFile = "exhibit_info.json";
+    private String edgeInfoFile = "trail_info.json";
     private String graphInfoFile = "zoo_graph.json";
 
     public static enum Kind {

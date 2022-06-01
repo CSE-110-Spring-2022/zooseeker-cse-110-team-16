@@ -131,8 +131,8 @@ public class TodoDatabaseTest {
         assertEquals(data.get("gorilla").getTags() ,  "[\"gorilla\",\"primate\",\"mammal\",\"great\",\"ape\",\"primate\",\"africa\"]");
         assertEquals(data.get("gorilla").getKind().toString(), "EXHIBIT");
         assertEquals(data.get("gorilla").getParentId(), null);
-        assertEquals(data.get("gorilla").getLat(), 32.74812588554637, 0.0001);
-        assertEquals(data.get("gorilla").getLng(), -117.17565073656901, 0.0001);
+        assertEquals(data.get("gorilla").getLat(), 32.74711745394194, 0.0001);
+        assertEquals(data.get("gorilla").getLng(), -117.18047982358976, 0.0001);
     }
 
     //Testing edge info database
@@ -182,7 +182,7 @@ public class TodoDatabaseTest {
         Graph<String, IdentifiedWeightedEdge> data = zooData.getGraphDatabase();
         IdentifiedWeightedEdge testEdge = data.getEdge("koi", "intxn_front_lagoon_2");
 
-        assertEquals(data.getEdgeWeight(testEdge), 30.0, 0.01);
+        assertEquals(data.getEdgeWeight(testEdge), 1300.0, 0.01);
         assertEquals(testEdge.getId(), "lagoon2_to_koi");
     }
 }
