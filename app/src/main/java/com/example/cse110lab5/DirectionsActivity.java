@@ -24,6 +24,7 @@ public class DirectionsActivity extends AppCompatActivity {
     private List<String> sortedVertexList;
     private final ZooData zooData = new ZooData();
     private Graph<String, IdentifiedWeightedEdge> edgeData;
+    private Map<String, ZooData.VertexInfo> vertexData;
     boolean directionType = false;
     String current_detailed_directions = "";
     String current_brief_directions = "";
@@ -43,10 +44,14 @@ public class DirectionsActivity extends AppCompatActivity {
 
         zooData.populateDatabase(this);
         edgeData = zooData.getGraphDatabase();
+        vertexData = zooData.getVertexDatabase();
 
         // Create route from sortedVertexList
         for (int i = 0; i < sortedVertexList.size() - 1; i++) {
-            route.add(DijkstraShortestPath.findPathBetween(edgeData, sortedVertexList.get(i), sortedVertexList.get(i + 1)));
+            String vertex1 = getGroupIdIfNecessary(vertexData, sortedVertexList.get(i));
+            String vertex2 = getGroupIdIfNecessary(vertexData, sortedVertexList.get(i + 1));
+
+            route.add(DijkstraShortestPath.findPathBetween(edgeData, vertex1, vertex2));
         }
     }
 
@@ -220,5 +225,13 @@ public class DirectionsActivity extends AppCompatActivity {
             directionsTextView.setText(title + "\n\n" + current_detailed_directions);
         }
 
+    }
+
+    private String getGroupIdIfNecessary(Map<String, ZooData.VertexInfo> vertexData, String vertex) {
+        ZooData.VertexInfo currentVertex = vertexData.get(vertex);
+        if (currentVertex.getInGroup()) {
+            return currentVertex.getGroupId();
+        }
+        return vertex;
     }
 }
