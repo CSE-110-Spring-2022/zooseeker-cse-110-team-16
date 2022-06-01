@@ -221,4 +221,23 @@ public class DirectionsActivity extends AppCompatActivity {
         }
 
     }
+
+    public void onSkipBtnClick(View view) {
+        if ((numNextClicks - numBackClicks) >= 1) {
+            numNextClicks++;
+            GraphPath<String, IdentifiedWeightedEdge> path = DijkstraShortestPath.findPathBetween(edgeData, sortedVertexList.get((numNextClicks - numBackClicks) - 1), sortedVertexList.get((numNextClicks - numBackClicks) + 1));
+            String skip_brief_directions = "";
+
+            skip_brief_directions +=
+                    " Walk " + path.getWeight()
+                    + " meters from " + path.getStartVertex()
+                    + " to " + path.getEndVertex()
+                    + "\n\n";
+
+            TextView directionsTextView = (TextView) findViewById(R.id.directionsView);
+            directionsTextView.setText(title + "\n\n" + skip_brief_directions);
+        }
+    }
+
+
 }
