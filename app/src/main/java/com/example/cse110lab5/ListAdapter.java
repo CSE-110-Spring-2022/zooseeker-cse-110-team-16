@@ -52,6 +52,17 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
         return listItems.get(position).id;
     }
 
+    public boolean hasItem(String item) {
+        if (listItems.contains(item))
+            return true;
+        else
+            return false;
+    }
+
+    public List<ListItem> getListItems() {
+        return listItems;
+    }
+
 
 
     public class ViewHolder extends RecyclerView.ViewHolder {
