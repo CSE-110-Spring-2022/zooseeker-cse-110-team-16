@@ -17,12 +17,14 @@ import org.jgrapht.alg.shortestpath.DijkstraShortestPath;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 public class PlanActivity extends AppCompatActivity {
     private static final RouteStrategy STRATEGY = new NearestNeighborRouteStrategy();
     private final ZooData zooData = new ZooData();
     private Graph<String, IdentifiedWeightedEdge> edgeData;
+    private Map<String, ZooData.VertexInfo> vertexData;
     private List<String> sortedVertexList = new ArrayList<>();
 
     @Override
@@ -32,12 +34,13 @@ public class PlanActivity extends AppCompatActivity {
 
         zooData.populateDatabase(this);
         edgeData = zooData.getGraphDatabase();
+        vertexData = zooData.getVertexDatabase();
 
         // Receive the selected exhibit names from ListActivity
         Bundle extras = getIntent().getExtras();
         List<String> selectedExhibitNames = new ArrayList<>(Arrays.asList(extras.getStringArray("addedAnimals")));
 
-        this.sortedVertexList = STRATEGY.makeRoute(edgeData, selectedExhibitNames);
+        this.sortedVertexList = STRATEGY.makeRoute(edgeData, vertexData, selectedExhibitNames);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, sortedVertexList);
         ListView exhibitList = this.findViewById(R.id.selected_exhibits);
