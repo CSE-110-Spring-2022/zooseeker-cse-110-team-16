@@ -44,19 +44,6 @@ public class ListItem {
     //instead of loading from json file load from map object (made in ms1)
     //load empty list
     public static List<ListItem> loadJSON(Context context, String path) {
-//        try {
-//            InputStream input = context.getAssets().open(path);
-//            Reader reader = new InputStreamReader(input);
-//            Gson gson = new Gson();
-//            Type type = new TypeToken<List<ListItem>>(){}.getType();
-//            return gson.fromJson(reader, type);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//            return Collections.emptyList();
-//        }
-//        ListItem listItem = new ListItem("test", 1);
-//        List<ListItem> list = new ArrayList<>();
-//        list.add(listItem);
         return Collections.emptyList();
     }
 }

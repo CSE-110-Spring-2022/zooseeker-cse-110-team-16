@@ -26,17 +26,6 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
         this.listItems = newListItems;
         notifyDataSetChanged();
     }
-//
-//    //TODO delete if not in use
-//    public void setOnTextEditedHandler(BiConsumer<ListItem, String> onTextEdited) {
-//        this.onTextEditedHandler = onTextEdited;
-//    }
-//
-//    //exercise 4
-//    //TODO expand on this to delete all items, not only one
-//    public void setOnDeleteBtnClickedHandler(Consumer<ListItem> onDeleteBtnClicked) {
-//        this.onDeleteBtnClicked = onDeleteBtnClicked;
-//    }
 
     @NonNull
     @Override
@@ -73,20 +62,6 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             this.textView = itemView.findViewById(R.id.item_text);
-//                this.checkBox = itemView.findViewById(R.id.completed);
-//            this.deleteBtn = itemView.findViewById(R.id.delete_btn);    //exercise 4
-//
-//            this.textView.setOnFocusChangeListener((view, hasFocus) -> {
-//                if (!hasFocus) {
-//                    onTextEditedHandler.accept(listItem, textView.getText().toString());
-//                }
-//            });
-//
-//            //exercise 4
-//            this.deleteBtn.setOnClickListener(view -> {
-//                if (onDeleteBtnClicked == null) return;
-//                onDeleteBtnClicked.accept(listItem);
-//            });
         }
 
         public ListItem getListItem() {
@@ -96,7 +71,6 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
         public void setListItem(ListItem listItem) {
             this.listItem = listItem;
             this.textView.setText(listItem.text);
-//                this.checkBox.setChecked(todoItem.completed);
         }
     }
 }

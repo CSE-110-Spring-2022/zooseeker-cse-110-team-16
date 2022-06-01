@@ -61,21 +61,9 @@ public class TodoListActivity extends AppCompatActivity {
         ListAdapter adapter = new ListAdapter();
         viewModel.getListItems().observe(this, adapter::setListItems);
 
-//        List<ListItem> todos = ListItem.loadJSON(this, "demo_todos.json");
-//        Log.d("TodoListActivity", todos.toString());
-
-//        viewModel = new ViewModelProvider(this)
-//                .get(ListViewModel.class);
-//
-//        adapter.setOnTextEditedHandler(viewModel::updateText);
-//        adapter.setOnDeleteBtnClickedHandler(viewModel::deleteItem);    //exercise 4
-//        viewModel.getListItems().observe(this, adapter::setListItems);
-//
         recyclerView = findViewById(R.id.list_items);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
-
-
 
         //set item ids
         this.searchText = this.findViewById(R.id.search_text);
